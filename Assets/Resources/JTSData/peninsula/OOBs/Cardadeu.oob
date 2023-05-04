@@ -1,0 +1,222 @@
+2
+French A VII Corps d’Armee
+	Begin
+	L 4 5 118 GD Gouvion St. Cyr
+	D 4e Division
+		Begin
+		L 3 6 204 GD Souham
+		B 1er Brigade
+			Begin
+			L 2 4 8 GB Verges
+			U 698 5 V M 10 25 1/1er Légère 
+			U 698 5 V M 10 25 2/1er Légère 
+			U 697 5 V M 10 25 3/1er Légère 
+			U 621 4 V M 11 26 4/3e Légère
+			End
+		B 2e Brigade
+			Begin
+			L 2 4 9 GB Dumoulin
+			U 621 4 I M 3 18 3/7e Ligne
+			U 621 4 I M 3 18 4/7e Ligne
+			U 823 5 I M 6 21 1/42e Ligne
+			U 822 5 I M 6 21 2/42e Ligne
+			U 822 5 I M 6 21 3/42e Ligne
+			U 621 4 I M 5 20 3/67e Ligne
+			End
+		B Bde de Cavalerie
+			Begin
+			L 2 5 67 GB Bessières
+			U 668 5 D M 47 6 24e Dragons
+			End
+		B Artillerie de Division
+			Begin
+			L 2 4 41 Capt. Anon
+			U 8 5 A J 20 0 11/7e Art. à Pied
+			U 2 5 A J 20 0 11/7e Art. à Pied
+			U 2 5 A J 20 0 11/7e Art. à Pied
+			U 2 5 A J 20 0 11/7e Art. à Pied
+			U 2 5 A O 20 0 11/7e Art. à Pied
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D 5e Division
+		Begin
+		L 3 4 178 GD Pino
+		B 1er Brigade
+			Begin
+			L 2 4 4 GB Mazzuchelli
+			U 749 5 V M 225 138 1/2° Leggera
+			U 748 5 V M 225 138 2/2° Leggera
+			U 978 4 I M 222 135 1/6° di Linea
+			U 977 4 I M 222 135 2/6° di Linea
+			End
+		B 2e Brigade
+			Begin
+			L 2 4 6 GB Fontana
+			U 735 5 V M 224 137 1/1° Leggera 
+			U 734 5 V M 224 137 2/1° Leggera 
+			U 894 4 I M 220 133 1/4° di Linea
+			U 894 4 I M 220 133 2/4° di Linea
+			U 461 4 I M 221 134 1/5° di Linea
+			U 618 4 I M 223 136 1/7° di Linea
+			U 122 5 G M 218 131 Det. Veliti Reale
+			End
+		B Bde de Cavalerie
+			Begin
+			L 2 4 56 GB Balabio
+			U 506 5 D M 226 2 2° Dragoni
+			U 535 5 L K 227 83 1° Cacciatori
+			End
+		B Artillerie
+			Begin
+			L 2 4 42 Capt. Anon 1
+			U 6 5 A J 228 18 9/Art. a Piedi
+			U 6 6 C V 228 18 1/Art. a Cavallo
+			U 2 5 A J 228 18 9/Art. a Piedi
+			U 2 5 A J 228 18 9/Art. a Piedi
+			U 2 5 A O 228 18 9/Art. a Piedi
+			U 2 6 C V 228 18 1/Art. a Cavallo
+			U 2 6 C V 228 18 1/Art. a Cavallo
+			U 2 6 C O 228 18 1/Art. a Cavallo
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D 6e Division
+		Begin
+		L 3 4 80 GD Chabot
+		B 1er Brigade
+			Begin
+			L 2 3 13 Col. Carrascosa
+			U 902 3 I M 230 140 1/2° di Linea
+			U 902 3 I M 230 140 2/2° di Linea
+			U 564 4 V M 216 129 GN P. Orientales
+			End
+		S 300 86 Chariot Fourniture
+		End
+	S 300 86 Chariot Fourniture
+	End
+British A [Not Present]
+	Begin
+	End
+Spanish A Ejercito de Cataluña
+	Begin
+	L 5 4 30 TG J.M. de Vives
+	D Cuerpo de la Derecha
+		Begin
+		L 3 5 382 TG Reding
+		B 1ª Sección
+			Begin
+			L 2 4 39 MdC de Witte
+			U 429 5 R M 171 107 1/Suizos de Reding
+			U 428 5 R M 171 107 2/Suizos de Reding
+			U 672 4 R M 172 108 Prov. de Mallorca
+			U 912 3 R M 158 96 1/Rto. de Baza
+			End
+		B 2ª Sección
+			Begin
+			L 2 3 37 Col. Anon 2
+			U 486 5 G M 173 109 1/Grans. C. la Vieja
+			U 486 5 G M 173 109 2/Grans. C. la Vieja
+			End
+		B Miqueletes
+			Begin
+			L 2 3 38 Col. Anon 3
+			U 756 3 V Z 282 160 1ª Tercio de Vich
+			U 400 3 V Z 282 160 Tercio de Igualada
+			End
+		B Caballería
+			Begin
+			L 2 2 36 Col. Anon 4
+			U 360 3 L K 194 75 Husares de Granada
+			End
+		B Artillería
+			Begin
+			L 2 5 362 Col. García-Loygorri
+			U 3 4 C V 197 11 1ª Batería a Caballo
+			U 2 4 C V 197 11 2ª Batería a Caballo
+			U 2 4 C V 197 11 3ª Batería a Caballo
+			End
+		S 300 199 Equipaje de Tren 
+		End
+	D Cuerpo del Izquierda
+		Begin
+		L 3 4 38 MdC Garcia Conde
+		B 1ª Sección
+			Begin
+			L 2 3 34 Col. Anon 5
+			U 163 5 V M 176 113 Ligero de Tarragona
+			U 438 5 G M 173 109 1/Grans. C. la Nueva
+			U 437 5 G M 173 109 2/Grans. C. la Nueva
+			End
+		B 2ª Sección
+			Begin
+			L 2 3 32 Col. Anon 6
+			U 467 4 R M 163 100 1/Rto. Soria
+			U 466 4 R M 163 100 2/Rto. Soria
+			U 934 3 R M 159 97 2/Rto. Almeria
+			End
+		B Miqueletes
+			Begin
+			L 2 3 36 Col. Anon 7
+			U 700 3 V Z 282 160 2ª Tercio de Vich
+			U 925 3 V Z 282 160 Tercio de Valles
+			End
+		B Caballería
+			Begin
+			L 2 4 35 Col. Ybarrola
+			U 300 5 L K 194 75 Husares Españoles
+			End
+		B Artillería
+			Begin
+			L 2 3 49 Capt. Anon 8
+			U 6 4 B V 197 11 Batería a Pe
+			U 2 4 B V 197 11 Batería a Pe
+			U 2 4 B V 197 11 Batería a Pe
+			U 2 4 B N 197 11 Batería a Pe
+			End
+		S 300 199 Equipaje de Tren 
+		End
+	B Reserva
+		Begin
+		L 2 4 32 Col. Wimpffen
+		U 357 5 G M 174 110 Grans. Combinados
+		U 340 4 R M 163 100 Guardia del General
+		U 60 6 S M 161 98 Dest. Gds. Españoles
+		End
+	B Miqueletes
+		Begin
+		L 2 4 373 Ten. Col. Milans
+		U 612 3 V Z 282 160 1ª Tercio de Lerida
+		U 790 3 V Z 158 96 Tercio de Granolers
+		U 937 3 V Z 282 160 1ª Tercio de Manresa
+		End
+	D División Aragónesa
+		Begin
+		L 3 4 368 TG Conde de Lazan
+		U 21 3 L S 193 74 Caz. Fernando VII
+		B 1ª Sección
+			Begin
+			L 2 5 30 Brig. Obispo
+			U 721 2 M M 158 96 Vols. de Aragón
+			U 427 3 V M 159 97 1° Ligero de Zaragoza
+			U 441 2 M Z 158 96 3° Vols. de Aragón
+			U 517 2 M M 159 97 Rto. Fernando VII
+			U 447 2 M Z 159 97 Tercio de Daroca
+			U 1088 3 R M 172 108 Bn. Reunión de Aragón
+			End
+		B Artillería
+			Begin
+			L 2 3 48 Capt. Anon 9
+			U 6 4 A U 197 11 Batería a Pe
+			U 2 4 A U 197 11 Batería a Pe
+			U 2 4 A U 197 11 Batería a Pe
+			U 2 4 A N 197 11 Batería a Pe
+			End 
+		S 300 199 Equipaje de Tren
+		End
+	S 300 199 Equipaje de Tren 
+	End
+French S 300 86 Chariot Fourniture
+British S 300 137 Supply Wagon
+Spanish S 300 199 Equipaje de Tren
+

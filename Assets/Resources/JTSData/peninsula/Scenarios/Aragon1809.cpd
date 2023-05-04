@@ -1,0 +1,273 @@
+CampaignData: Aragon 1809 Campaign
+    Campaign\Alcaniz1.bmp
+    After the French capture of Zaragoza, Napoleon ordered Mortier's
+    corps to withdraw to Logrono in case it should be needed for
+    his approaching Austrian campaign. This move effectively reduced
+    the French forces in the region by half and would result in a
+    number of setbacks, in particular Habert's loss of a thousand
+    men at Monzon and Laval being driven out of Alcaniz by Blake's
+    newly-constituted army. Assuming command of 3rd Corps on 19 May,
+    Suchet realized the need to defeat Blake promptly in order to
+    avoid the situation deteriorating further and risk being forced
+    to abandon Zaragoza.
+
+Branch: Alcaniz Alcaniz
+    Campaign\Alcaniz2.bmp
+    Having taken command of the disgruntled 3rd Corps, Suchet decided
+    that, to restore the morale of his troops and prevent the Spanish
+    from recapturing Zaragoza it was necessary to take the fight
+    to the enemy as quickly as possible. Collecting Musnier and Laval's
+    forces, Suchet also dispatched orders to Habert to join him and
+    defeat Blake's army assembled at Alcaniz.
+
+French: Historical Deployment
+    Campaign\Alcaniz3.bmp
+    Uncertain of the exact Spanish deployment, Suchet hesitated to
+    attack until the afternoon when he decided to send Laval's brigade
+    to secure the higher ground on the enemy right. Once Laval's
+    attack had got underway, the main French assault would be launched
+    directly at the Spanish centre to drive through the position
+    and secure the bridge across into Alcaniz and crush the enemy
+    army against the river.
+
+French: Alternative Plan
+    Campaign\Alcaniz4.bmp
+    Uncertain of the exact Spanish deployment, Suchet decides to
+    send Laval on an outflanking march to cross the river and attack
+    Alcaniz from the south. Hopefully Habert's brigade will turn
+    up to assist before the battle is over. Meanwhile, the rest of
+    the French army will delay until the afternoon and then launch
+    a direct frontal assault towards the bridge. 
+
+Allied: Historical Deployment
+    Campaign\Alcaniz5.bmp
+    Blake deploys his army in a strong defensive position with the
+    Cuerpo de la Derecha defending the high ground to prevent the
+    French from outflanking the troops in the centre. However, the
+    river is right behind the main line and if the troops are forced
+    back this could prove disastrous.
+
+Allied: Alternative Deployment
+    Campaign\Alcaniz6.bmp
+    Blake decides to place the Cuerpo del Centro and artillery behind
+    the river to defend Alcaniz, while the rest of the army would
+    keep out of sight behind the woods ready to attack the French
+    in the flank at the decisive moment.
+
+Outcome:
+Campaign\Arag1.scn/ -25 Maria Maria Maria Maria French
+    Suchet prepares to attack Blake's army, determined to drive the
+    enemy into the river.
+
+    Blake's position seems a strong one, but with it be able to resist
+    the French assault?
+
+Campaign\Arag2.scn/ 27 Maria Maria Maria Maria French
+    Suchet awaits the arrival of his outflanking force, but perhaps
+    it might be worthwhile getting the main attack underway to pin
+    down the enemy and prevent the Spanish from dealing with the
+    outflanking troops separately.
+
+    Blake's position seems a strong one, but with it be able to resist
+    the French assault?
+
+Campaign\Arag3.scn/ 22 Maria Maria Maria Maria French
+    Suchet prepares to attack Blake's army, but the enemy appear
+    to have fallen back across the river.
+
+    Blake awaits the enemy assault, ready to launch a counter-attack
+    at the crucial moment.
+
+Campaign\Arag4.scn/ -24 Maria Maria Maria Maria French
+    Suchet awaits the arrival of his outflanking force, but perhaps
+    it might be worthwhile getting the main attack underway to pin
+    down the enemy and prevent the Spanish from dealing with the
+    outflanking troops separately.
+
+    Blake awaits the enemy assault, ready to launch a counter-attack
+    at the crucial moment.
+
+Branch: Maria Maria or Zaragoza?
+    Campaign\Maria.bmp
+    Despite defeating the French at Alcaniz, Blake lacked sufficient
+    strength in cavalry to pursue Suchet. However, the victory quickly
+    swelled his army with reinforcements, far more than he could
+    equip or arm. Within a few weeks of Alcaniz, Blake had assembled
+    some 25,000 men and felt ready to march on Zaragoza. Should he
+    march directly towards the city across open terrain suitable
+    for the French cavalry, or take a more cautious mountainous route
+    via Belchite and Maria?
+
+French: Confront Blake
+    Campaign\Maria1.bmp
+    Having concentrated all available forces, Suchet realized that
+    he would have to fight Blake again to preserve his lines of communication
+    and avoid having to abandon Zaragoza.
+
+French: Defend Zaragoza
+    Campaign\Zaragoza1.bmp
+    Lacking confidence in his men after the defeat at Alcaniz, Suchet
+    decides to hold Zaragoza. However, with little prospect of any
+    relief army, the French couldn't afford to stay bottled up in
+    the city and will need to risk a decisive action.
+
+Allied: Maria
+    Campaign\Maria2.bmp
+    Anxious to avoid facing the French cavalry on level ground, Blake
+    decides to approach Zaragoza via difficult terrain.
+
+Allied: Zaragoza
+    Campaign\Zaragoza2.bmp
+    Overconfident after his defeat of Suchet and encouraged by the
+    number and enthusiasm of his reinforcements, Blake decides to
+    march directly on Zaragoza.
+
+Outcome:
+Campaign\Arag5.scn/ -20 Spanish Zaragoza Zaragoza Belchite Belchite
+    Facing the Spanish army at Maria, Suchet is reluctant to attack
+    until his 3,000 strong brigade from Tudela has arrived.
+
+    Blake has deployed his army in a defensive position at Maria
+    and hopes to induce Suchet to attack his position. But perhaps
+    it might be better to risk going onto the offensive?
+
+Campaign\Arag6.scn/ 24 Spanish Spanish Zaragoza Belchite French
+    The French army has assembled at Zaragoza, but Suchet will need
+    to fight an offensive action to defeat the Spaniards, rather
+    than keep his army blockaded in the city until starvation forces
+    them to surrender.
+
+    The enemy has remained at Zaragoza, but will need to fight a
+    decisive action rather than cower behind the city walls.
+
+Campaign\Arag7.scn/ 25 Spanish Spanish Zaragoza Belchite French
+    The French army have been assembling at Zaragoza, but before
+    Suchet can take any offensive action against the Spaniards, the
+    enemy have marched directly on the city and battle is imminent.
+
+    The enemy has been brought to bay at Zaragoza, but will need
+    to fight a decisive action rather than cower behind the city
+    walls.
+
+Campaign\Arag8.scn/ -27 Spanish Spanish Zaragoza Belchite French
+    The French army has assembled at Zaragoza, but Suchet will need
+    to fight an offensive action to defeat the Spaniards, rather
+    than keep his army blockaded in the city until starvation forces
+    them to surrender.
+
+    The enemy has remained at Zaragoza, but will need to fight a
+    decisive action rather than cower behind the city walls.
+
+Branch: Belchite Belchite
+    Campaign\Belchite.bmp
+    Belchite 18 June 1809 - Three days after the Spanish defeat at
+    Maria, Blake made the unwise decision to risk another battle,
+    despite the loss of most of his guns and the demoralization of
+    his army, some 3,000 of whom had deserted after the defeat. However,
+    he had now joined forces with Areizaga's division and the defensive
+    position at Belchite was stronger than at Maria. Rather than
+    attack the Spanish centre, Suchet sent Musnier's division against
+    the Spanish left flank and Habert's brigade to turn the right
+    flank.
+
+French: Historical Deployment
+    Campaign\Belchite1.bmp
+    Instead of just lauching a direct frontal assault on the Spanish
+    centre, Suchet sends Musnier's division against the Spanish left
+    flank and Habert's brigade to turn the right flank.
+
+French: Outflank the Enemy
+    Campaign\Belchite2.bmp
+    Suchet decides to attack the enemy right flank and sends Musnier
+    in an outflanking march to get behind the enemy rear.
+
+Allied: Historical Deployment
+    Campaign\Belchite3.bmp
+    Defeated by Suchet at Maria, but reinforced by Areizaga's division,
+    Blake decides to adopt a defensive position in front of Belchite.
+
+Allied: Alternative Deployment
+    Campaign\Belchite4.bmp
+    Concerned about the possibilty of the French outflanking his
+    position, Blake decides to keep part of his army in reserve.
+
+Outcome:
+Campaign\Arag10.scn/ -32 Spanish Zaragoza Zaragoza French French
+    Suchet decides to outflank Blake's position rather than launch
+    a direct frontal assault.
+
+    Blake's defensive position seems a fairly strong one, but it
+    may be difficult to protect against a flank attack.
+
+Campaign\Arag11.scn/ 27 Spanish Zaragoza Zaragoza French French
+    Suchet plans to attack the enemy right flank, but how promptly
+    will Musnier's outflanking force arrive behind the enemy line?
+
+    Blake's defensive position seems a fairly strong one, but it
+    may be difficult to protect against a flank attack.
+
+Campaign\Arag12.scn/ 24 Spanish Zaragoza Zaragoza French French
+    Suchet decides to outflank Blake's position rather than launch
+    a direct frontal assault.
+
+    Blake keeps some troops in reserve to guard against a potential
+    outflanking move by the French.
+
+Campaign\Arag13.scn/ -28 Spanish Zaragoza Zaragoza French French
+    Suchet plans to attack the enemy right flank, but how promptly
+    will Musnier's outflanking force arrive behind the enemy line?
+
+    Blake keeps some troops in reserve to guard against a potential
+    outflanking move by the French.
+
+Branch: Zaragoza Zaragoza
+    Campaign\Zaragoza.bmp
+    Suchet's French army has fallen back into Zaragoza and the Spanish
+    have surrounded the city determined to prevent the enemy from
+    escaping.
+
+French: Fight or Flight?
+    Campaign\Zaragoza1.bmp
+    With the Spaniards surrounding the city it should be possible
+    either to fight the enemy piecemeal or else effect a breakout.
+    Suchet must decide if and where to give battle, but since a draw
+    will effectively count as defeat, victory must somehow be secured
+    against the more numerous enemy.
+
+Allied: Defeat the French
+    Campaign\Zaragoza2.bmp
+    To defeat the French, all that is needed may be to keep them
+    bottled up in Zaragoza and prevent them from effecting an escape.
+    But with his forces spread out to maintain the blockade, Blake
+    runs the risk that Suchet might defeat his more numerous army
+    piecemeal.
+
+Outcome:
+Campaign\Arag9.scn/ 24 Spanish Spanish Spanish French French
+    Defeated in open battle, the French have retreated into Zaragoza
+    and have been surrounded by Blake's forces. To avoid suffering
+    from the inevitable effects of siege - assuming the enemy don't
+    assault the defences - it will be necessary to either defeat
+    the Spanish or effect a breakout.
+
+    The defeated French have been bottled up in Zaragoza, but a cornered
+    foe may still be a force to be reckoned with.
+
+Terminal: French French Victory
+    French.bmp
+    Suchet has managed to drive Blake out of Aragon and secured Zaragoza
+    firmly in French hands.
+
+Terminal: Draw Draw
+    Draw.bmp
+    Suchet has failed to decisively defeat Blake's army, yet the
+    Spanish general has been unable to secure a clear victory over
+    the invading French. With both armies worn down by fierce fighting,
+    the campaign degenerates into small scale guerilla actions until
+    one - or both - sides are ready to field fresh armies.
+
+Terminal: Spanish Spanish Victory
+    Spanish.bmp
+    Blake has defeated Suchet and will be able, if only temporarily,
+    to restore Aragon to Spanish control.
+

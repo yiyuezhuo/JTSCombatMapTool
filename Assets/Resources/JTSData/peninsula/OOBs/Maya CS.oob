@@ -1,0 +1,827 @@
+2
+French A Centre
+	Begin
+	L 4 5 102 GD Drouet d’Erlon
+	W 2e Division
+		Begin
+		L 3 4 90 GD Darmagnac
+		C 1er Brigade
+			Begin
+			L 2 6 83 GB Chassé
+			D 16e Légère
+				Begin
+				L 2 4 0 Col. Cornebise
+				B 1er Bataillon
+					Begin
+					L 2 3 1 CdB Anon 1
+					U 174 5 V M 9 24 Carabiniers
+					U 174 5 V M 9 24 1er Cie Chasseurs
+					U 173 5 V M 9 24 2e Cie Chasseurs 
+					U 173 5 V M 9 24 3e Cie Chasseurs 
+					U 174 5 V M 9 24 4e Cie Chasseurs 
+					U 174 5 V M 9 24 Voltiguers
+					End
+				End
+ 			D 8e Ligne
+				Begin
+				L 2 4 2 Col. Braun
+				B 1er Bataillon
+					Begin
+					L 2 3 3 CdB Anon 2
+					U 168 5 G M 3 18 Grenadiers
+					U 167 4 R M 3 18 1er Cie Fusiliers
+					U 167 4 R M 3 18 2e Cie Fusiliers
+					U 167 4 R M 3 18 3e Cie Fusiliers
+					U 167 4 R M 3 18 4e Cie Fusiliers
+					U 167 5 V M 2 17 Voltiguers 
+					End
+				End
+ 			D 28e Ligne
+				Begin
+				L 2 4 4 Col. Saint-Hilarire
+				B 1er Bataillon
+					Begin
+					L 2 3 5 CdB Anon 3
+					U 84 5 G M 6 21 Grenadiers
+					U 83 4 R M 6 21 1er Cie Fusiliers
+					U 83 4 R M 6 21 2e Cie Fusiliers
+					U 83 4 R M 6 21 3e Cie Fusiliers
+					U 83 4 R M 6 21 4e Cie Fusiliers
+					U 83 5 V M 2 17 Voltiguers 
+					End
+				B 3e Bataillon
+					Begin
+					L 2 3 6 CdB Anon 4
+					U 97 5 G M 6 21 Grenadiers
+					U 96 4 R M 6 21 1er Cie Fusiliers
+					U 96 4 R M 6 21 2e Cie Fusiliers
+					U 96 4 R M 6 21 3e Cie Fusiliers
+					U 96 4 R M 6 21 4e Cie Fusiliers
+					U 96 5 V M 2 17 Voltiguers 
+					End
+				End 
+			End
+		C 2e Brigade
+			Begin
+			L 2 4 0 GB Gruardet
+			D 51e Ligne
+				Begin
+				L 2 4 5 Col. Col. Taille
+				B 1er Bataillon
+					Begin
+					L 2 3 6 CdB Anon 5
+					U 193 5 G M 5 20 Grenadiers
+					U 193 4 R M 5 20 1er Cie Fusiliers
+					U 193 4 R M 5 20 2e Cie Fusiliers
+					U 193 4 R M 5 20 1 3e Cie Fusiliers
+					U 193 4 R M 6 21 4e Cie Fusiliers
+					U 193 5 V M 2 17 Voltiguers 
+					End
+				End
+ 			D 54e Ligne
+				Begin
+				L 2 4 6 Col. Saint-Faust
+				B 1er Bataillon
+					Begin
+					L 2 3 7 CdB Anon 6
+					U 188 5 G M 6 21 Grenadiers
+					U 188 4 R M 6 21 1er Cie Fusiliers
+					U 187 4 R M 6 21 2e Cie Fusiliers
+					U 187 4 R M 6 21 3e Cie Fusiliers
+					U 187 4 R M 6 21 4e Cie Fusiliers
+					U 188 5 V M 2 17 Voltiguers
+					End
+				End
+ 			D 75e Ligne
+				Begin
+				L 2 4 7 Col. Ducoudray
+				B 1er Bataillon
+					Begin
+					L 2 3 8 CdB Anon 7
+					U 149 5 G M 3 18 Grenadiers
+					U 148 4 R M 3 18 1er Cie Fusiliers
+					U 148 4 R M 3 18 2e Cie Fusiliers
+					U 148 4 R M 3 18 3e Cie Fusiliers
+					U 148 4 R M 3 18 4e Cie Fusiliers
+					U 149 5 V M 2 17 Voltiguers 
+					End
+				B 4e Bataillon
+					Begin
+					L 2 3 9 CdB Anon 8
+					U 52 4 G M 3 18 Grenadiers
+					U 51 3 R M 3 18 1er Cie Fusiliers
+					U 51 3 R M 3 18 2e Cie Fusiliers
+					U 51 3 R M 3 18 3e Cie Fusiliers
+					U 51 3 R M 3 18 4e Cie Fusiliers
+					U 52 4 V M 2 17 Voltiguers
+					End
+				End 
+			End
+		D Artillerie de Division
+			Begin
+			B 13/7e Art. à Pied
+				Begin
+				L 2 3 41 Capt. Passoureau
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B O 20 0 Obusier
+				U 1 5 B O 20 0 Obusier
+				End
+			End
+		S 100 86 Chariot Fourniture
+		End
+	W 3e Division
+		Begin
+		L 3 4 9 GD Abbé
+		C 1er Brigade
+			Begin
+			L 2 4 5 GB Rignoux
+			D 27e Légère
+				Begin
+				L 2 4 8 Col. Deschamps
+				B 1er Bataillon
+					Begin
+					L 2 3 0 CdB Anon 9
+					U 149 5 V M 10 25 Carabiniers
+					U 148 5 V M 10 25 1er Cie Chasseurs
+					U 148 5 V M 10 25 2e Cie Chasseurs 
+					U 148 5 V M 10 25 3e Cie Chasseurs 
+					U 148 5 V M 10 25 4e Cie Chasseurs 
+					U 148 5 V M 10 25 Voltiguers
+					End
+				End
+ 			D 63e Ligne
+				Begin
+				L 2 4 9 Col. Meunier
+				B 1er Bataillon
+					Begin
+					L 2 3 1 CdB 1/63 Bataillon 
+					U 187 5 G M 5 20 Grenadiers
+					U 187 4 R M 5 20 1er Cie Fusiliers
+					U 186 4 R M 5 20 2e Cie Fusiliers
+					U 186 4 R M 5 20 3e Cie Fusiliers
+					U 186 4 R M 5 20 4e Cie Fusiliers
+					U 187 5 V M 2 17 Voltiguers 
+					End 
+				End
+ 			D 64e Ligne
+				Begin
+				L 2 4 0 Col. Aulard
+				B 1er Bataillon
+					Begin
+					L 2 3 2 CdB Anon 10
+					U 127 5 G M 4 19 Grenadiers
+					U 127 4 R M 4 19 1er Cie Fusiliers
+					U 127 4 R M 4 19 2e Cie Fusiliers
+					U 127 4 R M 4 19 3e Cie Fusiliers
+					U 127 4 R M 4 19 4e Cie Fusiliers
+					U 127 5 V M 2 17 Voltiguers 
+					End 
+				B 2e Bataillon
+					Begin
+					L 2 3 3 CdB Anon 11
+					U 117 5 G M 4 19 Grenadiers
+					U 117 4 R M 4 19 1er Cie Fusiliers
+					U 116 4 R M 4 19 2e Cie Fusiliers
+					U 117 4 R M 4 19 3e Cie Fusiliers
+					U 116 4 R M 4 19 4e Cie Fusiliers
+					U 117 5 V M 2 17 Voltiguers 
+					End 
+				End 
+			End
+		C 2e Brigade
+			Begin
+			L 2 4 8 GB Remond
+			D 5e Légère
+				Begin
+				L 2 4 4 Col. Curnier
+				B 1er Bataillon
+					Begin
+					L 2 3 5 CdB Anon 12
+					U 105 5 V M 10 25 Carabiniers
+					U 104 5 V M 10 25 1er Cie Chasseurs
+					U 104 5 V M 10 25 2e Cie Chasseurs 
+					U 104 5 V M 10 25 3e Cie Chasseurs 
+					U 104 5 V M 10 25 4e Cie Chasseurs 
+					U 105 5 V M 10 25 Voltiguers
+					End
+				B 2e Bataillon
+					Begin
+					L 2 3 6 CdB Anon 13
+					U 109 5 V M 10 25 Carabiniers
+					U 108 5 V M 10 25 1er Cie Chasseurs
+					U 108 5 V M 10 25 2e Cie Chasseurs 
+					U 108 5 V M 10 25 3e Cie Chasseurs 
+					U 108 5 V M 10 25 4e Cie Chasseurs 
+					U 108 5 V M 10 25 Voltiguers
+					End
+				B Art. Régimentaire
+					Begin
+					L 2 2 41 Lt. Art. Régimentaire 
+					U 1 4 B V 20 0 4-pdr
+					U 1 4 B V 20 0 4-pdr
+					End
+
+				End
+ 			D 94e Ligne
+				Begin
+				L 2 4 7 Col. Gourgeon
+				B 1er Bataillon
+					Begin
+					L 2 3 8 CdB Anon 14
+					U 125 5 G M 6 21 Grenadiers
+					U 125 4 R M 6 21 1er Cie Fusiliers
+					U 124 4 R M 6 21 2e Cie Fusiliers
+					U 124 4 R M 6 21 3e Cie Fusiliers
+					U 125 4 R M 6 21 4e Cie Fusiliers
+					U 125 5 V M 2 17 Voltiguers 
+					End
+				B 2e Bataillon
+					Begin
+					L 2 3 9 CdB Anon 15
+					U 122 5 G M 6 21 Grenadiers
+					U 122 4 R M 6 21 1er Cie Fusiliers
+					U 122 4 R M 6 21 2e Cie Fusiliers
+					U 122 4 R M 6 21 3e Cie Fusiliers
+					U 122 4 R M 6 21 4e Cie Fusiliers
+					U 122 5 V M 2 17 Voltiguers 
+					End 
+				End
+ 			D 95e Ligne
+				Begin
+				L 2 4 0 Col. Ronzier
+				B 1er Bataillon
+					Begin
+					L 2 3 1 CdB Anon 16
+					U 189 5 G M 3 18 Grenadiers
+					U 189 4 R M 3 18 1er Cie Fusiliers
+					U 188 4 R M 3 18 2e Cie Fusiliers
+					U 189 4 R M 3 18 3e Cie Fusiliers
+					U 189 4 R M 3 18 4e Cie Fusiliers
+					U 189 5 V M 2 17 Voltiguers 
+					End 
+				End 
+			End
+		D Artillerie de Division
+			Begin
+			B 13/6e Art. à Pied
+				Begin
+				L 2 3 40 Capt. Mortaincourt
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B O 20 0 Obusier 
+				U 1 5 B O 20 0 Obusier
+				End
+			End
+		S 100 86 Chariot Fourniture
+		End
+	W 6e Division
+		Begin
+		L 3 4 154 GB Maransin 
+		C 1er Brigade
+			Begin
+			L 2 4 4 GB Baille de St. Pol
+			D 21e Légère
+				Begin
+				L 2 4 2 Col. Monnot
+				B 1er Bataillon
+					Begin
+					L 2 3 3 CdB 1/21 Bataillon 
+					U 157 5 V M 11 26 Carabiniers
+					U 156 5 V M 11 26 1er Cie Chasseurs
+					U 156 5 V M 11 26 2e Cie Chasseurs 
+					U 156 5 V M 11 26 3e Cie Chasseurs 
+					U 156 5 V M 11 26 4e Cie Chasseurs 
+					U 157 5 V M 11 26 Voltiguers
+					End
+				End
+ 			D 24e Ligne
+				Begin
+				L 2 4 4 Col. Henry
+				B 1er Bataillon
+					Begin
+					L 2 3 5 CdB 1/24 Bataillon 
+					U 143 5 G M 4 19 Grenadiers
+					U 143 4 R M 4 19 1er Cie Fusiliers
+					U 142 4 R M 4 19 2e Cie Fusiliers
+					U 142 4 R M 4 19 3e Cie Fusiliers
+					U 142 4 R M 4 19 4e Cie Fusiliers
+					U 143 5 V M 2 17 Voltiguers 
+					End 
+				End
+ 			D 96e Ligne
+				Begin
+				L 2 4 6 Col. Clavel
+				B 1er Bataillon
+					Begin
+					L 2 3 7 CdB Anon 17
+					U 166 5 G M 3 18 Grenadiers
+					U 166 4 R M 3 18 1er Cie Fusiliers
+					U 166 4 R M 3 18 2e Cie Fusiliers
+					U 166 4 R M 3 18 3e Cie Fusiliers
+					U 166 4 R M 3 18 4e Cie Fusiliers
+					U 166 5 V M 2 17 Voltiguers 
+					End 
+				End 
+			End
+		C 2e Brigade
+			Begin
+			L 2 4 2 GB Mocquery
+			D 28e Légère
+				Begin
+				L 2 4 8 Col. Genin
+				B 2e Bataillon
+					Begin
+					L 2 3 9 CdB Anon 18
+					U 101 5 V M 9 24 Carabiniers
+					U 100 5 V M 9 24 1er Cie Chasseurs
+					U 100 5 V M 9 24 2e Cie Chasseurs 
+					U 100 5 V M 9 24 3e Cie Chasseurs 
+					U 100 5 V M 9 24 4e Cie Chasseurs 
+					U 101 5 V M 9 24 Voltiguers
+					End
+				End
+ 			D 100e Ligne
+				Begin
+				L 2 4 0 Col. Bonnaire
+				B 1er Bataillon
+					Begin
+					L 2 3 1 CdB Anon 19
+					U 202 5 G M 6 21 Grenadiers
+					U 202 4 R M 6 21 1er Cie Fusiliers
+					U 202 4 R M 6 21 2e Cie Fusiliers
+					U 202 4 R M 6 21 3e Cie Fusiliers
+					U 201 4 R M 6 21 4e Cie Fusiliers
+					U 202 5 V M 2 17 Voltiguers 
+					End 
+				End
+ 			D 103e Ligne
+				Begin
+				L 2 4 2 Col. Marguet
+				B 1er Bataillon
+					Begin
+					L 2 3 3 CdB Anon  20
+					U 174 5 G M 4 19 Grenadiers
+					U 173 4 R M 4 19 1er Cie Fusiliers
+					U 173 4 R M 4 19 2e Cie Fusiliers
+					U 173 4 R M 4 19 3e Cie Fusiliers
+					U 173 4 R M 4 19 4e Cie Fusiliers
+					U 173 5 V M 2 17 Voltiguers 
+					End 
+				End 
+			End
+		D Artillerie de Division
+			Begin
+			B 2/8e Art. à Pied
+				Begin
+				L 2 3 40 Capt. Pidancet
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B C 20 0 6-pdr
+				U 1 5 B O 20 0 Obusier 
+				U 1 5 B O 20 0 Obusier
+				End
+			End
+		S 100 86 Chariot Fourniture
+		End
+	B 22e Chas. à Cheval 
+		Begin
+		L 2 4 5 Col. Desfossés
+		U 86 5 L K 37 30 1er Escadron
+		U 85 5 L K 37 30 2e Escadron
+		End
+	S 100 86 Chariot Fourniture
+	End
+British A Right Wing
+		Begin
+		L 4 6 274 LG Sir Rowland Hill
+		W 2nd Division
+			Begin
+			L 3 4 316 LG Sir Wm. Stewart
+			C Walker’s Brigade
+				Begin
+				L 2 5 244 Lt. Col. J. Cameron
+				B 1/50th (West Kent)
+					Begin
+					L 2 4 20 Lt. Col. Harrison
+					U 51 6 F G 98 64 Grenadier Company
+					U 50 5 T G 98 64 No.1 Company
+					U 50 5 T G 98 64 No.2 Company
+					U 50 5 T G 98 64 No.3 Company
+					U 50 5 T G 98 64 No.4 Company
+					U 50 5 T G 98 64 No.5 Company
+					U 50 5 T G 98 64 No.6 Company
+					U 50 5 T G 98 64 No.7 Company
+					U 50 5 T G 98 64 No.8 Company
+					U 51 6 U G 98 64 Light Company
+					End
+ 				B 1/71st Highland Light
+					Begin
+					L 2 1 21 Lt. Col. Peacocke
+					U 58 6 U G 105 71 No.1 Company
+					U 57 6 U G 105 71 No.2 Company
+					U 57 6 U G 105 71 No.3 Company
+					U 58 6 U G 105 71 No.4 Company
+					U 57 6 U G 105 71 No.5 Company
+					U 57 6 U G 105 71 No.6 Company
+					U 57 6 U G 105 71 No.7 Company
+					U 57 6 U G 105 71 No.8 Company
+					U 58 6 U G 105 71 No.9 Company
+					U 58 6 U G 105 71 No.10 Company
+					End
+ 				B 1/92nd (Gordons)
+					Begin
+					L 2 4 29 Lt. Col. MacDonnell
+					U 75 6 F G 102 68 Grenadier Company
+					U 75 6 T G 102 68 No.1 Company
+					U 75 6 T G 102 68 No.2 Company
+					U 75 6 T G 102 68 No.3 Company
+					U 75 6 T G 102 68 No.4 Company
+					U 74 6 T G 102 68 No.5 Company
+					U 75 6 T G 102 68 No.6 Company
+					U 75 6 T G 102 68 No.7 Company
+					U 75 6 T G 102 68 No.8 Company
+					U 75 6 U G 102 68 Light Company
+					End
+ 				B 5/60th Rifles
+					Begin
+					L 2 3 25 Capt. Blassiere
+					U 56 6 U I 90 57 No.8 Company
+					End 
+				End
+			C Byng's Brigade
+				Begin
+				L 2 4 242 MG John Byng
+				B 1/3rd (Buffs)
+					Begin
+					L 2 3 22 Lt. Col. Bunbury
+					U 75 6 F G 96 62 Grenadier Company
+					U 75 5 T G 96 62 No.1 Company
+					U 74 5 T G 96 62 No.2 Company
+					U 74 5 T G 96 62 No.3 Company
+					U 75 5 T G 96 62 No.4 Company
+					U 74 5 T G 96 62 No.5 Company
+					U 75 5 T G 96 62 No.6 Company
+					U 74 5 T G 96 62 No.7 Company
+					U 74 5 T G 96 62 No.8 Company
+					U 75 6 U G 96 62 Light Company
+					End
+ 				B 1/57th (W. Middlesex)
+					Begin
+					L 2 4 23 Lt. Col. McDonald
+					U 60 6 F G 95 61 Grenadier Company
+					U 60 5 T G 95 61 No.1 Company
+					U 60 5 T G 95 61 No.2 Company
+					U 59 5 T G 95 61 No.3 Company
+					U 60 5 T G 95 61 No.4 Company
+					U 60 5 T G 95 61 No.5 Company
+					U 59 5 T G 95 61 No.6 Company
+					U 60 5 T G 95 61 No.7 Company
+					U 60 5 T G 95 61 No.8 Company
+					U 60 6 U G 95 61 Light Company
+					End
+ 				B 1st Provisional Bn.
+					Begin
+					L 2 4 23 Lt. Col. Leith
+					U 70 6 F G 100 66 Grenadier Company
+					U 69 5 T G 100 66 No.1 Company
+					U 69 5 T G 100 66 No.2 Company
+					U 70 5 T G 100 66 No.3 Company
+					U 69 5 T G 100 66 No.4 Company
+					U 69 5 T G 96 62 No.5 Company
+					U 70 5 T G 96 62 No.6 Company
+					U 69 5 T G 96 62 No.7 Company
+					U 69 5 T G 96 62 No.8 Company
+					U 70 6 U G 96 62 Light Company
+					End
+ 				B 5/60th Rifles
+					Begin
+					L 2 3 25 Capt. Erskine
+					U 49 6 U I 90 57 No.6 Company
+					End 
+				End
+			C Pringle’s Brigade
+				Begin
+				L 2 5 307 MG W.H. Pringle
+				B 1/28th (N. Glosters)
+					Begin
+					L 2 4 27 Lt. Col. Belson
+					U 58 6 F G 94 60 Grenadier Company
+					U 57 5 T G 94 60 No.1 Company
+					U 57 5 T G 94 60 No.2 Company
+					U 57 5 T G 94 60 No.3 Company
+					U 57 5 T G 94 60 No.4 Company
+					U 57 5 T G 94 60 No.5 Company
+					U 57 5 T G 94 60 No.6 Company
+					U 57 5 T G 94 60 No.7 Company
+					U 57 5 T G 94 60 No.8 Company
+					U 58 6 U G 94 60 Light Company
+					End
+ 				B 2/34th (Cumberland)
+					Begin
+					L 2 4 28 Lt. Col. Fenwick
+					L 2 3 20 Capt. M. Sherer
+					U 51 6 F G 95 61 Grenadier Company
+					U 50 5 T G 95 61 No.1 Company
+					U 50 5 T G 95 61 No.2 Company
+					U 50 5 T G 95 61 No.3 Company
+					U 51 5 T G 95 61 No.4 Company
+					U 50 5 T G 95 61 No.5 Company
+					U 50 5 T G 95 61 No.6 Company
+					U 50 5 T G 95 61 No.7 Company
+					U 50 5 T G 95 61 No.8 Company
+					U 51 6 U G 95 61 Light Company
+					End
+ 				B 1/39th (Dorsetshire)
+					Begin
+					L 2 4 21 Col. O’Callaghan
+					U 51 6 F G 100 66 Grenadier Company
+					U 51 5 T G 100 66 No.1 Company
+					U 51 5 T G 100 66 No.2 Company
+					U 51 5 T G 100 66 No.3 Company
+					U 50 5 T G 100 66 No.4 Company
+					U 51 5 T G 100 66 No.5 Company
+					U 51 5 T G 100 66 No.6 Company
+					U 51 5 T G 100 66 No.7 Company
+					U 51 5 T G 100 66 No.8 Company
+					U 51 6 U G 100 66 Light Company
+					End
+ 				B 5/60th Rifles
+					Begin
+					L 2 3 22 Lt. Joyce
+					U 63 6 U I 90 57 No.4 Company
+					End 
+				End
+			C Ashworth's Brigade
+				Begin
+				L 2 4 22 Col. Chas. Ashworth
+				D 6° Infantaria
+					Begin
+					L 3 4 26 Lt. Col. Grant
+					B 1° Batalhão
+						Begin
+						L 2 3 19 Major Anon 1
+						U 90 5 F G 139 84 Granaderos
+						U 90 4 T G 139 84 1° Companhia 
+						U 90 4 T G 139 84 2° Companhia 
+						U 90 4 T G 139 84 3° Companhia 
+						U 90 4 T G 139 84 4° Companhia 
+						End
+					B 2° Batalhão
+						Begin
+						L 2 3 17 Major Anon 2 
+						U 90 5 F G 139 84 Granaderos
+						U 90 4 T G 139 84 1° Companhia 
+						U 90 4 T G 139 84 2° Companhia 
+						U 90 4 T G 139 84 3° Companhia 
+						U 90 4 T G 139 84 4° Companhia
+						End
+					End 
+				D 18° Infantaria
+					Begin
+					L 3 4 15 Col. Pamplona
+					B 1° Batalhão
+						Begin
+						L 2 3 19 Major Anon 3
+						U 107 5 F G 141 86 Granaderos
+						U 107 4 T G 141 86 1° Companhia 
+						U 107 4 T G 141 86 2° Companhia 
+						U 107 4 T G 141 86 3° Companhia 
+						U 107 4 T G 141 86 4° Companhia 
+						End
+					B 2° Batalhão
+						Begin
+						L 2 3 17 Major Anon 4
+						U 107 5 F G 141 86 Granaderos
+						U 107 4 T G 141 86 1° Companhia 
+						U 107 4 T G 141 86 2° Companhia 
+						U 107 4 T G 141 86 3° Companhia 
+						U 107 4 T G 141 86 4° Companhia
+						End
+					End 
+				B 6° Caçadores
+					Begin
+					L 2 4 19 Ten. Cor. Pinto
+					U 78 5 U G 147 92 1° Companhia
+					U 78 5 U G 147 92 2° Companhia
+					U 78 5 U G 147 92 3° Companhia
+					U 78 5 U G 147 92 4° Companhia
+					U 78 6 U I 147 92 Attiradores
+					End 
+				End 
+			D Divisional Artillery
+				Begin
+				L 2 3 43 Maj. J. Carncross
+				B Maxwell’s Brigade
+					Begin
+					L 2 3 44 Capt. Maxwell
+					U 1 5 A E 134 6 9-pdr
+					U 1 5 A E 134 6 9-pdr
+					U 1 5 A E 134 6 9-pdr
+					U 1 5 A E 134 6 9-pdr
+					U 1 5 A E 134 6 9-pdr
+					U 1 5 A H 134 6 5.5” Howitzer
+					End
+       End
+ 			S 100 137 Supply Wagon
+			End
+       W 7th Division
+		Begin
+		L 3 4 257 LG Lord Dalhousie
+		C Barnes’ Brigade
+			Begin
+			L 2 5 233 MG Edward Barnes
+				B 1/6th (1st Warwicks)
+					Begin
+					L 2 4 20 Lt. Col. Campbell
+					U 78 5 F G 95 61 Grenadier Company
+					U 77 4 T G 95 61 No.1 Company
+					U 78 4 T G 95 61 No.2 Company
+					U 77 4 T G 95 61 No.3 Company
+					U 77 4 T G 95 61 No.4 Company
+					U 77 4 T G 95 61 No.5 Company
+					U 77 4 T G 95 61 No.6 Company
+					U 77 4 T G 95 61 No.7 Company
+					U 77 4 T G 95 61 No.8 Company
+					U 78 5 U G 95 61 Light Company
+					End
+ 				B 3rd Provisional Bn.
+					Begin
+					L 2 4 21 Maj. Campbell
+					U 45 6 F G 100 66 Grenadier Company
+					U 44 5 T G 100 66 No.1 Company
+					U 45 5 T G 100 66 No.2 Company
+					U 44 5 T G 100 66 No.3 Company
+					U 44 5 T G 100 66 No.4 Company
+					U 45 5 T G 98 64 No.5 Company
+					U 45 5 T G 98 64 No.6 Company
+					U 44 5 T G 98 64 No.7 Company
+					U 45 5 T G 98 64 No.8 Company
+					U 45 6 U G 98 64 Light Company
+					End
+ 				B Brunswick-Oels Regt.
+					Begin
+					L 2 4 22 Lt. Col. Hertsberg
+					U 40 5 U G 113 79 No.1 Company
+					U 40 5 U G 113 79 No.2 Company
+					U 40 5 U G 113 79 No.3 Company
+					U 40 5 U G 113 79 No.4 Company
+					U 40 5 U G 113 79 No.5 Company
+					U 40 5 U G 113 79 No.6 Company
+					U 40 5 U G 113 79 No.7 Company
+					U 40 5 U G 113 79 No.8 Company
+					U 40 5 U G 113 79 No.9 Company
+					End
+			End 
+		C Inglis’ Brigade
+			Begin
+			L 2 5 280 MG William Inglis
+				B 51st (2nd W. York) Lt 
+					Begin
+					L 2 4 23 Maj. Roberts
+					U 34 5 U G 107 73 No.1 Company
+					U 34 5 U G 107 73 No.2 Company
+					U 34 5 U G 107 73 No.3 Company
+					U 34 5 U G 107 73 No.4 Company
+					U 34 5 U G 107 73 No.5 Company
+					U 34 5 U G 107 73 No.6 Company
+					U 34 5 U G 107 73 No.7 Company
+					U 34 5 U G 107 73 No.8 Company
+					U 34 5 U G 107 73 No.9 Company
+					U 34 5 U G 107 73 No.10 Company
+					End
+ 				B 68th (Durham) Light 
+					Begin
+					L 2 4 24 Maj. Hawkins
+					U 24 5 U G 107 73 No.1 Company
+					U 24 5 U G 107 73 No.2 Company
+					U 25 5 U G 107 73 No.3 Company
+					U 24 5 U G 107 73 No.4 Company
+					U 24 5 U G 107 73 No.5 Company
+					U 25 5 U G 107 73 No.6 Company
+					U 24 5 U G 107 73 No.7 Company
+					U 24 5 U G 107 73 No.8 Company
+					U 25 5 U G 107 73 No.9 Company
+					U 24 5 U G 107 73 No.10 Company
+					End
+				B 1/82nd (PoW's Vols.)
+					Begin
+					L 2 4 25 Lt. Col. Grant
+					U 39 5 F G 94 60 Grenadier Company
+					U 38 4 T G 94 60 No.1 Company
+					U 39 4 T G 94 60 No.2 Company
+					U 38 4 T G 94 60 No.3 Company
+					U 39 4 T G 94 60 No.4 Company
+					U 39 4 T G 94 60 No.5 Company
+					U 38 4 T G 94 60 No.6 Company
+					U 39 4 T G 94 60 No.7 Company
+					U 39 4 T G 94 60 No.8 Company
+					U 39 5 U G 94 60 Light Company
+					End
+				B Chas. Britanniques
+					Begin
+					L 2 4 26 Lt. Col. du Hautoy
+					U 56 5 T G 115 81 Grenadier Company
+					U 56 4 T G 115 81 No.1 Company
+					U 56 4 T G 115 81 No.2 Company
+					U 56 4 T G 115 81 No.3 Company
+					U 56 4 T G 115 81 No.4 Company
+					U 56 4 T G 115 81 No.5 Company
+					U 56 4 T G 115 81 No.6 Company
+					U 56 4 T G 115 81 No.7 Company
+					U 56 4 T G 115 81 No.8 Company
+					U 56 5 T G 115 81 Light Company
+					End
+			End
+		C Le Cor’s Brigade
+			Begin
+			L 2 5 334 MdC Carlos Lecor
+			D 7° Infantaria
+				Begin
+				L 3 4 20 Col. Campbell
+				B 1° Batalhão
+					Begin
+					L 2 3 19 Major Anon 5
+					U 58 5 F G 139 84 Granaderos
+					U 58 4 T G 139 84 1° Companhia 
+					U 57 4 T G 139 84 2° Companhia 
+					U 57 4 T G 139 84 3° Companhia 
+					U 57 4 T G 139 84 4° Companhia 
+					End
+				B 2° Batalhão
+					Begin
+					L 2 3 17 Major Anon 6
+					U 58 5 F G 139 84 Granaderos
+					U 58 4 T G 139 84 1° Companhia 
+					U 57 4 T G 139 84 2° Companhia 
+					U 57 4 T G 139 84 3° Companhia 
+					U 57 4 T G 139 84 4° Companhia
+					End
+				End 
+			D 19° Infantaria
+				Begin
+				L 3 4 21 Col. McDowell
+				B 1° Batalhão
+					Begin
+					L 2 3 19 Major Anon 7 
+					U 66 5 F G 141 86 Granaderos
+					U 65 4 T G 141 86 1° Companhia 
+					U 65 4 T G 141 86 2° Companhia 
+					U 65 4 T G 141 86 3° Companhia 
+					U 65 4 T G 141 86 4° Companhia 
+					End
+				B 2° Batalhão
+					Begin
+					L 2 3 17 Major Anon 8 
+					U 65 5 F G 141 86 Granaderos
+					U 65 4 T G 141 86 1° Companhia 
+					U 65 4 T G 141 86 2° Companhia 
+					U 65 4 T G 141 86 3° Companhia 
+					U 65 4 T G 141 86 4° Companhia
+					End
+				End 
+			B 2° Caçadores
+				Begin
+				L 2 4 19 Maj. Zühleke
+				U 63 5 U G 263 153 1° Companhia
+				U 62 5 U G 263 153 2° Companhia
+				U 63 5 U G 263 153 3° Companhia
+				U 62 5 U G 263 153 4° Companhia
+				U 63 6 U I 263 153 Attiradores
+				End 
+			End 
+			D Divisional Artillery
+				Begin
+				B Dickson’s Brigade
+					Begin
+       				L 2 3 44 2nd Capt. R. Cairnes
+					U 1 5 A E 134 6 9-pdr
+					U 1 5 A E 134 6 9-pdr
+					U 1 5 A E 134 6 9-pdr
+					U 1 5 A E 134 6 9-pdr
+					U 1 5 A E 134 6 9-pdr
+					U 1 5 A H 134 6 5.5” Howitzer
+					End 
+				End 
+			S 100 137 Supply Wagon
+			End
+		S 100 137 Supply Wagon
+		End
+Spanish A Ejércitos Españoles
+	Begin
+	End
+French S 100 86 Chariot Fourniture
+British S 100 137 Supply Wagon
+Spanish S 100 199 Equipaje de Tren
+

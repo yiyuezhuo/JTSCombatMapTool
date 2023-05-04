@@ -1,0 +1,185 @@
+2
+French C III Corps d’Armée
+	Begin
+	L 4 5 208 GD Suchet
+	B Escorte du QG
+		Begin
+		U 400 5 I M 3 18 3/64e Ligne
+		U 50 5 S M 2 17 Voltiguers/40e Ligne
+		End
+	D 1er Division
+		Begin
+		L 3 4 9 GD Grandjean
+		B 1er Brigade
+			Begin
+			L 2 4 122 GB Habert
+			U 535 4 I M 4 19 1/44e Ligne
+			U 534 4 I M 4 19 2/44e Ligne
+			U 440 5 I M 202 121 1/2e de la Vistule
+			U 440 5 I M 202 121 2/2e de la Vistule
+			U 190 6 H S 51 34 Det. 13e Cuirassiers
+			End
+		B 2e Brigade
+			Begin
+			L 2 4 0 GB Laval
+			U 540 4 I M 3 18 1/14e Ligne
+			U 540 4 I M 3 18 2/14e Ligne
+			U 482 5 I M 202 121 1/3e de la Vistule
+			U 482 5 I M 202 121 2/3e de la Vistule
+			End
+		B Artillerie de Division
+			Begin
+			L 2 4 40 Capt. Anon 1
+			U 6 5 A J 20 0 18/3e Art. à Pied
+			U 2 5 A J 20 0 18/3e Art. à Pied
+			U 2 5 B V 20 0 18/3e Art. à Pied
+			U 2 5 B O 20 0 18/3e Art. à Pied
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D 2e Division
+		Begin
+		L 3 4 3 GD Musnier
+		B 1er Brigade
+			Begin
+			L 2 4 4 GB Fabre
+			U 543 3 I M 3 18 1/114e Ligne
+			U 542 3 I M 3 18 2/114e Ligne
+			U 542 3 I M 3 18 3/114e Ligne
+			U 520 5 I M 202 121 1/1er de la Vistule
+			U 519 5 I M 202 121 2/1er de la Vistule
+			End
+		B 2e Brigade
+			Begin
+			L 2 4 5 Col. Dupeyroux
+			U 578 3 I M 5 20 1/115e Ligne
+			U 577 3 I M 5 20 2/115e Ligne
+			U 577 3 I M 5 20 3/115e Ligne
+			U 400 3 I M 6 21 4/121e Ligne
+			End
+		B Artillerie de Division
+			Begin
+			L 2 4 41 Capt. Anon 2
+			U 8 5 B V 20 0 22/3e Art. à Pied
+			U 2 5 A J 20 0 22/3e Art. à Pied
+			U 2 5 B V 20 0 22/3e Art. à Pied
+			U 2 5 B V 20 0 22/3e Art. à Pied
+			U 2 5 B O 20 0 22/3e Art. à Pied
+			End
+		S 300 86 Chariot Fourniture
+		End
+	B Cavallerie de III Corps
+		Begin
+		L 2 5 224 GB Watier
+		U 200 6 H S 51 34 13e Cuirassiers
+		U 326 5 L K 25 18 4e Hussards
+		U 80 6 L L 28 21 Det. 1er de la Vistule
+		U 4 5 C V 21 1 7/5e Art. à Cheval
+		U 3 5 C V 21 1 7/5e Art. à Cheval
+		U 1 5 C O 21 1 7/5e Art. à Cheval
+		End
+	S 300 86 Chariot Fourniture
+	End
+British A British Army
+	Begin
+	End
+Spanish A Ejército de Aragón
+	Begin
+	L 5 5 345 TG Don J. Blake
+	D Cuerpo de la Derecha
+		Begin
+		L 3 4 340 TG J.C. Aréizaga
+		B 3ª Columna
+			Begin
+			L 2 4 32 Col. Carbón
+			U 661 3 R M 159 97 Vols. de Daroca
+			U 275 3 V M 158 96 Tiradores de Doyle
+			U 189 3 R M 181 118 2/Vols. de Aragón
+			U 62 4 S M 178 115 Tirs. de Cartagena
+			End
+		B 4ª Columna
+			Begin
+			L 2 4 33 Col. Cucalón
+			U 1104 2 M M 158 96 Reserva de Aragón
+			U 592 3 V M 159 97 1ª Tiradores de Murcia
+			End
+		B Artillería
+			Begin
+			L 2 3 48 Capt. Anon 3
+			U 2 4 A U 197 11 Batería a Pe
+			End 
+		S 300 199 Equipaje de Tren
+		End
+	D Cuerpo del Centro
+		Begin
+		L 3 4 368 TG de Lazan
+		L 2 4 32 Brig. Obispo
+		B 1ª Columna
+			Begin
+			L 2 3 30 Ten. Col. Hernandez
+			U 347 4 V M 177 114 Vols. de Valencia
+			U 260 2 R M 179 116 2/Rto. de Fernando VII
+			U 454 5 R M 174 110 Columna de Grans.
+			End
+		S 300 199 Equipaje de Tren
+		End
+	D Cuerpo del Izquierda
+		Begin
+		L 3 4 34 MdC Don P. Roca
+		B 2ª Columna
+			Begin
+			L 2 4 31 Col. Menchaca
+			U 661 3 V M 158 96 2ª Caz de Valencia
+			U 556 3 R M 178 115 1/Vols de Zaragoza
+			End
+		B 5ª Columna
+			Begin
+			L 2 4 35 Col. Peréz
+			U 558 4 R M 165 102 1/Rto. de Valencia
+			U 558 4 R M 165 102 2/Rto. de Valencia
+			U 558 4 R M 165 102 3/Rto. de Valencia
+			End
+		B 6ª Columna
+			Begin
+			L 2 4 36 Col. Andriani
+			U 307 4 R M 164 101 3/Rto. de Saboya
+			U 544 4 R M 168 105 2/Rto. de América
+			End
+		B Artillería
+			Begin
+			L 2 3 49 Capt. Anon 4
+			U 3 4 B V 197 11 Batería a Pe
+			End 
+		S 300 199 Equipaje de Tren
+		End
+	B Caballería 
+		Begin
+		L 2 2 37 Brig. Ybarrola
+		U 190 4 H S 186 72 Rto. de Santiago
+		U 96 5 L S 269 103 Caz. de Olivenza
+		U 154 4 L K 194 75 Husares Españoles
+		End
+	B Artillería
+		Begin
+		L 2 5 362 Brig. García-Loygorri
+		U 6 4 C V 197 11 Batería a Caballo
+		U 4 4 A U 197 11 1ª Batería a Pe
+		U 4 4 A U 197 11 2ª Batería a Pe
+		U 2 4 C V 197 11 Batería a Caballo
+		U 2 4 C V 197 11 Batería a Caballo
+		U 2 4 C V 197 11 Batería a Caballo
+		U 2 4 A U 197 11 1ª Batería a Pe
+		U 2 4 A N 197 11 1ª Batería a Pe
+		U 2 4 A U 197 11 2ª Batería a Pe
+		U 2 4 A N 197 11 2ª Batería a Pe
+		U 544 4 R M 168 105 3/Rto. de América
+		U 44 4 P M 198 119 Zapadores
+		End
+	U 160 2 K L 195 76 Partida de Guijaro
+	S 300 199 Equipaje de Tren 
+	End
+French S 300 86 Chariot Fourniture
+British S 300 137 Supply Wagon
+Spanish S 300 199 Equipaje de Tren
+
+

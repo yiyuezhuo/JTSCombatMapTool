@@ -1,0 +1,850 @@
+CampaignData: Salamanca Campaign
+    1812
+    Wellington's capture of Badajoz greatly facilitated conducting
+    an Allied advance into Spain. Destroying the bridge at Almaraz
+    would greatly hamper communications between the French armies
+    of Marmont and Soult. Meanwhile, Napoleon's decision to invade
+    Russia and the consequent withdrawal of troops from the Peninsular
+    drastically reduced the French capacity for conducting offensive
+    operations. To rectify this situation, King Joseph - belatedly
+    appointed commander-in-chief by Napoleon - wanted to evacuate
+    Andalusia to be able to create a larger field army. Also Marmont
+    was ordered to reinforce Foy and place a sizeable force in the
+    Tagus valley to maintain contact with Drouet and Soult's troops
+    in Extramadura. In addition, Suchet was told to send a "good
+    division" from Valencia to Ocana. Unfortunately, none of the
+    French generals obeyed these instructions, having been accustomed
+    to acting independently for the last three years and being more
+    concerned with their own field of operations than with the overall
+    strategic situation.
+
+Branch: Almaraz Almaraz Bridge
+    Campaign\Almaraz.bmp
+    The bridge at Almaraz was a vital communications link between
+    the French armies under Marmont and Soult. Discovering that Foy's
+    division at Talavera was the only force within two days march,
+    Wellington sent Hill's Corps to destroy the bridge.
+
+French: Almaraz
+    Campaign\AlmarFr.bmp
+    The Almaraz forts are under attack from a strong enemy force.
+    Since the nearest reinforcements are two days march away, the
+    forts will have to hold out on their own. 
+
+Allied: Almaraz
+    Campaign\AlmarBr.bmp
+    Hill instructs Chowne to make a diversonary attack on the Miravete
+    forts, while the rest of his troops take an alternative route
+    to capture Fort Napoleon and secure the bridge and Fort Ragusa
+    on the opposite bank.
+
+Outcome:
+Campaign\Sala1.scn/ 0 Forts Forts Foy-Almaraz Foy-Almaraz Foy-Almaraz
+    The enemy are numerous, but the forts are strong and should prove
+    tought nuts to crack.
+
+    The main objective must be to destroy the bridge, although the
+    forts should also be captured, providing heavy losses can be
+    avoided.
+
+Branch: Foy-Almaraz Foy reaches Almaraz
+    Campaign\Almaraz.bmp
+    Hill's failure to secure the bridge and forts promptly allows
+    time for Foy's division to march to the rescue.
+
+French: Relieve the forts
+    Campaign\AlmarFr.bmp
+    Defending the forts and bridge is the main priority, but if Foy
+    can drive off Hill's force it will deal a powerful blow to the
+    enemy campaign.
+
+Allied: Secure the bridge
+    Campaign\AlmarBr.bmp
+    The bridge and its forts must be captured at all costs.
+
+Outcome:
+Campaign\Sala2.scn/ 0 Forts Forts Forts Forts French
+    Foy's division has arrived to relieve the forts, but the French
+    are still outnumbered.
+
+    The French forts have managed to hold out without assistance,
+    but now Foy's division has marched to their assistance, so the
+    struggle will be harder.
+
+Branch: Forts Salamanca Forts
+    Campaign\Forts.bmp
+    In preparation for Wellington's advance on Salamanca, various
+    complex diversionary operations were set in motion to deter other
+    French generals in the Peninsular from sending troops to Marmont's
+    assistance. Although the tempermentally insubordinate Soult was
+    already busy besieging Cadiz, Hill's Corps and Ballasteros' army
+    would be tasked with preventing him from reinforcing Drouet.
+    Caffarelli's Army of the North would be pinned down by a combination
+    of Spanish guerillas and a British naval expedition into the
+    Biscay. The Army of Galicia would besiege Astorga, put pressure
+    on General Bonnet in the Asturias and also threaten Marmont's
+    northern flank. Meanwhile, to keep him informed about movements
+    on Marmont's right flank, Wellington instructed Silveira with
+    four militia regiments, supported by a brigade of regular cavalry
+    under d'Urban, to blockade the French garrison at Zamora. Finally,
+    in case Suchet decided to reinforce Marmont or King Joseph, an
+    Anglo-Sicilian naval expedition would be launched against the
+    Catalonian coast. Upon reaching Salamanca, Wellington could either
+    pursue Marmont's two retreating divisions - as no doubt Napoleon
+    would have done - or else besiege the French forts and attempt
+    to draw Marmont into attacking at a disadvantage.
+
+French: Fight for the forts
+    Campaign\FortsFr1.bmp
+    Having assembled all his army except for Bonnet's Division, perhaps
+    Marmont should risk a general engagement in defence of the Salamanca
+    forts? 
+
+French: Hold Back
+    Campaign\FortsFr2.bmp
+    It would be unwise to attack a superior force, especially since
+    Wellington's cavalry was now stronger so that any defeat would
+    be disastrous. Instead, the forts should be left to fend for
+    themselves until all available French troops could be assembled.
+
+Allied: Secure the forts
+    Campaign\FortsBr1.bmp
+    Rather than promptly crush Marmont's two divisions before the
+    French outlying forces could be concentrated, Wellington felt
+    that by besieging the forts, he could force the French general
+    to attack him and, hopefully, secure a decisive victory over
+    the entire French army.
+
+Allied: Pursue Marmont
+    Campaign\FortsBr2.bmp
+    Instead of reducing the forts, maybe it would be better to pursue
+    Marmont's retreating divisions and attempt to crush them before
+    the French forces could concentrate.
+
+Outcome:
+Campaign\Sala5.scn/ 27 Pursuit Forts2 Forts2 Forts2 Forts2
+    Perhaps the French inferiority in cavalry and numbers may be
+    at least partially offset by the fact that many of the Allied
+    troops are Portuguese or Spanish rather than British? Nevertheless,
+    this will prove a tough fight for Marmont's French.
+
+    Wellington's plan to besiege the Salamanca forts and draw the
+    French into making an unwise attack has been successful. Now
+    all that's left to do is to inflict a crushing defeat on the
+    enemy!
+
+Campaign\Sala6.scn/ 17 Castrejon Castrejon Forts2 Forts2 Forts2
+    Marmont decides to concentrate his forces prior to risking a
+    general engagement. The forts will have to try to hold out until
+    the French army has been gathered together.
+
+    Marmont has failed to take the bait and risk attacking without
+    waiting for Bonnet's division. The forts should be captured before
+    he has time to assemble his entire army and is ready to relieve
+    them.
+
+Campaign\Sala7.scn/ 15 Pursuit Pursuit Forts2 Marmont Retreat
+    Due to a shortage of magazines and transport, Marmont hadn't
+    dared concentrate his forces until Wellington struck. This resulted
+    in the Allied army making camp in sight of Salamanca on the night
+    of 16 June, giving Marmont with the two divisions under his direct
+    command barely time to evacuate the city and fall back towards
+    Fuente Sauco, the rendez-vous point for all his forces.
+
+    The outnumbered French have been forced to retreat from Salamanca,
+    leaving a small garrison to defend the forts. Rather than waste
+    time dealing with the forts, the enemy should be hunted down
+    and brought to battle before they can concentrate all their forces.
+
+Campaign\Sala8.scn/ 21 Pursuit Pursuit Castrejon Castrejon Retreat
+    With the Anglo-Allied army in hot pursuit, Marmont with merely
+    two divisions under his direct command has barely had time to
+    evacuate Salamanca and fall back towards Fuente Sauco, the rendez-vous
+    point for all his forces.
+
+    The outnumbered French have been forced to retreat from Salamanca,
+    leaving a small garrison to defend the forts. Rather than waste
+    time dealing with the forts, the enemy should be hunted down
+    and brought to battle before they can concentrate all their forces.
+
+Branch: Forts2 Forts or Fight?
+    Campaign\Forts.bmp
+    Wellington had decided to reduce the Salamanca forts in order
+    to draw Marmont into attacking at a disadvantage. Will the outnumbered
+    French general actually take the risk? Or will the gruelling
+    task of securing the forts continue?
+
+French: Defend the forts
+    Campaign\FortsFr3.bmp
+    The forts need to be defended vigorously. If they can hold out,
+    once Marmont has assembled his army he will find an opportunity
+    to come to their assistance.
+
+French: San Christobal
+    Campaign\ChristoFr1 .bmp
+    Marmont decides to risk an attack at San Christobal. The British
+    position is strong and the French remain outnumbered, but this
+    would be the best chance of preventing the enemy from capturing
+    the forts.
+
+Allied: Secure the forts
+    Campaign\FortsBr3.bmp
+    The forts need to be captured, but preferably without the loss
+    of too many Allied lives. If Marmont moves up his army to demonstrate,
+    the British will take up a defensive position and, hopefully,
+    the French will go onto the offensive and, no doubt, shatter
+    their army in futile assaults.
+
+Allied: Attack Marmont
+    Campaign\ChristoBr1.bmp
+    Assuming Marmont brings his army within striking distance, it
+    would surely be a missed opportunity to sit on the defensive
+    and permit the numerically inferior enemy army - particularly
+    an army without a strong cavalry force - to march away intact.
+    So, if Marmont moves up with the intention of disrupting the
+    siege of the forts, the British will not just sit on the defensive
+    but will instead attack and, in all likelihood, shatter the French
+    army.
+
+Outcome:
+Campaign\Sala9.scn/ 11 Castrejon Castrejon Marmont Marmont Marmont
+    The Salamanca forts must be defended vigorous until Marmont can
+    concentrate his entire army and march to their relief.
+
+    The Salamanca forts remain in French hands and need to be reduced
+    before Marmont can concentrate his entire army and march to their
+    relief.
+
+Campaign\Sala34.scn/ 7 Pursuit Joseph Joseph Joseph Retreat
+    Marmont contemplates risking a general engagement to prevent
+    the loss of the Salamanca forts.
+
+    It seems that Marmont has taken the "bait" and will launch a
+    direct frontal assault on the British defensive position.
+
+Campaign\Sala8a.scn/ -5 Pursuit Joseph Castrejon Castrejon Retreat
+    The Salamanca forts must be defended vigorous until Marmont can
+    concentrate his entire army and march to their relief. But what
+    if Wellington decides to march against Marmont instead?
+
+    The Salamanca forts are proving a tough nut to crack, so Wellington
+    decides to move against Marmont before he can concentrate his
+    forces.
+
+Campaign\Sala35.scn/ 35 Pursuit Castrejon Castrejon Joseph Retreat
+    Marmont contemplates risking a general engagement to prevent
+    the loss of the Salamanca forts.
+
+    If Marmont decides to draw up his army and demonstrate in support
+    of the forts, Wellington plans to go onto the offensive and destroy
+    the weaker French army.
+
+Branch: Marmont Marmont attacks
+    Campaign\Marmont.bmp
+    The Allied failure to secure the Salamanca forts persuades Marmont
+    to risk an attack across the Tormes, a move that would bring
+    the French army onto the same ground that, historically, they
+    were to march across on 22 July. However, in late June, Marmont
+    still lacked Bonnet's 8th Division, so the prospects of a French
+    victory seem slim.
+
+French: Alba de Tormes
+    Campaign\AlbaFr1 .bmp
+    Determined to relieve the forts, Marmont decides to cross the
+    river Tormes at Alba de Tormes and then march his army north-west
+    towards Salamanca.
+
+French: Huerta
+    Campaign\HuertFr1.bmp
+    Resolving to relieve the Salamanca forts, Marmont's army marches
+    at dawn along the north bank of the river directly towards the
+    forts.
+
+Allied: Maintain the siege
+    Campaign\FortsBr4.bmp
+    Suspecting that Marmont planned to attack, Wellington felt that
+    the priority was to maintain the siege of the forts and prevent
+    the French from relieving them. Nevertheless, a sizeable portion
+    of the army would need to be kept south of the river to maintain
+    communications with Ciudad Rodrigo.
+
+Allied: Defeat Marmont
+    Campaign\SalaBr1.bmp
+    Receiving information that the French army planned to cross the
+    river and then either march to the relief of the forts or else
+    attempt to severe Allied communications with Ciudad Rodrigo,
+    Wellington gave the order to move almost the entire army south
+    of the river and march in the direction of Alba de Tormes to
+    deal with the enemy.
+
+Outcome:
+Campaign\Sala19.scn/ -35 Pursuit Pursuit Castrejon Retreat Retreat
+    The French army has crossed at Alba de Tormes and is marching
+    north-west towards Salamanca.
+
+    Another day has dawned and the siege of the forts continues.
+    It remains to be seen if the French will allow the forts to fall
+    without a fight.
+
+Campaign\Sala20.scn/ 40 Pursuit Pursuit Castrejon Retreat Retreat
+    The French attack along the north bank of the river directly
+    towards the forts.
+
+    Another day has dawned and the siege of the forts continues.
+    It remains to be seen if the French will allow the forts to fall
+    without a fight
+
+Campaign\Sala21.scn/ 42 Pursuit Pursuit Pursuit Retreat Retreat
+    The French army has crossed at Alba de Tormes and is marching
+    north-west towards Salamanca.
+
+    Another day has dawned and the siege of the forts continues.
+    It remains to be seen if the French will allow the forts to fall
+    without a fight
+
+Campaign\Sala22.scn/ -27 Pursuit Pursuit Pursuit Retreat Retreat
+    The French attack along the north bank of the river directly
+    towards the forts.
+
+    Another day has dawned and the siege of the forts continues.
+    It remains to be seen if the French will allow the forts to fall
+    without a fight
+
+Branch: Castrejon Castrejon
+    Campaign\Castrejon.bmp
+    After the capture of the French forts, Marmont had fallen back
+    towards Valladolid to link up with Bonnet's Division. Meanwhile,
+    Marmont was unaware that Joseph was scraping together a 13,000
+    strong army to reinforce him, even though Joseph himself knew
+    that neither Soult, Caffarelli nor Suchet planned to send any
+    additional reinforcements for this decisive campaign. With Bonnet's
+    troops, Marmont had an army approximately equal in numbers to
+    and so felt he could go on the offensive.
+
+French: Castrejon
+    Campaign\CastreFr1.bmp
+    Marmont's decision to about turn his army during the night of
+    16-17 July had enabled the French army to concentrate at Nava
+    del Rey by nightfall on 17 July after a fatiguing force march.
+    The British rear-guard had been discovered at Castrejon that
+    afternoon and could be attacked the following morning before
+    it could be reinforced or could fall back to the main Allied
+    army.
+
+Allied: Castrejon
+    Campaign\CastreBr1.bmp
+    Caught by surprise by the unexpected French about face, the British
+    van-guard at Castrejon - comprised of the 4th and Light Divisions,
+    supported by Anson's cavalry - would have to fight a rear-guard
+    action before falling back towards the main Allied army. Wellington
+    himself had to draw his sword to defend himself and might well
+    have become a casualty of this action.
+
+Outcome:
+Campaign\Sala10.scn/ 0 Cantalpino Cantalpino Cantalpino Cantalpino Cantalpino
+    A portion of the enemy army has been encountered at Castrejon
+    and should be dealt with before it can retreat to the main Allied
+    army.
+
+    The French prompt about face had caught the British rear-guard
+    by surprise. Wellington realised the danger and personally led
+    all available cavalry to help these troops retreat back to the
+    main army.
+
+Branch: Cantalpino Cantalpino
+    Campaign\Cantalpino.bmp
+    With both armies conducting a parallel march, Marmont gives the
+    order for his troops to cross the Guarena river and advance south-west
+    towards the village of Cantalpino. This would result in the two
+    armies colliding at this point  ... unless of course Wellington
+    deliberately decides to avoid battle.
+
+French: Cantalpino
+    Campaign\CantalFr1.bmp
+    Marmont has manoeuvred his troops towards Cantalpino in anticipation
+    of a general engagement, but will Wellington once again refuse
+    to fight?
+
+Allied: Cantalpino
+    Campaign\CantalBr1.bmp
+    With the enemy in close proximity, Wellington must, once again,
+    decide whether to avoid fighting a potentially decisive battle
+    at Cantalpino.
+
+Outcome:
+Campaign\Sala11.scn/ -35 Allied Salamanca Salamanca Salamanca French
+    Perhaps, with the armies now in close proximity, Marmont at last
+    has the chance of fighting a decisive action.
+
+    After hours of parallel marching and with the enemy in close
+    proximity, Wellington must decide whether to fight at Cantalpino
+    or once again endeavour to postpone the decisive battle.
+
+Branch: Salamanca Salamanca
+    Campaign\Salamanca.bmp
+    Neither Marmont nor Wellington expected 22 July to be any more
+    eventful than the previous day. Marmont hoped to manoeuvre the
+    Allied army away from Salamanca and perhaps fight an advantageous
+    rear-guard action. Meanwhile, Wellington needed to maintain communications
+    with Ciudad Rodrigo and only intended to fight under very favourable
+    circumstances or if absolutely necessary.
+
+French: Outflank the enemy Rear-guard
+    Campaign\SalaFr1.bmp
+    Anticipating that Wellington would once again avoid battle, Marmont
+    is keen to advance fast enough to outflank the enemy rear-guard
+    and, hopefully, cut off its line of retreat.
+
+French: Cautious Advance
+    Campaign\SalaFr2.bmp
+    Marmont decides to move his troops forward cautiously to avoid
+    a potential trap, even if this means that the enemy rear-guard
+    is able to retreat unmolested.
+
+French: Rest until Dawn
+    Campaign\SalaFr3.bmp
+    The troops have done a lot of marching over the last few days,
+    so perhaps they could do with a rest? Shortly before dawn they
+    can be deployed in a defensive position just in case - albeit
+    a highly unlikely one considering Wellington's reputation for
+    caution - that the enemy decides to launch a surprise attack.
+
+Allied: Prepare for retreat
+    Campaign\SalaBr2.bmp
+    Aware that Joseph is on the march with 14,000 men and would be
+    able to reinforce Marmont within a few days and also that a cavalry
+    brigade sent by Caffarelli would reach Marmont in just 36 hours,
+    Wellington prepares for retreat by sending off his baggage train
+    at dawn on the Ciudad Rodrigo road.
+
+Allied: Attack at dawn
+    Campaign\SalaBr3.bmp
+    Wellington realises that he needs to defeat Marmont's army promptly
+    before it is reinforced, since Joseph is on the march with 14,000
+    men and would be able to reach Marmont within a few days. Also
+    a cavalry brigade sent by Caffarelli should reach Marmont in
+    just 36 hours, A defensive battle is no longer a viable option.
+
+Allied: Retreat to Ciudad Rodrigo
+    Campaign\SalaBr2.bmp
+    Aware that Joseph is on the march with 14,000 men and would be
+    able to reinforce Marmont within a few days and also that a cavalry
+    brigade sent by Caffarelli would reach Marmont in just 36 hours,
+    Wellington decides that the campaign of manoeuvre with Marmont
+    will not give him a suitable opportunity for fighting the defensive
+    battle of his choice. Consequently, he might as well retreat
+    back towards Ciudad Rodrigo before the French can concentrate
+    superior numbers against his army.
+
+Outcome:
+Campaign\Sala12.scn/ 27 Garcia Garcia Retreat Retreat French
+    Marmont is eager to deal with the enemy rear-guard and perhaps
+    even compel Wellington to fight a decisive battle on unfavourable
+    ground.
+
+    The baggage train is on the road back towards Ciudad Rodrigo
+    and, unless the enemy do something rash and give Wellington the
+    opportunity to deal it a decisive blow, the army will follow
+    and the campaign may end in a indecisive draw.
+
+Campaign\Sala13.scn/ -25 Garcia Garcia Retreat Retreat Retreat
+    Marmont's cautious advance may give the enemy plenty of time
+    to get away without having to fight.
+
+    The baggage train is on the road back towards Ciudad Rodrigo
+    and, unless the enemy do something rash and give Wellington the
+    opportunity to deal it a decisive blow, the army will follow
+    and the campaign may end in a indecisive draw.
+
+Campaign\Sala14.scn/ 20 Garcia Garcia Pursuit Retreat Retreat
+    It's dawn and the French army has deployed in a defensive position
+    after a refreshing night's rest. Hopefully the enemy haven't
+    taken the opportunity of retreating back towards Ciudad Rodrigo.
+
+    The baggage train is on the road back towards Ciudad Rodrigo
+    and, unless the enemy do something rash and give Wellington the
+    opportunity to deal it a decisive blow, the army will follow
+    and the campaign may end in a indecisive draw.
+
+Campaign\Sala15.scn/ 20 Garcia Garcia Retreat Retreat French
+    Marmont is eager to deal with the enemy rear-guard and perhaps
+    even compel Wellington to fight a decisive battle on unfavourable
+    ground.
+
+    Perhaps against his better judgment, Wellington decides to go
+    onto the offensive in the hope of catching Marmont by surprise
+    and delivering a knockout blow to the French army before it can
+    receive significant reinforcements.
+
+Campaign\Sala16.scn/ 15 Garcia Garcia Retreat Retreat Retreat
+    Marmont's cautious advance may give the enemy plenty of time
+    to get away without having to fight.
+
+    Perhaps against his better judgment, Wellington decides to go
+    onto the offensive in the hope of catching Marmont by surprise
+    and delivering a knockout blow to the French army before it can
+    receive significant reinforcements.
+
+Campaign\Sala17.scn/ -50 Garcia Garcia Retreat Retreat French
+    It's dawn and the French army has deployed in a defensive position
+    after a refreshing night's rest. Hopefully the enemy haven't
+    taken the opportunity of retreating back towards Ciudad Rodrigo.
+
+    Perhaps against his better judgment, Wellington decides to go
+    onto the offensive in the hope of catching Marmont by surprise
+    and delivering a knockout blow to the French army before it can
+    receive significant reinforcements.
+
+Campaign\Sala18.scn/ -40 Garcia Pursuit Retreat Retreat French
+    Marmont is eager to deal with the enemy rear-guard and perhaps
+    even compel Wellington to fight a decisive battle on unfavourable
+    ground.
+
+    The Allied army plans to retreat to Ciudad Rodrigo and, unless
+    the enemy decides to pursue vigorously, the campaign will end
+    in an indecisive draw.
+
+/ 10 Retreat Retreat Retreat Retreat Retreat
+    Marmont's cautious advance may give the enemy plenty of time
+    to get away without having to fight.
+
+    The Allied army plans to retreat to Ciudad Rodrigo and, unless
+    the enemy decides to pursue vigorously, the campaign will end
+    in an indecisive draw.
+
+/ 10 Retreat Retreat Retreat Retreat Retreat
+    It's dawn and the French army has deployed in a defensive position
+    after a refreshing night's rest. Hopefully the enemy haven't
+    taken the opportunity of retreating back towards Ciudad Rodrigo.
+
+    The Allied army plans to retreat to Ciudad Rodrigo and, unless
+    the enemy decides to pursue vigorously, the campaign will end
+    in an indecisive draw.
+
+Branch: Garcia Garcia Hernandez
+    Campaign\Garcia.bmp
+    After defeating the French at Salamanca, Wellington pursued the
+    enemy with uncustomary determination, sending detachments by
+    all three routes along which the French were retreating, but
+    concentrating on the central and most important road leading
+    via Garcia Hernandez to Penaranda. 
+
+French: Garcia Hernandez
+    Campaign\Garcia1.bmp
+    After the defeat at Salamanca, Foy must fight a rearguard action
+    against pursuing British cavalry.
+
+Allied: Garcia Hernandez
+    Campaign\Garcia1.bmp
+    Some squadrons of enemy cavalry have been detected up ahead:
+    these must be driven off to allow the pursuit of the defeated
+    French army to continue.
+
+Outcome:
+Campaign\Sala23.scn/ 0 Pursuit Pursuit Pursuit Pursuit Pursuit
+    Foy's 1st Division, which had not been heavily involved at Salamanca,
+    supported by a brigade of Curto's cavalry, must fight a rearguard
+    action against the pursuing British cavalry to allow the retreating
+    French troops to get away.
+
+    Observing only some French cavalry squadrons opposing the British
+    advance, Wellington sent Anson's cavalry, supported by Bock's
+    troopers, to drive them off, so that the pursuit of the retreating
+    enemy could continue.
+
+Branch: Joseph Joseph reinforces Marmont
+    Campaign\Joseph.bmp
+    Despite victory at Salamanca, Wellington's decision to pursue
+    Marmont has led to a setback and the British have been forced
+    to fall back to Salamanca, where they may have to face both Marmont
+    and Joseph's fresh army. Another victory will be required before
+    the Allies can march on Madrid.
+
+French: Attack South of Salamanca
+    Campaign\SalaFr4.bmp
+    Joseph has decided to move his small army south of Salamanca
+    to try to cut off the British line of communications back to
+    Portugual. He is aware of Marmont's earlier defeat at Salamanca,
+    but has also heard rumours of a subsequent British defeat, so
+    if the enemy turn up in any force he hopes that Marmont's army
+    will also make an appearance.
+
+French: Join forces with Marmont
+    Campaign\SalaFr5.bmp
+    Joseph decides to approach Salamanca from the north, hoping to
+    join forces with Marmont before attempting to recapture Salamanca
+    and then cut off the British line of communications back to Portugual.
+    He is aware of Marmont's earlier defeat at Salamanca, but has
+    also heard rumours of a subsequent British defeat, so if the
+    enemy turn up in any force he hopes that Marmont's army arrive
+    in time to secure victory.
+
+Allied: Regroup North of Salamanca
+    Campaign\SalaBr4.bmp
+    Suffering a setback against Marmont, Wellington falls back towards
+    Salamanca and, reluctant to allow the enemy to gain control of
+    the city, decides to rest his troops north of the river.
+
+Allied: Maintain Lines of Communication
+    Campaign\SalaBr5.bmp
+    Leaving a division to keep control of Salamanca, Wellington moves
+    most of his army south of the river to maintain his line of communications
+    back to Portugal.
+
+Outcome:
+Campaign\Sala32.scn/ -33 Madrid Madrid Retreat Retreat French
+    Joseph has moved his troops south of Salamanca to block the Allied
+    lines of communication. But if a large enemy force appears, his
+    small army will have to make a quick retreat unless Marmont arrives
+    promptly with reinforcements.
+
+    After suffering a setback at Marmont's hands, Wellington falls
+    back towards Salamanca, but is determined not to let the enemy
+    retake the city.
+
+Campaign\Sala33.scn/ 22 Madrid Madrid Retreat Retreat Retreat
+    Joseph plans to join forces with Marmont north of the river before
+    marching on Salamanca. Hopefully the Allied army won't get too
+    much in the way!
+
+    After suffering a setback at Marmont's hands, Wellington falls
+    back towards Salamanca, but is determined not to let the enemy
+    retake the city.
+
+Campaign\Sala36.scn/ 40 Madrid Madrid Retreat Retreat Retreat
+    Joseph has moved his troops south of Salamanca to block the Allied
+    lines of communication. But if a large enemy force appears, his
+    small army will have to make a quick retreat unless Marmont arrives
+    promptly with reinforcements.
+
+    Retreating to Salamanca after suffering a defeat at Marmont's
+    hands, the British need to maintain communication links back
+    to Portugal.
+
+Campaign\Sala37.scn/ -27 Madrid Madrid Retreat Retreat Retreat
+    Joseph plans to join forces with Marmont north of the river before
+    marching on Salamanca. Hopefully the Allied army won't get too
+    much in the way!
+
+    Retreating back to Salamanca after suffering a defeat at Marmont's
+    hands, the British need to maintain communication links back
+    to Portugal.
+
+Branch: Pursuit French retreat from Salamanca
+    Campaign\Valladolid.bmp
+    After securing victory at Salamanca and continued the pursuit
+    to Garcia Hernandez, Wellington had to decide whether to relentlessly
+    pursue the retreating French by forced march and risk exhausting
+    his troops, despite the possibility of having to fight another
+    battle should Joseph's Army of the Centre and perhaps some of
+    Caffarelli's troops join forces with Marmont's battered army.
+
+French: Retreat to Burgos
+    Campaign\BurgosFr1.bmp
+    The defeated French army is in no state to risk another battle
+    and must retreat as far as Burgos if hotly pursued, even if this
+    means leaving a large number of wounded and stragglers to fall
+    into enemy hands.
+
+French: Defend Valladolid
+    Campaign\VallaFr1.bmp
+    The French army decides to take a much needed rest at Valladolid,
+    a city reputedly containing a larger number of Afrancesados than
+    any other in Northern Spain.
+
+Allied: Halt the pursuit
+    Campaign\Madrid.bmp
+    With the Allied troops much fatigued after the battle of Salamanca
+    and subsequent two days pursuit, Wellington orders the bulk of
+    the army to halt, with only the light cavalry and guerrillas
+    continuing the pursuit of the French. Continuing the pursuit
+    might have resulted in the complete destination of the French
+    army, but at what cost in Allied stragglers and loss of horses?
+    An over-vigorous pursuit of the enemy could leave Wellington's
+    army too exhausted for any further action. Besides, there was
+    always the possibility that fresh French forces - especially
+    Joseph's small army - might reinforce Marmont's retreating troops
+    and give the pursuers an unexpected repulse.
+
+Allied: Continue the pursuit
+    Campaign\VallaBr1.bmp
+    Although his troops are fatigued after securing victory at Salamanca
+    and pursuing the French for the next two days, Wellington decides
+    to continue the pursuit to give the enemy no opportunity of rallying.
+    With luck, the battered Army of Portugal can be completely destroyed
+    before Joseph's Army of the Centre or other French forces can
+    march to the rescue.
+
+Outcome:
+/ -30 Madrid Madrid Madrid Madrid Madrid
+    Retreating towards Burgos, the French army realises that the
+    enemy have abandoned the pursuit.
+
+    The beaten French are retreating towards Burgos but, once rested,
+    the priority now for the Allied army is to march on Madrid and
+    secure a significant psychological victory by liberating the
+    Spanish capital.
+
+/ 35 Madrid Madrid Madrid Madrid Madrid
+    The army has been able to recuperate for a few days at  Valladolid,
+    but now the enemy are approaching.The decision must be made whether
+    to fight a defensive battle against superior numbers or if it
+    would be better to fight a rear-guard action to allow the rest
+    of the army to retreat unmolested.
+
+    The retreating French army has halted, unexpectedly, at Valladolid
+    and will need to be dealt with once the Allied army has rested.
+    Once the enemy have been defeated again, it'll be possible to
+    march on Madrid without any further danger of intervention, at
+    least from this French army.
+
+Campaign\Sala24.scn/ 40 Madrid Madrid Madrid Joseph Joseph
+    Retreating as far as Burgos, the exhausted French army has been
+    unable to shake off the British pursuers and will have to fight
+    another battle.
+
+    The battered French army has fallen back to Burgos, but now seems
+    prepared to make a stand. If defeated again, it'll no longer
+    remain a threat, but a setback here would mean that Wellington
+    would have to fall back to Salamanca where Joseph's small, but
+    fresh, army might be waiting for him.
+
+Campaign\Sala25.scn/ -25 Madrid Madrid Madrid Joseph Joseph
+    Falling back to Valladolid, the French army had hoped to find
+    time to rest and regroup, but the enemy are in hot pursuit. Since
+    they seem rather strung out and will probably arrive piecemeal,
+    it may be worthwhile launching a well-timed counter-attack to
+    halt the pursuit and inflict some potentially heavy losses on
+    the enemy.
+
+    The retreating French army appears to have halted, unexpectedly,
+    at Valladolid. The Allied advance guard may have pursued too
+    closely and should probably wait for reinforcements before risking
+    an assault. On the other hand, maybe this is just a small enemy
+    rear-guard to hold up the advance long enough to permit the main
+    French army to escape?
+
+Branch: Madrid Madrid
+    Campaign\Madrid.bmp
+    Wellington decides to march on Madrid to deprive Joseph of his
+    strategic supply base in case Soult decided to march to his assistance.
+    He would also secure a significant political and psychological
+    victory by liberating the Spanish capital.
+
+French: Joseph defends Madrid
+    Campaign\MadridFr1.bmp
+    Joseph is determined to defend Madrid at all costs, despite Soult's
+    continuing insubordination in refusing to abandon Andalusia and
+    march to his assistance.
+
+French: Joseph evacuates Madrid
+    Campaign\MadridFr2.bmp
+    Reluctantly, Joseph evacuates Madrid and orders his army to retreat
+    to Aranjuez, leaving a small garrison to defend the city.
+
+Allied: Rush to Madrid
+    Campaign\MadridBr1.bmp
+    Wellington marches rapidly against Joseph to secure Madrid as
+    quickly as possible.
+
+Allied: March on Madrid
+    Campaign\MadridBr2.bmp
+    Wellington marches to secure Madrid, but is careful not to risk
+    rushing into an ambush.
+
+Outcome:
+Campaign\Sala27.scn/ 22 Allied Allied Draw Retreat French
+    Unable to rendezvous with the Army of Portugal, Joseph has retreated
+    back to Madrid and prepares to defend the capital with all his
+    available forces.
+
+    Joseph has retreated back to Madrid and seems prepared to defend
+    the capital with all his available forces. There is no indication
+    that he has received any support from his insubordinate general
+    Soult.
+
+Campaign\Sala28.scn/ -15 Allied Allied Retreat Retreat Retreat
+    With his repeated demands for assistance to Soult ignored, Joseph
+    reluctantly evacuates Madrid and orders his army to retreat to
+    Aranjuez, leaving a small garrison to defend the city.
+
+    Joseph has retreated back to Madrid and preparations are being
+    made for the defence of the capital. The strength of the garrison
+    is uncertain, although there is no indication that any support
+    has arrived from Joseph's  insubordinate general Soult.
+
+Campaign\Sala30.scn/ -20 Allied Allied Retreat Retreat French
+    Unable to rendezvous with the Army of Portugal, Joseph has retreated
+    back to Madrid and prepares to defend the capital with all his
+    available forces.
+
+    Joseph has retreated back to Madrid and seems prepared to defend
+    the capital with all his available forces. There is no indication
+    that he has received any support from his insubordinate general
+    Soult.
+
+Campaign\Sala28.scn/ 30 Allied Allied Retreat Retreat Retreat
+    With his repeated demands for assistance to Soult ignored, Joseph
+    reluctantly evacuates Madrid and orders his army to retreat to
+    Aranjuez, leaving a small garrison to defend the city.
+
+    Joseph has retreated back to Madrid and preparations are being
+    made for the defence of the capital. The strength of the garrison
+    is uncertain, although there is no indication that any support
+    has arrived from Joseph's  insubordinate general Soult.
+
+Branch: Retreat Retreat to Ciudad Rodrigo
+    Campaign\Retreat.bmp
+    The Allied army is retreating back towards Ciudad Rodrigo with
+    the French in pursuit. Wellington manages to adopt a good defensive
+    position and awaits the enemy attack.
+
+French: Pursue the defeated enemy
+    Campaign\AldeFr1.bmp
+    The Allied forces have been defeated and are in retreat, but
+    they need to be pursued and dealt a final decisive blow to secure
+    a French victory. A too cautious pursuit may result in a draw,
+    with the enemy falling back to Ciudad Rodrigo in good shape and
+    capable of renewing the fight. However, a too rash pursuit might
+    perhaps enable the enemy to snatch a victory out of the jaws
+    of defeat.
+
+Allied: Defensive Action
+    Campaign\AldeBr1.bmp
+    Pursued by the enemy, Wellington must fight a defensive action
+    to determine the outcome of the campaign.
+
+Outcome:
+Campaign\Sala38.scn/ -33 Allied Draw Draw French French
+    Victory is within your grasp! Hunt down the retreating enemy
+    and inflict another defeat that will prove decisive.
+
+    The army has suffered a serious setback and is retreating towards
+    the Portuguese border with the enemy in pursuit. A defensive
+    battle will have to be fought to avoid losing the campaign yet,
+    if a decisive victory can be secured, it may still be possible
+    to win.
+
+Terminal: Allied Allied Victory
+    Allied.bmp
+    Marmont's army has been dealt a decisive defeat and Wellington's
+    troops have liberated Madrid. Perhaps the next objective might
+    be to besiege Burgos before Soult's inevitable evacuation of
+    Andalusia allows him time to link up with the remaining French
+    forces and pose a new threat.
+
+Terminal: Draw Draw
+    Draw.bmp
+    The campaigning season has ended and neither side has managed
+    to secure a decisive victory. However, with French resources
+    withdrawn for the invasion of Russia, the ultimate fate of the
+    Peninsular will no doubt depend on how Napoleon's Grand Army
+    fares in the East.
+
+Terminal: French French Victory
+    French.bmp
+    Wellington has been decisively defeated and his army driven back
+    to the Portuguese border. However, with limited resources for
+    conducting offensive action and Soult's continuing insubordination,
+    any further military success seems unlikely.
+

@@ -1,0 +1,83 @@
+2
+French C Corps de Siége
+	Begin
+	L 3 4 146 GD Lef.-Desnoëttes
+	B 1er Brigade
+		Begin
+		L 2 4 9 GB Grandjean
+		U 379 4 I M 5 20 3/70e Ligne
+		U 688 5 I M 202 121 1/2e de la Vistule
+		U 688 5 I M 202 121 2/2e de la Vistule
+		U 581 2 R M 3 18 4e Bn. de Marche
+		U 655 2 R M 4 19 6e Bn. de Marche
+		End
+	B 2e Brigade
+		Begin
+		L 2 5 122 GB Habert
+		L 2 4 84 Col. Chlopicki
+		U 411 4 I M 7 22 4/15e Ligne 
+		U 420 4 I M 4 19 3/47e Ligne
+		U 515 3 R M 5 20 1/1er Sup. de Réserve
+		U 515 3 R M 5 20 2/1er Sup. de Réserve 
+		U 622 5 I M 202 121 1/1er de la Vistule
+		U 621 5 I M 202 121 2/1er de la Vistule
+		End
+	B Cavalerie Attaché
+		Begin
+		L 2 5 11 Col. Konopka
+		U 717 6 L L 28 21 1er de la Vistule
+		U 217 3 L K 35 28 5e Esc. de Marche
+		End
+	B Artillerie
+		Begin
+		L 2 4 40 Capt. Anon 1
+		U 6 5 A J 20 0 20/1er Art. à Pied
+		U 8 5 B V 20 0 9/3e Art. à Pied
+		U 2 5 A J 20 0 20/1er Art. à Pied
+		U 2 5 A J 20 0 20/1er Art. à Pied
+		U 2 5 A O 20 0 20/1er Art. à Pied
+		U 2 5 B V 20 0 9/3e Art. à Pied
+		U 2 5 B V 20 0 9/3e Art. à Pied
+		U 2 5 B V 20 0 9/3e Art. à Pied
+		U 2 5 B O 20 0 9/3e Art. à Pied
+		End
+	S 300 86 Chariot Fourniture
+	End
+British A Not Present
+	Begin
+	End
+Spanish A Ejercito de Aragón
+	Begin
+	L 5 4 379 CG Don J. Palafox
+	B 1ª Seccion
+		Begin
+		L 2 4 30 Col. Anon 2
+       	U 360 4 G M 161 98 Bon. Guardias
+		U 63 2 S M 178 115 Vols. Aragóneses 
+		U 79 2 S d 159 97 Capuchinos 
+		U 95 -2 M P 157 95 Tercio de Torres
+		U 79 2 S d 158 96 Companias de Ricia
+		U 83 2 S d 158 96 Minones
+       	U 81 3 S M 175 111 Destacamentos 
+		U 79 5 S M 171 107 Estrangeros Suizos
+		End
+	B 2ª Seccion
+		Begin
+		L 2 4 31 Brig. de Versage
+		U 201 2 M d 159 97 Rto. Fernando VII
+		U 778 2 M Z 158 96 2ª Rto. de Aragón 
+		End
+	B Caballería
+		Begin
+		L 2 4 33 Col. Anon 3
+		U 287 5 L S 188 10 Dragones del Rey
+		U 60 2 K L 195 76 Lanceros de Almunia
+		U 64 2 K L 195 76 Cas. de Calatayud
+		U 12 3 K L 195 76 Contrabandistas
+		End
+	S 300 199 Equipaje de Tren 
+	End
+French S 300 86 Chariot Fourniture
+British S 300 137 Supply Wagon
+Spanish S 300 199 Equipaje de Tren
+

@@ -1,0 +1,37 @@
+11
+Roses: Fort Trinidad 30 November 1808
+1808 11 30 6 30 0 0 1 5
+2 9 8 1
+2 8 9 1
+-25 0 25 50
+Roses_sub1.map
+Rosas.oob
+Pen25.pdt
+2 2 2 2 0 0 0 0
+0 0 0
+0 0 0 0 0 0 0 0
+2 1 2 1
+1 1.2.3.3.6 16 16 171 0 0 8650752 8 2
+1 3.10.2.4 1 1 30 0 0 8650752 8 5
+1 3.10.2.4 1 1 25 0 0 8650752 8 5
+1 3.10.2.4 1 1 25 0 0 8650752 8 5
+1 1.2.3.3.6 8 8 172 0 0 134479872 9 2
+1 1.2.3.3.6 8 8 171 0 0 8650752 9 3
+1 1.2.3.2.2 8 32 134 0 0 134479872 10 2
+1 1.2.3.2.2 8 1 133 0 0 8650752 10 3
+1 1.2.3.2.2 4 4 133 0 0 8650752 11 4
+7 8 5 50 2
+0
+1 0
+3 AI Script #1
+1.2.3 1808 11 30 6 30 8 5 3
+3.10.2 1808 11 30 6 30 8 5 1
+3.10.2 1808 11 30 7 30 8 5 0
+Rich White
+Date: 30 November 1808 - Size: Small - Location: Roses, Catalonia\\Scenario
+Briefing: Siege of Roses: Fort Trinidad - Despite the failure
+of the previous attempt to capture Fort Trinity, Reille decided
+to launch another assault on 30 November. A preliminary bombardment
+had created a "breach" of sorts, but this proved impractical,
+so the attack stood little chance of success.\\Recommended Rules:
+Default

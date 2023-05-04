@@ -1,0 +1,1142 @@
+2
+French A Armée d’Espagne
+	Begin
+	L 5 4 205 Maréchal Soult
+	L 4 4 113 GD Gazan
+	C Aile Droite
+		Begin
+		L 4 4 185 GD Reille
+		D 7e Division
+			Begin
+			L 3 4 6 GD Leval
+			B 1er Brigade
+				Begin
+				L 2 4 179 GB Pinoteau
+				U 492 5 V M 9 24 1/10e Légère
+				U 485 5 V M 9 24 2/10e Légère
+				U 677 4 I M 5 20 1/3e Ligne
+				U 610 4 I M 5 20 1/15e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 1 GB Montfort
+				U 580 5 V M 9 24 1/17e Légère
+				U 539 4 I M 5 20 1/101e Ligne
+				U 499 4 I M 6 21 1/105e Ligne
+				U 432 4 I M 6 21 2/105e Ligne
+				End
+			B Artillerie de Division
+				Begin
+				L 2 3 40 Capt. Schneider
+				U 8 5 B C 20 0 19/1er Art. à Pied
+				U 2 5 B C 20 0 19/1er Art. à Pied
+				U 2 5 B C 20 0 19/1er Art. à Pied
+				U 2 5 B C 20 0 19/1er Art. à Pied
+				U 2 5 B O 20 0 19/1er Art. à Pied
+				End
+			S 300 86 Chariot Fourniture
+			End
+		D 9e Division
+			Begin
+			L 3 4 74 GB Boyer
+			B 1er Brigade
+				Begin
+				L 2 3 8 Col. Villars
+				U 468 5 V M 10 25 1/2e Légère
+				U 436 5 V M 10 25 2/2e Légère
+				U 775 4 I M 7 22 1/24e Ligne
+				U 535 4 I M 6 21 1/118e Ligne
+				U 517 4 I M 6 21 2/118e Ligne
+				U 520 3 I M 6 21 3/118e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 7 GB Gautier
+				U 643 4 I M 4 19 1/120e Ligne
+				U 649 4 I M 4 19 2/120e Ligne
+				U 635 3 I M 4 19 4/120e Ligne
+				U 719 4 I M 5 20 1/122e Ligne
+				U 659 3 I M 5 20 4/122e Ligne
+				End
+			B Artillerie de Division
+				Begin
+				L 2 3 41 Capt. Methias
+				U 8 5 B C 20 0 20/3e Art. à Pied
+				U 2 5 B C 20 0 20/3e Art. à Pied
+				U 2 5 B C 20 0 20/3e Art. à Pied
+				U 2 5 B C 20 0 20/3e Art. à Pied
+				U 2 5 B O 20 0 20/3e Art. à Pied 
+				End
+			S 300 86 Chariot Fourniture
+			End
+		S 300 86 Chariot Fourniture
+		End
+	C Centre
+		Begin
+		L 4 5 102 GD Drouet d’Erlon
+		D 1er Division
+			Begin
+			L 3 5 110 GD Foy
+			B 1er Brigade
+				Begin
+				L 2 5 112 GB Fririon
+				U 656 5 V M 11 26 1/6e Légère
+				U 620 4 I M 3 18 1/69e Ligne
+				U 563 4 I M 3 18 2/69e Ligne
+				U 624 4 I M 5 20 1/76e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 3 3 2 GB Berlier
+				U 591 4 I M 4 19 1/36e Ligne
+				U 592 4 I M 4 19 2/36e Ligne 
+				U 689 4 I M 5 20 1/39e Ligne
+				U 532 4 I M 6 21 1/65e Ligne
+				U 536 4 I M 6 21 2/65e Ligne
+				End
+			B Artillerie de Division
+				Begin
+				L 2 3 41 Capt. Ninabert
+				U 8 5 B C 20 0 6/8e Art. à Pied
+				U 2 5 B C 20 0 6/8e Art. à Pied
+				U 2 5 B C 20 0 6/8e Art. à Pied
+				U 2 5 B C 20 0 6/8e Art. à Pied
+				U 2 5 B O 20 0 6/8e Art. à Pied
+				End
+			S 300 86 Chariot Fourniture
+			End
+		D 2e Division
+			Begin
+			L 3 4 90 GD Darmagnac
+			B 1er Brigade
+				Begin
+				L 2 6 83 GB Chassé
+				U 617 5 V M 9 24 1/16e Légère
+				U 556 4 I M 3 18 1/8e Ligne
+				U 393 4 I M 6 21 1/28e Ligne
+				U 365 4 I M 6 21 3/28e Ligne
+				U 745 4 I M 6 21 1/54e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 0 GB Gruardet
+				U 603 5 V M 9 24 1/31e Légère
+				U 574 5 V M 9 24 2/31e Légère
+				U 745 4 I M 5 20 1/51e Ligne
+				U 500 4 I M 3 18 1/75e Ligne
+				U 521 3 I M 3 18 4/75e Ligne
+				End
+			B Artillerie de Division
+				Begin
+				L 2 3 40 Capt. Guichon
+				U 8 5 B C 20 0 2/8e Art. à Pied
+				U 2 5 B C 20 0 2/8e Art. à Pied
+				U 2 5 B C 20 0 2/8e Art. à Pied
+				U 2 5 B C 20 0 2/8e Art. à Pied
+				U 2 5 B O 20 0 2/8e Art. à Pied 
+				End
+			S 300 86 Chariot Fourniture
+			End
+		D 3e Division
+			Begin
+			L 3 4 9 GD Abbé
+			B 1er Brigade
+				Begin
+				L 2 4 2 GB Beuret
+				U 652 5 V M 10 25 1/27e Légère
+				U 872 4 I M 5 20 1/63e Ligne
+				U 616 5 I M 4 19 1/64e Ligne
+				U 595 5 I M 4 19 2/64e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 3 GB Maucomble
+				U 873 5 V M 10 25 1/5e Légère
+				U 649 5 I M 6 21 1/94e Ligne
+				U 609 5 I M 6 21 2/94e Ligne
+				U 1113 3 I M 3 18 1/95e Ligne
+				End
+			B Artillerie de Division
+				Begin
+				L 2 3 41 Capt. Perrin
+				U 8 5 B C 20 0 9/1er Art. à Pied
+				U 2 5 B C 20 0 9/1er Art. à Pied
+				U 2 5 B C 20 0 9/1er Art. à Pied
+				U 2 5 B C 20 0 9/1er Art. à Pied
+				U 2 5 B O 20 0 9/1er Art. à Pied 
+				End
+			S 300 86 Chariot Fourniture
+			End
+		D 6e Division
+			Begin
+			L 3 4 91 GD Darricau
+			B 1er Brigade
+				Begin
+				L 2 4 4 GB Baille de St. Pol
+				U 939 5 V M 11 26 1/21e Légère
+				U 864 4 I M 4 19 1/96e Ligne
+				U 699 4 I M 3 18 1/119e Ligne
+				U 629 4 I M 3 18 2/119e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 2 GB Mocquery
+				U 540 5 V M 9 24 2/28e Légère
+				U 1069 4 I M 6 21 1/100e Ligne
+				U 861 4 I M 4 19 1/103e Ligne
+				End
+			B Artillerie de Division
+				Begin
+				L 2 3 40 Capt. Pastoureaux 
+				U 8 5 B C 20 0 13/7e Art. à Pied
+				U 2 5 B C 20 0 13/7e Art. à Pied
+				U 2 5 B C 20 0 13/7e Art. à Pied
+				U 2 5 B C 20 0 13/7e Art. à Pied
+				U 2 5 B O 20 0 13/7e Art. à Pied 
+				End
+			S 300 86 Chariot Fourniture
+			End
+		S 300 86 Chariot Fourniture
+		End
+	C Aile Gauche
+		Begin
+		L 4 5 86 GD Clausel
+		D 4e Division
+			Begin
+			L 3 5 209 GD Taupin
+			B 1er Brigade
+				Begin
+				L 2 4 189 GB J.P.A. Rey
+				U 571 5 V M 10 25 1/12e Légère
+				U 524 5 V M 10 25 2/12e Légère
+				U 442 4 I M 3 18 1/32e Ligne
+				U 454 4 I M 3 18 2/32e Ligne
+				U 456 4 I M 2 17 1/43e Ligne
+				U 403 4 I M 2 17 2/43e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 62 GB Baurot
+				U 726 4 I M 3 18 1/45e Ligne
+				U 655 4 I M 6 21 1/47e Ligne
+				U 538 4 I M 4 19 1/55e Ligne
+				U 693 4 I M 5 20 1/58e Ligne
+				End
+			B Artillerie de Division
+				Begin
+				L 2 3 40 Capt. Mortaincourt
+				U 8 5 B C 20 0 13/6e Art. à Pied
+				U 2 5 B C 20 0 13/6e Art. à Pied
+				U 2 5 B C 20 0 13/6e Art. à Pied
+				U 2 5 B C 20 0 13/6e Art. à Pied
+				U 2 5 B O 20 0 13/6e Art. à Pied 
+				End
+			S 300 86 Chariot Fourniture
+			End
+		D 5e Division
+			Begin
+			L 3 5 154 GB Maransin 
+			B 1er Brigade
+				Begin
+				L 2 4 59 GB Barbot
+				U 604 5 V M 11 26 1/4e Légère
+				U 525 4 I M 3 18 1/34e Ligne
+				U 402 4 I M 4 19 1/40e Ligne
+				U 433 4 I M 4 19 2/40e Ligne
+				U 569 4 I M 3 18 1/50e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 5 GB Rouget
+				U 548 4 I M 6 21 1/27e Ligne
+				U 619 4 I M 4 19 1/59e Ligne
+				U 499 4 I M 6 21 1/130e Ligne
+				U 568 4 I M 6 21 4/130e Ligne
+				End
+			B Artillerie de Division
+				Begin
+				L 2 3 40 Capt. Boramet
+				U 8 5 B C 20 0 19/3e Art. à Pied
+				U 2 5 B C 20 0 19/3e Art. à Pied
+				U 2 5 B C 20 0 19/3e Art. à Pied
+				U 2 5 B C 20 0 19/3e Art. à Pied
+				U 2 5 B O 20 0 19/3e Art. à Pied 
+				End
+			S 300 86 Chariot Fourniture
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D 10e Division
+		Begin
+		L 3 4 5 GB Paris
+		B 1er Brigade
+			Begin
+			L 2 4 7 Col. Terrier
+			U 423 5 I M 3 18 1/10e Ligne
+			U 425 5 I M 3 18 2/10e Ligne
+			U 2 4 B V 20 0 Art./10e Ligne
+			U 411 5 I M 4 19 1/81e Ligne
+			U 363 5 I M 4 19 2/81e Ligne
+			U 2 4 B V 20 0 Art./81e Ligne
+			U 491 2 R M 217 130 5/114e Ligne
+			U 337 3 I M 231 141 1/8° di Linea
+			End
+		B 2e Brigade
+			Begin
+			L 3 3 2 CdB Fayet
+			U 315 3 I M 4 19 3/115e Ligne 
+			U 651 3 I M 4 19 4/115e Ligne 
+			U 125 2 R M 217 130 5/115e Ligne
+			U 250 2 R M 217 130 5/117e Ligne
+			U 320 4 V M 215 128 2/Chas. de Montagne
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D Div. de Résérve
+		Begin
+		L 3 4 222 GD Villatte
+		B 1er Brigade
+			Begin
+			L 2 4 5 GB Dauture
+			U 630 5 V M 9 24 1/9e Légère
+			U 393 4 V M 11 26 1/34e Légère
+			U 395 4 V M 11 26 2/34e Légère
+			U 6 5 C C 21 1 3/3e Art. à Cheval
+			U 2 5 C C 21 1 3/3e Art. à Cheval
+			U 2 5 C C 21 1 3/3e Art. à Cheval
+			U 2 5 C O 21 1 3/3e Art. à Cheval
+			End
+		B 2e Brigade
+			Begin
+			L 2 4 128 GB Jamin de Bernuy 
+			U 262 6 G M 77 47 1/Granaderos
+			U 299 6 G M 77 47 2/Granaderos
+			U 326 5 G M 78 48 1/Tiradores
+			U 328 5 G M 78 48 2/Tiradores
+			U 240 6 G M 240 147 1/Fusilieros
+			U 318 3 I M 242 149 1/Real Extranjeros
+			U 310 3 I M 242 149 2/Real Extranjeros
+			U 6 5 B C 20 0 1ª Batería a Pe
+			U 4 5 C C 20 0 1ª Batería a Caballo
+			U 2 5 B C 20 0 1ª Batería a Pe
+			U 2 5 B C 20 0 1ª Batería a Pe
+			U 2 5 B C 20 0 1ª Batería a Pe
+			U 2 5 C C 20 0 1ª Batería a Caballo
+			U 2 5 C C 20 0 1ª Batería a Caballo
+			End
+		B 3e Brigade
+			Begin
+			L 2 4 133 Oberst von Kruse 
+			U 479 4 I M 68 41 1/2. Nassau Inf.
+	 	 	U 499 4 I M 68 41 2/2. Nassau Inf.
+			U 464 4 I M 203 122 2/IR Harrant Nr.4
+			U 275 3 I M 69 42 Frankfurt Bn.
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D 1er Div. de Cavalerie
+		Begin
+		L 3 4 6 GD P. Soult
+		B 1er Brigade
+			Begin
+			L 2 4 1 GB Vinot
+			U 299 5 L K 29 22 5e Chas. à Cheval
+			U 574 5 L K 31 24 10e Chas. à Cheval
+			U 384 5 L K 33 26 15e Chas. à Cheval
+			U 386 5 L K 37 30 22e Chas. à Cheval
+			End
+		B 2e Brigade
+			Begin
+			L 2 4 65 GB Berton
+			U 365 5 L K 23 16 2e Hussards
+			U 630 5 L K 33 26 13e Chas. à Cheval
+			U 418 5 L K 36 29 21e Chas. à Cheval
+			U 250 4 L K 81 45 1ª Caz. a Caballo
+			U 225 3 L K 81 45 2ª Caz. a Caballo
+			End
+		B 3e Brigade
+			Begin
+			L 2 4 9 GB Sparre
+			U 291 5 D M 42 1 5e Dragons
+			U 302 5 D M 43 2 12e Dragons
+			U 378 5 L S 79 44 Caballos Ligeros
+			U 84 5 L K 243 86 Húsares 
+			End
+		B Artillerie de Division
+			Begin
+			L 2 3 41 CdB Grosjean
+			U 6 5 C C 21 1 3/2e Art. à Cheval
+			U 2 5 C C 21 1 3/2e Art. à Cheval
+			U 2 5 C C 21 1 3/2e Art. à Cheval
+			U 2 5 C O 21 1 3/2e Art. à Cheval
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D 2e Div. de Cavalerie
+		Begin
+		L 3 5 0 GD Trelliard
+		B 1er Brigade
+			Begin
+			L 2 4 7 GB Ismert
+			U 473 5 D M 41 0 4e Dragons
+			U 447 5 D M 47 4 21e Dragons
+			U 521 5 D M 50 9 26e Dragons
+			End
+		B 2e Brigade
+			Begin
+			L 2 4 8 GB Ormancey
+			U 405 5 D M 46 5 14e Dragons
+			U 244 5 D M 45 4 16e Dragons
+			U 318 5 D M 46 5 17e Dragons
+			U 434 5 D M 49 8 27e Dragons
+			End
+		B Artillerie de Division
+			Begin
+			L 2 3 41 CdB Chantel
+			U 6 5 C C 21 1 6/2e Art. à Cheval
+			U 2 5 C C 21 1 6/2e Art. à Cheval
+			U 2 5 C C 21 1 6/2e Art. à Cheval
+			U 2 5 C O 21 1 6/2e Art. à Cheval
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D Parc d'Artillerie
+		Begin
+		L 3 4 214 GD Tirlet
+		U 8 5 A A 20 0 15/3e Art. à Pied
+		U 8 5 A A 20 0 11/6e Art. à Pied
+		U 8 5 B C 20 0 12/6e Art. à Pied
+		U 8 5 B C 20 0 20/6e Art. à Pied
+		U 6 3 B C 20 0 23/GN Art. à Pied
+		U 6 5 C C 21 1 2/2e Art. à Cheval
+		U 2 5 A A 20 0 15/3e Art. à Pied
+		U 2 5 A A 20 0 15/3e Art. à Pied
+		U 2 5 A A 20 0 15/3e Art. à Pied
+		U 2 5 A O 20 0 15/3e Art. à Pied
+		U 2 5 A A 20 0 11/6e Art. à Pied
+		U 2 5 A A 20 0 11/6e Art. à Pied
+		U 2 5 A A 20 0 11/6e Art. à Pied
+		U 2 5 A O 20 0 11/6e Art. à Pied
+		U 2 5 B C 20 0 12/6e Art. à Pied
+		U 2 5 B C 20 0 12/6e Art. à Pied
+		U 2 5 B C 20 0 12/6e Art. à Pied
+		U 2 5 B O 20 0 12/6e Art. à Pied
+		U 2 5 B C 20 0 20/6e Art. à Pied
+		U 2 5 B C 20 0 20/6e Art. à Pied
+		U 2 5 B C 20 0 20/6e Art. à Pied
+		U 2 5 B O 20 0 20/6e Art. à Pied
+		U 2 3 B C 20 0 23/GN Art. à Pied
+		U 2 3 B C 20 0 23/GN Art. à Pied
+		U 2 3 B C 20 0 23/GN Art. à Pied
+		U 2 5 C C 21 1 2/2e Art. à Cheval
+		U 2 5 C C 21 1 2/2e Art. à Cheval
+		U 2 5 C O 21 1 2/2e Art. à Cheval
+		End
+	B Troupes de Genie
+		Begin
+		L 2 4 148 GB Vicomte de Léry
+		U 122 5 P M 8 23 5/2e Sappeurs
+		U 78 5 P M 8 23 9/2e Sappeurs
+		U 114 5 P M 8 23 3/4e Sappeurs
+		U 79 5 P M 8 23 3/2e Mineurs
+		End
+	B Gendarmerie
+		Begin
+		L 2 4 76 GB Buquet
+		U 502 4 I M 67 48 2e Legion à Pied
+		U 472 4 I M 67 48 3e Legion à Pied
+		U 706 4 I M 67 48 4e Legion à Pied
+		U 376 4 I M 67 48 5e Legion à Pied
+		U 243 4 H S 67 69 4e Legion à Cheval
+		U 228 4 H S 67 69 5e Legion à Cheval
+		U 247 4 H S 67 69 Force Publique
+		End
+	C Garnison de Bayonne
+		Begin
+		L 4 4 212 GB Thouvenot
+		B Infanterie
+			Begin
+			L 2 3 5 Col. St Martin
+			U 253 4 V M 9 24 2/9e Légère
+			U 833 3 V M 11 26 3/34e Légère
+			U 564 4 V M 11 26 4/34e Légère
+			U 591 4 I M 2 17 1/1er Ligne
+			U 477 4 I M 5 20 4/26e Ligne
+			U 153 2 R M 217 130 2/47e Ligne
+			U 701 3 I M 6 21 4/66e Ligne
+			U 608 4 I M 3 18 1/70e Ligne
+			U 586 3 I M 3 18 4/82e Ligne
+			U 356 3 I M 6 21 4/118e Ligne
+			U 541 3 I M 3 18 3/119e Ligne
+			U 461 3 I M 3 18 4/119e Ligne
+			U 641 3 I M 4 19 3/120e Ligne
+			U 394 2 M M 216 129 2/GN B. Pyrenees
+			U 431 2 M M 216 129 GN des Landes
+			End
+		D Artillerie
+			Begin
+			L 3 4 6 GB Berge
+			B Fort de Beyris
+				Begin
+				L 2 3 40 Capt. Fort de Beyris Staff
+				U 4 5 E Y 20 12 1er Batterie
+				U 4 5 E Y 20 12 2e Batterie
+				U 4 5 E Y 20 12 3e Batterie
+				U 4 5 E J 20 0 1er Bat. Annexé
+				U 3 5 E J 20 0 2e Bat. Annexé
+				End
+			B Front Espagnol
+				Begin
+				L 2 3 41 Capt. Front Espagnol Staff
+				U 4 5 E A 20 12 1er Batterie
+				U 4 5 E A 20 12 2e Batterie
+				U 4 5 E A 20 12 3e Batterie
+				U 4 5 E A 20 12 4e Batterie
+				U 4 5 E A 20 12 5e Batterie
+				U 3 5 E A 20 12 6e Batterie
+				U 3 5 E A 20 12 7e Batterie
+				End
+			B Front Marrare
+				Begin
+				L 2 3 42 Capt. Front Marrare Staff
+				U 4 5 E A 20 12 1er Batterie
+				U 4 5 E A 20 12 2e Batterie
+				U 4 5 E A 20 12 3e Batterie
+				U 4 5 E A 20 12 4e Batterie
+				U 4 5 E A 20 12 5e Batterie
+				U 4 5 E A 20 12 6e Batterie
+				U 3 5 E A 20 12 7e Batterie
+				End
+			B Camp de Mousserolles
+				Begin
+				L 2 3 41 Capt. Camp de Mousserolles 
+				U 4 5 E A 20 12 1er Batterie
+				U 4 5 E A 20 12 2e Batterie
+				U 4 5 E A 20 12 3e Batterie
+				U 4 5 E A 20 12 4e Batterie
+				U 4 5 E A 20 12 5e Batterie
+				U 3 5 E A 20 12 6e Batterie
+				U 4 5 E A 20 12 7e Batterie
+				U 3 5 E A 20 12 8e Batterie
+				End
+			B Batteries d’Advance
+				Begin
+				L 2 3 40 Capt. Batteries d’Advance 
+				U 5 5 E C 20 0 1er Batterie
+				U 5 5 E C 20 0 2e Batterie
+				U 5 5 E C 20 0 3e Batterie
+				U 5 5 E C 20 0 4e Batterie
+				End
+			B Camp du Citadel
+				Begin
+				L 2 3 42 Capt. Camp du Citadel 
+				U 4 5 E A 20 12 1er Batterie
+				U 4 5 E A 20 12 2e Batterie
+				U 4 5 E A 20 12 3e Batterie
+				U 4 5 E A 20 12 4e Batterie
+				U 4 5 E A 20 12 5e Batterie
+				U 4 5 E A 20 12 6e Batterie
+				U 4 5 E A 20 12 7e Batterie
+				U 4 5 E A 20 12 8e Batterie
+				U 4 5 E A 20 12 9e Batterie
+				U 4 5 E A 20 12 10e Batterie
+				End
+			End
+		B Troupes de Génie
+			Begin
+			L 2 4 6 GB Garbé
+			U 117 5 P M 8 23 3/2e Sappeurs
+			U 150 3 P M 8 23 Depôt des Pioniers
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D Garn. St. Jean P.d.P
+		Begin
+		L 3 3 1 GB Blondeau
+		B Infanterie
+			Begin
+			L 2 4 1 CdB Peyret
+			U 610 5 V M 10 25 2/25e Légère
+			U 682 4 V M 9 24 3/31e Légère
+			U 202 3 I M 4 19 Det. 114e Ligne 
+			U 274 4 V M 215 128 3/Chas. de Montagne
+			U 414 2 M M 216 129 1/GN B. Pyrenees
+			U 70 5 P M 8 23 3&9/2e Sappeurs
+			End
+		B Artillerie
+			Begin
+			L 2 3 42 CdB Churlaud
+			U 4 5 E Y 20 12 24pdrs 
+			U 4 5 E Y 20 12 24pdrs 
+			U 4 5 E Y 20 12 24pdrs 
+			U 4 5 E Y 20 12 24pdrs 
+			U 3 5 E A 20 12 12pdrs 
+			U 3 5 E A 20 12 12pdrs 
+			U 3 5 E A 20 12 12pdrs 
+			U 3 5 E A 20 12 12pdrs
+ 			U 4 5 E A 20 0 8pdrs 
+			U 4 5 E A 20 0 8pdrs 
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D Garn. de Navarrenx
+		Begin
+		L 3 3 7 Adjt. Cmdt. Goujet
+		U 598 4 I M 2 17 1/86e Ligne
+		U 10 5 P M 8 23 Det. 3/2e Sappeurs
+		B Artillerie
+			Begin
+			L 2 3 41 Capt. Artillerie 
+			U 4 5 E Y 20 12 24pdrs 
+			U 4 5 E Y 20 12 24pdrs 
+			U 4 5 E Y 20 12 24pdrs 
+			U 4 5 E Y 20 12 24pdrs 
+			U 2 5 E A 20 12 12pdrs 
+			End
+		S 300 86 Chariot Fourniture
+		End
+ 	B Chateau de Lourdes
+		Begin
+		L 2 3 7 Col. Rutesserre
+		U 80 4 S M 5 20 Det. 116e Ligne
+		U 2 5 E A 20 12 12pdrs 
+		U 2 5 E U 20 0 8pdrs 
+		U 2 5 E U 20 0 8pdrs 
+		End 
+	S 300 86 Chariot Fourniture
+	End
+British A British Army
+	Begin
+	L 5 6 324 FM Lord Wellington
+	C Right Wing
+		Begin
+		L 4 6 274 LG Sir Rowland Hill
+		D 2nd Division
+			Begin
+			L 3 4 316 LG Sir Wm. Stewart
+			B Barnes’ Brigade
+				Begin
+				L 2 5 233 MG Edward Barnes
+				U 388 5 T G 98 64 1/50th (West Kent)
+				U 518 6 U G 105 71 1/71st Highland Light
+				U 437 6 T G 102 68 1/92nd (Gordons)
+				U 47 6 S I 90 57 5/60th Rifles (1 Co.)
+				End
+			B Byng's Brigade
+				Begin
+				L 2 4 242 MG John Byng
+				U 675 5 T G 96 62 1/3rd (Buffs)
+				U 511 5 T G 95 61 1/57th (W. Middlesex)
+				U 595 5 T G 100 66 1st Provisional Bn.
+				U 40 6 S I 90 57 5/60th Rifles (1 Co.)
+				End
+			B Pringle’s Brigade
+				Begin
+				L 2 5 307 MG W.H. Pringle
+				U 640 5 T G 94 60 1/28th (N. Glosters)
+				U 385 5 T G 95 61 2/34th (Cumberland)
+				U 687 5 T G 100 66 1/39th (Dorsetshire)
+				U 54 6 S I 90 57 5/60th Rifles (1 Co.)
+				End
+			B Ashworth's Brigade
+				Begin
+				L 2 4 22 Col. Chas. Ashworth
+				U 445 4 T G 139 84 1/6° Infantaria
+				U 445 4 T G 139 84 2/6° Infantaria
+				U 526 4 T G 141 86 1/18° Infantaria 
+				U 526 4 T G 141 86 2/18° Infantaria 
+				U 389 5 U Q 147 92 6° Caçadores
+				End 
+			B Divisional Artillery
+				Begin
+				L 2 3 43 Maj. J. Carncross
+				U 6 5 A E 134 6 Maxwell’s Brigade
+				U 3 5 A E 134 6 Maxwell’s Brigade
+				U 2 5 A E 134 6 Maxwell’s Brigade
+				U 1 5 A H 134 6 Maxwell’s Brigade
+				End
+ 			S 300 137 Supply Wagon
+			End
+		D 6th Division
+			Begin
+			L 3 4 248 LG Sir H. Clinton
+			B Pack’s Brigade
+				Begin
+				L 2 5 299 MG Denis Pack
+				U 643 6 T G 103 69 1/42nd (R. Highland)
+				U 574 6 T G 104 70 1/79th (Camerons)
+				U 481 5 T G 102 68 1/91st (Argylls)
+				U 43 6 S I 90 57 5/60th Rifles (1 Co.)
+				End
+			B Lambert’s Brigade
+				Begin
+				L 2 5 283 MG John Lambert
+				U 472 5 T G 99 65 1/11th (N. Devon)
+				U 417 5 T G 93 59 1/32nd (Cornwall)
+				U 346 5 T G 100 66 1/36th (Herts.)
+				U 511 5 T G 96 62 1/61st (S. Glosters)
+				End
+			B Madden’s Brigade
+				Begin
+				L 2 4 25 Col. James Douglas 
+				U 340 4 T G 139 84 1/8° Infantaria
+				U 340 4 T G 139 84 2/8° Infantaria
+				U 397 4 T G 139 84 1/12° Infantaria 
+				U 397 4 T G 139 84 1/12° Infantaria
+				U 312 5 U Q 146 91 9° Caçadores
+ 				End
+			B Divisional Artillery
+				Begin
+				L 2 3 43 2nd Capt. Greene
+				U 6 5 B B 134 6 Brandreth’s Brigade
+				U 3 5 B B 134 6 Brandreth’s Brigade
+				U 2 5 B B 134 6 Brandreth’s Brigade
+				U 1 5 B H 134 6 Brandreth’s Brigade
+				End 
+			S 300 137 Supply Wagon
+			End
+		D Portuguese Division
+			Begin
+			L 3 4 334 TG Carlos Lecor
+			B Buchan’s Brigade
+				Begin
+				L 2 4 21 BG John Buchan
+				U 540 4 T G 139 84 1/2° Infantaria
+				U 540 4 T G 139 84 2/2° Infantaria
+				U 477 4 T G 140 85 1/14° Infantaria
+				U 477 4 T G 140 85 2/14° Infantaria
+				End
+			B Costa’s Brigade
+				Begin
+				L 2 4 331 Brig. H. da Costa
+				U 469 4 T G 139 84 1/4° Infantaria
+				U 469 4 T G 139 84 2/4° Infantaria
+				U 498 4 T G 139 84 1/10° Infantaria
+				U 498 4 T G 139 84 2/10° Infantaria
+				U 243 5 U Q 147 92 10° Caçadores
+				End
+			B Divisional Artillery
+				Begin
+				L 2 4 43 Lt. Col. A. Tulloh
+				U 6 5 A E 155 10 Bateria Mitchell
+				U 6 5 B B 155 10 Bateria da Cunha
+				U 3 5 A E 155 10 Bateria Mitchell
+				U 2 5 A E 155 10 Bateria Mitchell
+				U 1 5 A H 155 10 Bateria Mitchell
+				U 3 5 B B 155 10 Bateria da Cunha
+				U 2 5 B B 155 10 Bateria da Cunha
+				U 1 5 B H 155 10 Bateria da Cunha
+				End 
+			S 300 160 Vagão de Abast.
+			End
+		B Alten’s Brigade
+			Begin
+			L 2 4 20 MG Victor von Alten
+			U 462 4 L K 123 52 18th Hussars
+			U 425 6 L K 126 55 1st KGL Hussars
+			End
+		B Vivian’s Brigade
+			Begin
+			L 2 5 320 MG Sir H. Vivian
+			U 362 5 L K 251 94 13th Lt. Dragoons
+			U 437 6 L K 252 95 14th Lt. Dragoons
+			End 
+		S 300 137 Supply Wagon
+		End
+	C Centre
+		Begin
+		L 4 4 236 LG Sir Wm. Beresford
+		D 3rd Division
+			Begin
+			L 3 4 253 MG Chas. Colville
+			B Brisbane’s Brigade
+				Begin
+				L 2 4 239 MG Thos. Brisbane
+				U 479 6 T G 99 65 1/45th (1st Notts.)
+				U 427 6 T G 93 59 74th Foot
+				U 712 6 T G 95 61 1/88th (Connaught)
+				U 162 6 U I 90 57 5/60th Rifles (3 Cos.)
+				End
+			B Colville's Brigade
+				Begin
+				L 2 4 281 Col. John Keane
+				U 603 5 T G 100 66 1/5th (N'thumberland)
+				U 361 5 T G 94 60 2/83rd Foot
+				U 312 6 T G 99 65 2/87th (PoW's Irish)
+				U 321 5 T G 99 65 94th (Scots Brigade)
+				End
+			B Power’s Brigade
+				Begin
+				L 2 4 306 MG Manley Power
+				U 392 4 T G 139 84 1/9° Infantaria
+ 				U 392 4 T G 139 84 2/9° Infantaria
+ 				U 405 4 T G 142 87 1/21° Infantaria
+				U 405 4 T G 142 87 2/21° Infantaria
+				U 253 5 U Q 145 90 11° Caçadores
+				End
+			B Divisional Artillery
+				Begin
+				L 2 3 43 Capt. Douglas
+				U 6 5 A E 134 6 Douglas's Brigade
+				U 3 5 A E 134 6 Douglas's Brigade
+				U 2 5 A E 134 6 Douglas's Brigade
+				U 1 5 A H 134 6 Douglas's Brigade
+				End 
+			S 300 137 Supply Wagon
+			End
+		D 4th Division
+			Begin
+			L 3 5 252 LG Sir Lowry Cole
+			B Anson’s Brigade
+				Begin
+				L 2 5 229 MG William Anson 
+				U 504 5 T G 96 62 3/27th (Inniskilling)
+				U 441 6 T G 96 62 1/40th (2nd Somerset)
+				U 393 5 T G 96 62 1/48th (Northants)
+				U 439 5 T G 92 58 2nd Provisional Bn.
+				U 41 6 S I 90 57 5/60th Rifles (1 Co.)
+				End
+			B Ross’ Brigade
+				Begin
+				L 2 5 311 MG Robert Ross
+				U 583 6 T G 110 76 1/7th R. Fusiliers
+				U 360 5 T G 94 60 20th (E. Devon)
+				U 393 6 T G 110 76 1/23rd W. Fusiliers
+				U 30 6 S I 114 80 Brunswick-Oels Jägers
+				End
+			B Vasconcelos’ Brigade
+ 				Begin
+				L 2 4 18 Brig. J. Vasconcelos
+				U 410 4 T G 139 84 1/11° Infantaria
+ 				U 410 4 T G 139 84 2/11° Infantaria
+ 				U 440 4 T G 143 88 1/23° Infantaria
+				U 440 4 T G 143 88 2/23° Infantaria
+				U 351 5 U Q 263 153 7° Caçadores
+				End
+			B Divisional Artillery
+				Begin
+				L 2 3 44 Capt. Sympher
+				U 6 5 A E 136 8 4th KGL Battery
+				U 3 5 A E 136 8 4th KGL Battery
+				U 2 5 A E 136 8 4th KGL Battery
+				U 1 5 A H 136 8 4th KGL Battery 
+				End 
+			S 300 137 Supply Wagon
+			End
+		D 7th Division
+			Begin
+			L 3 4 321 MG Sir Geo. Walker
+			B Gardiner’s Brigade
+				Begin
+				L 2 3 24 Lt. Col. J. Gardiner
+				U 740 4 T G 95 61 1/6th (1st Warwicks)
+				U 419 5 T G 98 64 3rd Provisional Bn.
+				U 298 5 U G 113 79 Brunswick-Oels Regt.
+				End 
+			B Inglis’ Brigade
+				Begin
+				L 2 5 280 MG William Inglis 
+				U 253 5 U G 107 73 51st (2nd W. York) Lt
+				U 215 5 U G 107 73 68th (Durham) Light
+				U 478 4 T G 94 60 1/82nd (PoW's Vols.)
+				U 281 4 T G 115 81 Chas. Britanniques
+				End
+			B Doyle’s Brigade
+				Begin
+				L 2 4 28 Col. John M. Doyle
+				U 366 5 T G 139 84 1/7° Infantaria
+				U 366 5 T G 139 84 2/7° Infantaria
+				U 416 4 T G 141 86 1/19° Infantaria 
+				U 416 4 T G 141 86 2/19° Infantaria
+				U 398 5 U Q 263 153 2° Caçadores
+				End
+			B Divisional Artillery
+				Begin
+				L 2 3 43 2nd Capt. Cairnes
+				U 6 5 A E 134 6 Dickson’s Brigade
+				U 3 5 A E 134 6 Dickson’s Brigade
+				U 2 5 A E 134 6 Dickson’s Brigade
+				U 1 5 A H 134 6 Dickson’s Brigade
+				End 
+			S 300 137 Supply Wagon
+			End
+		D Light Division
+			Begin
+			L 3 4 227 MG Karl von Alten 
+			B Kempt’s Brigade
+				Begin
+				L 2 5 282 MG James Kempt 
+				U 683 6 U G 106 72 1/43rd (Monmouth) Lt.
+				U 434 6 U I 91 56 1/95th Rifles
+				U 280 6 U I 91 56 3/95th Rifles
+				U 402 6 U Q 263 153 1° Caçadores
+				End
+			B Skerrett’s Brigade
+				Begin
+				L 2 6 251 Lt. Col. J. Colborne
+				U 632 6 U G 108 74 1/52nd (Oxford) Lt.
+				U 265 6 U I 91 56 2/95th Rifles
+				U 316 4 T G 141 86 1/17° Infantaria 
+				U 316 4 T G 141 86 2/17° Infantaria
+				U 312 6 U Q 263 153 3° Caçadores
+				End
+			B Divisional Artillery
+				Begin
+				L 2 4 308 Capt. N. Ramsay
+				U 6 6 C B 135 7 Bull’s Troop
+				U 3 6 C B 135 7 Bull’s Troop
+				U 2 6 C B 135 7 Bull’s Troop
+				U 1 6 C H 135 7 Bull’s Troop 
+				End 
+			S 300 137 Supply Wagon
+			End
+		S 300 137 Supply Wagon
+		End
+	C Left Wing
+		Begin
+		L 4 5 277 LG Sir John Hope
+		D 1st Division
+			Begin
+			L 3 4 279 MG Sir K. Howard
+			B Maitland’s Brigade
+				Begin
+				L 2 5 291 MG P. Maitland
+				U 817 6 F G 87 53 1/1st Foot Guards
+				U 820 6 F G 87 53 3/1st Foot Guards
+				U 45 6 S I 90 57 5/60th Rifles (1 Co.)
+				End
+			B Stopford’s Brigade
+				Begin
+				L 2 4 20 MG Hon. E. Stopford
+				U 773 7 F G 88 54 1/Coldstream Guards
+				U 944 7 F G 89 55 1/3rd Foot Guards
+				U 37 6 S I 90 57 5/60th Rifles (1 Co.)
+				End
+			B Hinüber’s Brigade
+				Begin
+				L 2 4 276 MG H. von Hinüber
+				U 568 6 U Q 112 78 1st KGL Light
+				U 599 6 U Q 112 78 2nd KGL Light
+				U 576 5 T G 111 77 1st KGL Line
+				U 536 5 T G 111 77 2nd KGL Line
+				U 510 5 T G 111 77 5th KGL Line
+				End
+			B Divisional Artillery
+				Begin
+				L 2 3 43 2nd Capt. C. Dansey
+				U 6 5 A E 134 6 Carmichael’s Brigade
+				U 3 5 A E 134 6 Carmichael’s Brigade
+				U 2 5 A E 134 6 Carmichael’s Brigade
+				U 1 5 A H 134 6 Carmichael’s Brigade
+				End 
+			S 300 137 Supply Wagon
+			End
+		D 5th Division
+			Begin
+			L 3 3 272 MG Andrew Hay
+			B Hay’s Brigade
+				Begin
+				L 2 4 25 Col. C.J. Greville
+				U 329 5 T G 92 58 3/1st (Royals)
+				U 630 5 T G 94 60 1/9th (E. Norfolk)
+				U 412 5 T G 95 61 1/38th (1st Staffs.)
+				U 240 5 T G 93 59 2/47th (Lancashire)
+				U 25 6 S I 114 80 Brunswick-Oels Jägers
+				End
+			B Robinson’s Brigade
+				Begin
+				L 2 5 309 MG F.P. Robinson
+				U 530 5 T G 92 58 1/4th (King's Own)
+				U 608 4 T G 94 60 2/84th (York & Lancs)
+				U 410 5 T G 93 59 2/59th (2nd Notts.)
+				U 26 6 S I 114 80 Brunswick-Oels Jägers
+				End
+			B Spry's Brigade
+				Begin
+				L 2 4 394 Col. Rêgo Barreto
+				U 299 4 T G 139 84 1/3° Infantaria 
+				U 299 4 T G 139 84 2/3° Infantaria 
+				U 307 4 T G 140 85 1/15° Infantaria 
+				U 307 4 T G 140 85 2/15° Infantaria 
+				U 254 5 U Q 145 90 8° Caçadores
+				End
+			B Divisional Artillery
+				Begin
+				L 2 3 44 Capt. C. Mosse
+				U 6 5 B B 134 6 Lawson's Brigade
+				U 3 5 B B 134 6 Lawson's Brigade
+				U 2 5 B B 134 6 Lawson's Brigade
+				U 1 5 B H 134 6 Lawson's Brigade
+				End
+			S 300 137 Supply Wagon
+			End
+		B Aylmer’s Brigade
+			Begin
+			L 2 5 395 MG Lord Aylmer
+			U 554 3 T G 96 62 2/62nd (Wiltshire)
+			U 514 3 T G 97 63 76th (Hindoostan)
+			U 165 3 T G 95 61 77th (E. Middlesex)
+			U 462 5 U G 109 75 85th (Bucks Vols.) Lt
+			End
+		B Bradford's Brigade
+			Begin
+			L 2 4 238 MG Thos. Bradford
+			U 319 5 T G 140 85 1/13° Infantaria
+			U 319 5 T G 140 85 2/13° Infantaria
+			U 334 4 T G 143 88 1/24° Infantaria 
+			U 334 4 T G 143 88 2/24° Infantaria 
+			U 421 5 U Q 146 91 5° Caçadores
+			End
+		B Campbell’s Brigade
+			Begin
+			L 2 4 245 BG Archibald Campbell
+			U 317 5 T G 139 84 1/1° Infantaria
+			U 317 5 T G 139 84 2/1° Infantaria
+			U 362 5 T G 141 86 1/16° Infantaria
+			U 362 5 T G 141 86 2/16° Infantaria
+			U 421 5 U Q 145 90 4° Caçadores
+			End
+		B Vandeleur's Brigade
+			Begin
+			L 2 5 319 MG J.O. Vandeleur
+			U 421 6 L K 250 93 12th Lt. Dragoons
+			U 415 6 L K 253 96 16th Lt. Dragoons
+			End
+		S 300 137 Supply Wagon
+		End
+	D Cavalry Division
+		Begin
+		L 3 5 254 LG Sir S. Cotton
+		B Household Brigade
+			Begin
+			L 2 4 23 MG T. O’Loghlin
+			U 218 6 H S 244 87 1st Life Guards 
+			U 202 6 H S 244 87 2nd Life Guards
+			U 279 7 H S 245 88 Royal Horse Guards 
+			End
+		B Ponsonby’s Brigade
+			Begin
+			L 2 5 305 MG Wm. Ponsonby
+			U 409 6 H S 249 92 5th Dragoon Guards 
+			U 392 6 H S 246 89 3rd Dragoons
+			U 372 6 H S 247 90 4th Dragoons 
+			End
+		B Fane’s Brigade
+			Begin
+			L 2 5 393 MG Hon. Henry Fane 
+			U 360 6 H S 248 91 3rd Dragoon Guards
+			U 376 6 H S 246 89 1st (Royal) Dragoons
+			End
+		B Bock’s Brigade
+			Begin
+			L 2 4 20 MG Baron von Bock 
+			U 342 6 L K 255 98 1st KGL Lt. Dragoons 
+			U 344 6 L K 255 98 2nd KGL Lt. Dragoons 
+			End
+		B Somerset’s Brigade
+			Begin
+			L 2 5 314 MG Lord E. Somerset
+			U 552 4 L K 123 52 7th Hussars
+			U 464 5 L K 124 53 10th Hussars
+			U 468 5 L K 125 54 15th Hussars
+			End
+		B d’Urban’s Brigade
+			Begin
+			L 2 5 262 Col. B. d’Urban
+			U 257 4 L K 151 64 1° Cavalaria
+			U 175 4 L K 154 67 11° Cavalaria
+			U 223 4 L K 154 67 12° Cavalaria
+			End 
+		B Campbell’s Brigade
+			Begin
+			L 2 3 21 Col. John Campbell
+			U 235 4 L K 152 65 6° Cavalaria
+			U 316 4 L K 152 65 8° Cavalaria
+			End
+		B Horse Artillery
+			Begin
+			L 2 4 267 Major A.S. Frazer
+			U 6 6 C B 135 7 Bean’s Troop
+			U 6 6 C B 135 7 Gardiner’s Troop
+			U 6 6 C E 135 7 Webber-Smith’s Troop
+			U 3 6 C B 135 7 Bean’s Troop
+			U 2 6 C B 135 7 Bean’s Troop
+			U 1 6 C H 135 7 Bean’s Troop
+			U 3 6 C B 135 7 Gardiner’s Troop
+			U 2 6 C B 135 7 Gardiner’s Troop
+			U 1 6 C H 135 7 Gardiner’s Troop
+			U 3 6 C E 135 7 Webber-Smith’s Troop
+			U 2 6 C E 135 7 Webber-Smith’s Troop
+			U 1 6 C H 135 7 Webber-Smith’s Troop
+			End
+		S 300 137 Supply Wagon
+		End
+	D Reserve Artillery
+		Begin
+		L 3 5 259 Col. A. Dickson
+		U 6 6 C B 135 7 Ross’ Troop
+		U 6 5 A E 134 6 Michell’s Brigade
+		U 6 5 A X 134 13 Morrison’s Brigade
+		U 6 5 A E 155 10 Bateria Arriaga
+		U 3 5 C T 134 6 Mountain Demi-Bde.
+		U 3 5 C T 155 10 1° Bat. de Montanha
+		U 3 5 C T 155 10 2° Bat. de Montanha
+		U 3 6 C B 135 7 Ross’ Troop
+		U 2 6 C B 135 7 Ross’ Troop
+		U 1 6 C H 135 7 Ross’ Troop 
+		U 3 5 A E 134 6 Michell’s Brigade
+		U 2 5 A E 134 6 Michell’s Brigade
+		U 1 5 A H 134 6 Michell’s Brigade
+		U 2 5 A X 134 13 Morrison’s Brigade
+		U 2 5 A X 134 13 Morrison’s Brigade
+		U 2 5 A X 134 13 Morrison’s Brigade
+		U 3 5 A E 155 10 Bateria Arriaga
+		U 2 5 A E 155 10 Bateria Arriaga 
+		U 2 5 A H 155 10 Bateria Arriaga
+		End
+	B Engineers
+		Begin
+		L 2 4 26 Lt. Col. H. Elphinstone
+		U 85 5 P G 116 82 5/R. Sappers & Miners
+		U 85 5 P G 116 82 6/R. Sappers & Miners
+		U 85 5 P G 116 82 7/R. Sappers & Miners
+		U 84 5 P G 116 82 8/R. Sappers & Miners
+		U 145 5 P G 116 82 Royal Staff Corps
+		U 50 4 P G 156 94 Artífices
+		End
+	S 300 137 Supply Wagon 
+	End
+Spanish A IV Ejército
+	Begin
+	D 1ª División
+		Begin
+		L 3 6 376 Brig. Pablo Morillo
+		B 1ª Sección
+			Begin
+			L 2 3 31 Col. Anon 2 
+			U 729 4 I M 264 154 Rto. de León
+			U 1069 4 I M 179 116 Rto. Union
+			U 656 5 V G 204 120 Legión Extrameña
+			End
+		B 2ª Sección
+			Begin
+			L 2 3 32 Col. Anon 1 
+			U 718 5 V M 204 120 Tiradores de Doile
+			U 662 5 V M 204 120 Vols de la Victoria
+			U 495 4 I M 265 155 2ª Rto. de Jaen
+			End
+		B Artillería
+			Begin
+			L 2 3 49 Capt. Artillería 3
+			U 4 5 C V 266 22 Batería a Caballo
+			U 2 5 C V 266 22 Batería a Caballo
+			U 2 5 C V 266 22 Batería a Caballo
+			End 
+		S 300 199 Equipaje de Tren
+		End
+	S 300 199 Equipaje de Tren
+	End
+French S 300 86 Chariot Fourniture
+British S 300 137 Supply Wagon
+Spanish S 300 199 Equipaje de Tren
+

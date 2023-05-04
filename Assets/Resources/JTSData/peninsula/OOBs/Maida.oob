@@ -1,0 +1,107 @@
+2
+French A Armée de Naples
+	Begin
+	L 5 3 51 Le Roi Joséph
+	C II Corps d’Armée
+		Begin
+		L 3 5 190 GD Reynier
+		B 1er Brigade
+			Begin
+			L 2 4 1 GB Compère
+			U 918 5 V M 9 24 1/1er Légère
+			U 918 5 V M 9 24 2/1er Légère
+			U 755 4 I M 3 18 1/42e Ligne
+			U 754 4 I M 3 18 2/42e Ligne
+			End
+		B 2e Brigade
+			Begin
+			L 2 4 2 GB Digonet
+			U 767 5 V M 10 25 1/23e Légère
+			U 767 5 V M 10 25 2/23e Légère
+			U 884 4 I M 3 18 1/6e Ligne
+			U 883 4 I M 3 18 2/6e Ligne
+			End
+		B 3e Brigade
+			Begin
+			L 2 4 3 GB Peyri
+			U 605 4 V M 208 126 4/1er Suisse
+			U 469 3 I M 202 121 2/1° Rto. Polacco
+			U 468 3 I M 202 121 3/1° Rto. Polacco
+			End
+		B Cavalerie
+			Begin
+			L 2 4 4 Col. Thullier 
+			U 451 5 L K 29 22 6e Chas. à Cheval
+			U 393 5 L K 30 23 9e Chas. à Cheval
+			End
+		B Artillerie
+			Begin
+			L 2 3 42 CdE Griois
+			U 2 5 B T 20 0 5/2e Art. à Pied
+			U 4 5 C C 21 1 2/1er Art. à Cheval
+			U 2 5 C C 21 1 2/1er Art. à Cheval
+			U 2 5 C O 21 1 2/1er Art. à Cheval
+			U 105 4 P M 8 23 Det. Sappeurs
+			End
+		S 300 86 Chariot Fourniture
+		End
+	S 300 86 Chariot Fourniture
+	End
+British C Expeditionary Corps
+	Begin
+	L 4 5 318 MG Sir John Stuart
+	U 16 5 L K 130 59 Det. 20th Lt. Dragoons
+	B Advance Guard
+		Begin
+		L 2 5 282 Col. James Kempt
+		U 661 6 U G 109 75 Light Infantry Bn.
+		U 100 5 S R 91 57 R. Corsican Rangers
+		U 100 5 S R 91 57 R. Corsican Rangers
+		U 58 3 S G 107 73 R. Sicilian Vols.
+		U 2 5 B V 134 6 Artillery Detachment
+		End
+	B 1st Brigade
+		Begin
+		L 2 5 252 Col. G. Lowry Cole
+		U 464 6 F G 94 60 Grenadier Bn.
+		U 754 5 T G 96 62 1/27th (Inniskillng)
+		U 3 5 B V 134 6 Artillery Detachment
+		End 
+	B 2nd Brigade
+		Begin
+		L 2 4 27 BG Wroth Acland
+		U 702 5 T G 101 67 2/78th (Ross-shire)
+		U 570 4 T G 96 62 1/81st (Loyal Lincoln)
+		U 3 5 B V 134 6 Artillery Detachment
+		End
+	B 3rd Brigade
+		Begin
+		L 2 4 297 Col. John Oswald
+		U 554 4 T G 98 64 1/58th (Rutland)
+		U 271 5 T G 98 64 Watteville’s (4 Cos.)
+		U 271 5 T G 98 64 Watteville’s (4 Cos.)
+		U 2 5 B V 134 6 Artillery Detachment
+		End
+	B Reserve
+		Begin
+		L 2 5 311 Lt. Col. R. Ross
+		U 597 5 T G 95 61 20th (East Devon)
+		End
+	B Royal Artillery
+		Begin
+		L 2 4 43 Maj. Lemoine
+		U 6 5 B B 134 6 Lemoine’s Brigade
+		U 2 5 B B 134 6 Lemoine’s Brigade
+		U 2 5 B B 134 6 Lemoine’s Brigade
+		U 2 5 B H 134 6 Lemoine’s Brigade
+		End
+	S 300 137 Supply Wagon
+	End
+Spanish A Not Present
+	Begin
+	End
+French S 300 86 Chariot Fourniture
+British S 300 137 Supply Wagon
+Spanish S 300 199 Equipaje de Tren
+
+

@@ -1,0 +1,367 @@
+CampaignData: Vittoria Campaign
+    Campaign\Vittoria.bmp
+    Determined to avoid the mistakes made the previous year in the
+    disastrous siege of Burgos, Wellington made careful preparations
+    for the 1813 Vittoria campaign, making sure he had an adequate
+    artillery train, keeping his forces in close parallel columns
+    and no longer entrusting any important role to an independent
+    Spanish general. Meanwhile, the consequences of Napoleon's Russian
+    debacle would have a significant impact on French troop numbers
+    in the Peninsular, forcing them firmly onto the defensive.
+
+Branch: Salamanca Salamanca
+    Campaign\Salam1.bmp
+    Until late May 1813, Wellington's army had remained in Portugal
+    with the French unable to detect enemy troop deployments or take
+    precautions. Then Wellington and Hill marched on Salamanca with
+    30,000 men against Villatte who had only a single infantry division
+    and a cavalry regiment.
+
+French: Abandon Salamanca
+    Campaign\Salam2.bmp
+    With only an infantry division and a single regiment of dragoons,
+    Villatte has no choice but to abandon Salamanca and retreat.
+
+Allied: Pursue Villatte
+    Campaign\Salam3.bmp
+    British cavalry have reached Salamanca and found that Villatte
+    has only just left the city. Without infantry support, a cautious
+    pursuit of the French is the only option.
+
+Outcome:
+Campaign\Vitt1.scn/ 20 Morales Morales Morales Morales Morales
+    Villatte needs to get his troops out of danger to avoid capture.
+
+    British cavalry have reach Salamanca and found that Villatte
+    has only just left the city. However, to attack the enemy without
+    infantry support could be disastrous.
+
+Branch: Morales Morales
+    Campaign\Moral1.bmp
+    While Wellington and Hill marched first on Salamanca and then
+    headed northwards towards Toro, Graham's 40,000 strong force
+    advanced to the Esla against a mere 6,000 French, forcing them
+    to evacuate Toro and thus allowing the two allied armies to link
+    up. On June 2nd, Grant's hussars would encounter Digeon's rearguard
+    at Morales, six miles east of Toro.
+
+French: Rearguard Action
+    Campaign\Moral2.bmp
+    Unable to hold Toro with 6,000 men against 40,000 Allied troops,
+    Digeon retreated to Morales with enemy cavalry in hot pursuit.
+    Two regiments of dragoons adopted a defensive position with an
+    infantry brigade and artillery battery deployed further back
+    on the Pedroso del Rey heights.
+
+Allied: Pursue the French
+    Campaign\Moral3.bmp
+    Pursuing the French from Toro to Morales, Grant's cavalry come
+    across two regiments of dragoons ...
+
+Outcome:
+Campaign\Vitt2.scn/ 22 Burgos Burgos Burgos Burgos Burgos
+    The French must fight a rearguard action against advancing British
+    cavalry. There are infantry and guns in support that will release
+    later and perhaps play a decisive role in this minor action.
+
+    The advancing British cavalry have come across French dragoons
+    blocking their path. The enemy must be brushed aside and defeated.
+
+Branch: Burgos Risk Fighting at Burgos?
+    Campaign\Burg1.bmp
+    Forced to abandon Madrid and Valladolid, Joseph fell back to
+    Burgos. Should he risk fighting at Burgos - a town which had
+    thwarted Wellington the previous October - despite the continued
+    absence of Foy, Clausel and Sarrut? But perhaps at least Sarrut's
+    division might arrive in time for the battle?
+
+French: Fight at Burgos
+    Campaign\Burg2.bmp
+    Despite outnumbered, Joseph is determined to risk battle in defence
+    of Burgos. However, if Wellington decides to outflank his position
+    - the British general's usual tactic - it will become necessary
+    to fight a rearguard action, rather than a regular battle, to
+    allow the bulk of the army to retreat.
+
+French: Retreat
+    Campaign\Burg3.bmp
+    Joseph realizes that it is too risky to fight Wellington at Burgos
+    so reluctantly orders a retreat.
+
+Allied: Attack Straightaway
+    Campaign\Burg4.bmp
+    Rather than give the French time to retreat, Wellington decides
+    that it's time to fight a decisive battle before further enemy
+    reinforcements can strengthen the French army.
+
+Allied: Outflank the French
+    Campaign\Burg5.bmp
+    Realizing that the French are preparing to make a stand at Burgos,
+    Wellington sends outflanking forces to cut off the enemy's line
+    of retreat.
+
+Outcome:
+Campaign\Vitt3.scn/ 25 Allied Osma Osma Osma French
+    Reluctant to keep retreating and perhaps hoping that Wellington
+    may make a rash move rather than once more outflank his position,
+    Joseph decides to make a stand at Burgos.
+
+    The French seem prepared to risk a major action at Burgos, but
+    Wellington would need to attack promptly in case they decide
+    to retreat.
+
+None.scn/ -7 Osma Osma Osma Osma Osma
+    Your forces have withdrawn and avoided contact with the enemy.
+
+    Your advancing forces can't seem to find the French...
+
+Campaign\Vitt10.scn/ -21 Allied Osma Osma Osma French
+    Reluctant to keep retreating and perhaps hoping that Wellington
+    may make a rash move rather than once more outflank his position,
+    Joseph decides to make a stand at Burgos.
+
+    The French seem prepared to risk a major action at Burgos yet,
+    despite possessing significant numerical superiority, Wellington
+    is reluctant to launch a direct frontal attack, especially since
+    Burgos had been the site of a major setback the previous year.
+
+None.scn/ 0 Osma Osma Osma Osma Osma
+    Your forces have withdrawn and avoided contact with the enemy.
+
+    Your advancing forces can't seem to find the French...
+
+Branch: Osma Osma
+    Campaign\Osm1.bmp
+    Would Wellington attempt to outflank the French army by the shorter
+    Osma-Vittoria route or the much longer Valmaseda and Bilbao route,
+    which would cut off the main road back to France at Bergara?
+    Should Reille be ordered north via Valmaseda to cover Bilbao
+    from the West?
+
+French: Send Reille northwards
+    Campaign\Osm2.bmp
+    Believing that Wellington planned to outflank the French army
+    via Valmaseda and Bilbao and thus cut off the high road back
+    to France, Joseph and Jordan ordered Reille to concentrate his
+    divisions at Osma and then march northwards and link up with
+    Foy at Bilbao.
+
+French: Keep the army intact
+    Campaign\Vittor1.bmp
+    Releasing the dangers of splitting the army, the French leaders
+    decide to fall back to Vittoria.
+
+Allied: Outflank via Orduna
+    Campaign\Osm2.bmp
+    Wellington decides to get round the French position by sending
+    Graham's column to Orduna.
+
+Allied: Scout ahead
+    Campaign\Osm2.bmp
+    Wellington decides to give his troops a day's rest, sending out
+    small forces in the direction of Orduna and Osma to scout ahead
+    and find out the location of the enemy and discover if the French
+    have set any ambushes.
+
+Outcome:
+Campaign\Vitt4.scn/ 20 Millan Millan Millan Millan Millan
+    Reille's advancing troops encounter enemy troops and must decide
+    whether to adopt a defensive position until the situation becomes
+    clearer or else quickly drive them off in case further enemy
+    forces arrive.
+
+    Advancing towards Orduna, Graham's force runs into Reille's troops.
+
+None.scn/ -15 Vittoria Vittoria Vittoria Vittoria Vittoria
+    
+
+    
+
+Campaign\Vitt11.scn/ -18 Millan Millan Millan Vittoria Vittoria
+    Reille's advancing troops encounter enemy troops and must decide
+    whether to adopt a defensive position until the situation becomes
+    clearer or else quickly drive them off in case further enemy
+    forces arrive.
+
+    The scouting party encounters a significant French force and
+    must fall back to avoid capture.
+
+None.scn/ 25 Vittoria Vittoria Vittoria Vittoria Vittoria
+    
+
+    
+
+Branch: Millan Millan
+    Campaign\Millan1.bmp
+    Intending to join forces with Reille, Maucune encounters British
+    cavalry, supported by the Light Division, at the village of San
+    Millan.
+
+French: San Millan
+    Campaign\Millan2.bmp
+    Marching to join forces with Reille, Maucune's leading brigade
+    had reached the village of San Millan when enemy troops appeared.
+    Since his other brigade, which was protecting the baggage train,
+    was still some way in the rear, Maucune found it necessary to
+    fight a defensive action to allow time for his remaining troops
+    to come up.
+
+Allied: San Millan
+    Campaign\Millan3.bmp
+    German Legion Hussar scouts have come across a brigade-sized
+    French force defending the village of San Millan. The Light Division
+    should be able to quickly sweep aside this small enemy force.
+
+Outcome:
+Campaign\Vitt5.scn/ 20 Vittoria Vittoria Vittoria Vittoria Vittoria
+    Maucune must fight a defensive action to allow time for his other
+    brigade to arrive.
+
+    Vandeleur's brigade has deployed facing the enemy at San Millan
+    ready to attack, while Kempt's brigade is moving up to take up
+    position on Vandeleur's left.
+
+Branch: Vittoria Vittoria
+    Campaign\Vittor2.bmp
+    By nightfall on 19 June, the French forces had concentrated east
+    of the Zadorra river and their leaders had decided to make a
+    stand to permit the substantial baggage train time to retreat,
+    despite the absence of Clausel's troops. Jourdan believed that
+    Wellington would march on Bilbao via Orduna to outflank the French
+    position and force them to retreat, but this would allow time
+    for Clausel to join forces with the main French army. Reinforced
+    by Clausel, the French would then be strong enough to take the
+    offensive. But what would Wellington actually do?
+
+French: Historical Deployment
+    Campaign\Vittor3.bmp
+    The Armee du Midi was drawn up on a short three mile front from
+    the defile of Puebla to the Villodas bridge, with d'Erlon's Armee
+    du Centre in reserve at the village of Gomecha. Joseph's royal
+    guards formed a second reserve, while most of the cavalry and
+    the troops from the Armee de Portugal were deployed in the vicinity
+    of Vittoria itself.
+
+French: Alternative Deployment
+    Campaign\Vittor4.bmp
+    Anticipating an Allied frontal attack, the French decide to concentrate
+    the entire Armee du Midi to defend the Puebla Heights. Meanwhile
+    other French forces would defend the various bridges across the
+    Zadorra. A small reserve - Joseph's Royal Guard - would be left
+    in Vittoria to reinforce any danger spot.
+
+Allied: Historical Deployment
+    Campaign\Vittor5.bmp
+    Wellington's historical plan of attack was complex and time-sensitive,
+    involving the simultaneous movement of four separate forces against
+    the French position. Hill, with some 20,000 men -  the 2nd Division,
+    Silveira's Portuguese, Morillo's Spaniards, supported by Alten's
+    and Fane's cavalry - would cross the Zadorra and assault the
+    Puebla heights. Meanwhile, the 4th and Light Divisions, supported
+    by Hill's, Grant's, Ponsonby's and D'Urban's cavalry, would advance
+    agains the Nanclares and Villodas bridges. Another column, consisting
+    of 3rd and 7th Divisions, would descend into the Zadorra valley
+    and move up towards the bridge at Mendoza. Finally, Graham's
+    column, supported by Anson's dragoons and with Longa's Spaniards
+    acting as an advance guard, would outflank the French right wing
+    to cut off the retreat route back towards France.
+
+Allied: Alternative Deployment
+    Campaign\Vittor6.bmp
+    Wellington decides to reinforce Hill to deliver a powerful frontal
+    assault, rather than risk a potentially badly co-ordinated outflanking
+    manoeuvre to attempt to trap the French. However, this decision
+    will make it harder to deliver a decisive blow to destroy the
+    French army, since this may enable the enemy to retreat from
+    the battlefield and join forces with Clausel before fighting
+    a follow up battle.
+
+Outcome:
+Campaign\Vitt6.scn/ 22 Allied Allied Draw French French
+    The French have deployed historically, but what will Wellington
+    do?
+
+    Wellington decides to follow the historical plan of attack, but
+    will the French  adopt a different defensive strategy? 
+
+Campaign\Vitt7.scn/ -15 Allied Allied Draw French French
+    While the Armee du Midi defends against a frontal assault on
+    the Puebla Heights, other French troops would defend the various
+    bridges across the Zadorra. Joseph's Royal Guard would remain
+    in Vittoria to reinforce any danger spot.
+
+    Wellington decides to follow the historical plan of attack, but
+    will the French  adopt a different defensive strategy? 
+
+Campaign\Vitt8.scn/ -21 Allied Allied Draw French French
+    The French have deployed historically, but what will Wellington
+    do?
+
+    Wellington makes some adjustments to the historical plan of attack,
+    but will these prove useful or a hinderance?
+
+Campaign\Vitt9.scn/ 25 Allied Allied Draw French French
+    While the Armee du Midi defends against a frontal assault on
+    the Puebla Heights, other French troops would defend the various
+    bridges across the Zadorra. Joseph's Royal Guard would remain
+    in Vittoria to reinforce any danger spot.
+
+    Wellington makes some adjustments to the historical plan of attack,
+    but will these prove useful or a hinderance?
+
+Branch: Vittoria Vittoria variant
+    Campaign\Vittor2.bmp
+    The French will have to fight at Vittoria without Reille's three
+    divisions which have marched northwards to Bilbao.
+
+French: Vittoria sans Reille
+    Campaign\Vittor3.bmp
+    Despite the absence of Reille's troops, the Armee du Midi was
+    drawn up on a short three mile front from the defile of Puebla
+    to the Villodas bridge, with d'Erlon's Armee du Centre in reserve
+    at the village of Gomecha. Joseph's royal guards formed a second
+    reserve, while most of the cavalry and the troops from the Armee
+    de Portugal were deployed in the vicinity of Vittoria itself.
+
+Allied: Historical Deployment
+    Campaign\Vittor5.bmp
+    Wellington's historical plan of attack was complex and time-sensitive,
+    involving the simultaneous movement of four separate forces against
+    the French position. Hill, with some 20,000 men -  the 2nd Division,
+    Silveira's Portuguese, Morillo's Spaniards, supported by Alten's
+    and Fane's cavalry - would cross the Zadorra and assault the
+    Puebla heights. Meanwhile, the 4th and Light Divisions, supported
+    by Hill's, Grant's, Ponsonby's and D'Urban's cavalry, would advance
+    agains the Nanclares and Villodas bridges. Another column, consisting
+    of 3rd and 7th Divisions, would descend into the Zadorra valley
+    and move up towards the bridge at Mendoza. Finally, Graham's
+    column, supported by Anson's dragoons and with Longa's Spaniards
+    acting as an advance guard, would outflank the French right wing
+    to cut off the retreat route back towards France.
+
+Outcome:
+Campaign\Vitt12.scn/ 27 Allied Allied Draw French French
+    Without Reille, the French will have a tougher time winning the
+    battle. To help compensate, more French troops start out unfixed
+    and the rest release earlier than in the historical battle.
+
+    Wellington decides to follow the historical plan of attack, but
+    will the French adopt a different defensive strategy? 
+
+Terminal: Allied Allied Victory
+    Allied.bmp
+    Wellington has defeated the French and it will now be only a
+    matter of time before they are driven out of Spain.
+
+Terminal: Draw Draw
+    Draw.bmp
+    Wellington has failed to defeat the French and, with Clausel's
+    fresh troops approaching, this "draw" seems more of a defeat
+    for the Allies.
+
+Terminal: French French Victory
+    French.bmp
+    The French have defeated Wellington and the Allied army, yet
+    the military situation beyond the Peninsular may mean that this
+    victory, however decisive, will be short-lived.
+

@@ -1,0 +1,165 @@
+2
+French A Armée de Portugal
+	Begin
+	C 1er Division
+		Begin
+		L 4 5 110 GD Foy
+		D 1er Brigade
+			Begin
+			L 3 4 0 GB Chemineau
+			B 6e Légère
+				Begin
+				L 2 4 3 Col. E.A.J. Molard
+				U 551 4 V M 11 26 1er Battalion
+				U 504 4 V M 11 26 2e Battalion
+				End
+ 			B 69e Ligne
+				Begin
+				L 2 4 4 Col. Guinard
+				U 706 3 I M 3 18 1er Battalion
+				U 702 3 I M 3 18 2e Battalion
+				End 
+			End
+		D 2e Brigade
+			Begin
+			L 3 4 1 GB Berthelot
+			B 39e Ligne
+				Begin
+				L 2 4 210 Col. L.M.J. Thevenet
+				U 494 3 I M 4 19 1er Battalion
+				U 424 3 I M 4 19 2e Battalion
+				End
+ 			B 76e Ligne
+				Begin
+				L 2 4 6 Col. Chabert
+				U 671 3 I M 5 20 1er Battalion
+				U 680 3 I M 5 20 2e Battalion
+				End 
+			End
+		D Artillerie de Division
+			Begin
+			L 3 3 41 CB Grosjean
+			B 3/2e Art. à Cheval
+				Begin
+				L 2 4 42 Capt. Anon 1
+				U 1 5 C U 21 1 8pdr
+				U 1 5 C U 21 1 8pdr 
+				U 1 5 C U 21 1 8pdr 
+				U 1 5 C V 21 1 4pdr 
+				U 1 5 C V 21 1 4pdr
+				U 1 5 C O 21 1 Obusier 
+				End
+			End 
+		S 300 86 Chariot Fourniture
+		End
+	C Div. de Cav. Légère
+		Begin
+		L 3 3 9 GB Curto
+		D 1er Brigade
+			Begin
+			L 3 4 1 Col. Desfossés
+			B 3e Hussards
+				Begin
+				L 2 4 4 Col. Rousseau
+				U 93 4 L K 24 17 1er Escadron
+				U 92 4 L K 24 17 2e Escadron
+				End
+			B 13e Chas. à Cheval
+				Begin
+				L 2 4 203 Col. Shee
+				U 104 4 L K 33 26 1er Escadron 
+				U 103 4 L K 33 26 2e Escadron 
+				U 103 4 L K 33 26 3e Escadron 
+				U 103 4 L K 33 26 4e Escadron
+				End
+			B 22e Chas. à Cheval
+				Begin
+				L 2 3 5 CdE 22e Chas. à Cheval 
+				U 101 4 L K 37 30 1er Escadron 
+				U 101 4 L K 37 30 2e Escadron
+				End
+			End
+		D 2e Brigade
+			Begin
+			L 3 4 219 Col. Vial
+			B 14e Chas. à Cheval
+				Begin
+				L 2 3 6 Col. Lemoyne
+				U 112 4 L K 34 27 3e Escadron
+				U 112 4 L K 34 27 4e Escadron
+				End
+			B 26e Chas. à Cheval
+				Begin
+				L 2 3 6 CdE 26e Chas. à Cheval 
+				U 111 4 L K 38 31 1er Escadron
+				U 110 4 L K 38 31 2e Escadron
+				End
+			B 28e Chas. à Cheval
+				Begin
+				L 2 3 7 Col. Laroche
+				U 75 3 L K 40 33 1er Escadron
+				End
+ 			End
+		S 300 86 Chariot Fourniture
+		End
+	S 300 86 Chariot Fourniture
+	End
+British A British Army
+	Begin
+	L 5 6 324 Gen. Lord Wellington
+	C 1st Cavalry Division
+		Begin
+		D Bock’s Brigade
+			Begin
+			L 3 4 20 MG Baron von Bock
+			B 1st KGL Dragoons
+				Begin
+				L 2 4 21 Lt. Col. Bülow
+				U 113 6 H S 122 51 Right Squadron 
+				U 113 6 H S 122 51 Centre Squadron 
+				U 113 6 H S 122 51 Left Squadron 
+				End
+ 			B 2nd KGL Dragoons
+				Begin
+				L 2 4 24 Lt. Col. Jonquières
+				U 128 6 H S 122 51 Right Squadron 
+				U 128 6 H S 122 51 Centre Squadron 
+				U 128 6 H S 122 51 Left Squadron 
+				End 
+			End
+		D Anson's Brigade
+			Begin
+			L 3 4 228 MG George Anson
+			B 11th Lt. Dragoons
+				Begin
+				L 2 4 23 Col. H.J. Cumming
+				U 121 5 L K 129 58 Right Squadron
+				U 120 5 L K 129 58 Centre Squadron
+				U 120 5 L K 129 58 Left Squadron
+				End
+ 			B 12th Lt. Dragoons
+				Begin
+				L 2 5 304 Lt. Col F. Ponsonby
+				U 102 6 L K 130 59 Right Squadron
+				U 107 6 L K 130 59 Centre Squadron
+				U 107 6 L K 130 59 Left Squadron
+				End
+ 			B 16th Lt. Dragoons
+				Begin
+				L 2 3 27 Capt. Murray
+				U 87 6 L K 132 61 Right Squadron
+				U 86 6 L K 132 61 Centre Squadron
+				U 86 6 L K 132 61 Left Squadron
+				End 
+			End
+		S 300 137 Supply Wagon
+		End
+	S 300 137 Supply Wagon 
+	End
+Spanish A V Ejército
+	Begin
+	End
+French S 300 86 Chariot Fourniture
+British S 300 137 Supply Wagon
+Spanish S 300 199 Equipaje de Tren
+

@@ -1,0 +1,218 @@
+2
+French A Corps de Siége
+	Begin
+	L 4 4 218 GD Baron Verdier
+	D 1er Division
+		Begin
+		L 3 4 146 GD Lef.-Desnoëttes
+		B 1er Brigade
+			Begin
+			L 2 4 9 GB Grandjean
+			U 379 4 I M 5 20 3/70e Ligne
+			U 688 5 I M 202 121 1/2e de la Vistule
+			U 688 5 I M 202 121 2/2e de la Vistule
+			U 581 2 R M 3 18 4e Bn. de Marche
+			U 655 2 R M 4 19 6e Bn. de Marche
+			End
+		B 2e Brigade
+			Begin
+			L 2 5 122 GB Habert
+			L 2 4 84 Col. Chlopicki
+			U 411 4 I M 7 22 4/15e Ligne 
+			U 420 4 I M 4 19 3/47e Ligne
+			U 515 3 R M 5 20 1/1er Sup. de Réserve
+			U 515 3 R M 5 20 2/1er Sup. de Réserve 
+			U 622 5 I M 202 121 1/1er de la Vistule
+			U 621 5 I M 202 121 2/1er de la Vistule
+			End
+		B Cavalerie Attaché
+			Begin
+			L 2 5 11 Col. Konopka
+			U 717 6 L L 28 21 1er de la Vistule
+			U 217 3 L K 35 28 5e Esc. de Marche
+			End
+		B Artillerie de Division
+			Begin
+			L 2 4 40 Capt. Anon 1
+			U 6 5 A J 20 0 20/1er Art. à Pied
+			U 8 5 B V 20 0 9/3e Art. à Pied
+			U 2 5 A J 20 0 20/1er Art. à Pied
+			U 2 5 A J 20 0 20/1er Art. à Pied
+			U 2 5 A O 20 0 20/1er Art. à Pied
+			U 2 5 B V 20 0 9/3e Art. à Pied
+			U 2 5 B V 20 0 9/3e Art. à Pied
+			U 2 5 B V 20 0 9/3e Art. à Pied
+			U 2 5 B O 20 0 9/3e Art. à Pied
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D 2e Division
+		Begin
+		L 3 4 6 GD Gomes Freire
+		B 1er Brigade
+			Begin
+			L 2 4 5 Col. Cretin
+			U 391 3 I M 5 20 1/14e Regt Provisioire
+			U 391 3 I M 5 20 2/14e Regt Provisioire
+			U 391 3 I M 5 20 2/14e Regt Provisioire
+			U 334 2 R M 4 19 7e Bn. de Marche
+			End
+		B 2e Brigade
+			Begin
+			L 2 3 15 Col. Vasconcellos
+			U 265 3 I M 214 127 5e Légion Portugaise
+			U 288 3 V M 214 127 Bn. de Caçadores
+			End
+		S 300 86 Chariot Fourniture
+		End
+	B 1er Bde de Réserve
+		Begin
+		L 2 4 180 Col. Piré
+		U 666 5 I M 202 121 1/3e de la Vistule
+		U 666 5 I M 202 121 2/3e de la Vistule
+		U 486 4 V M 216 129 GN Bas Pyrénées
+		U 485 4 V M 216 129 GN Haute Pyrénées
+		U 92 4 H S 51 34 3e Esc. de Marche
+		U 92 3 D M 48 7 8e Esc. de Marche
+		U 91 3 L K 36 29 9e Esc. de Marche
+		End
+	B 2e Bde de Réserve
+		Begin
+		L 2 4 1 GB Bazancourt
+		U 744 4 I M 3 18 1/14e Ligne
+		U 744 4 I M 3 18 2/14e Ligne
+		U 807 4 I M 4 19 1/44e Ligne
+		U 807 4 I M 4 19 2/44e Ligne
+		U 205 3 D M 42 1 11e Esc. de Marche
+		End
+	B Train de Siege
+		Begin
+		U 6 5 E Y 20 12 1er Batterie
+		U 6 5 E Y 20 12 2e Batterie 
+		U 6 5 E Y 20 12 3e Batterie 
+		U 6 5 E X 20 12 4e Batterie 
+		U 6 5 E X 20 12 5e Batterie 
+		U 4 5 E O 20 0 6e Batterie 
+		U 4 5 E O 20 0 7e Batterie 
+		U 4 5 E O 20 0 8e Batterie 
+		U 4 5 E F 20 16 9e Batterie
+		End
+	S 300 86 Chariot Fourniture
+	End
+British A Not Present
+	Begin
+	End
+Spanish A Ejercito de Aragón
+	Begin
+	L 5 4 379 CG Don J. Palafox
+	U 379 3 R M 178 115 Bon. del General
+	U 100 5 L S 188 10 Dragones del Rey
+	U 200 4 R M 188 10 Dragones del Rey
+	C Guarnición de Zaragoza
+		Begin
+		L 4 3 368 TG Marques de Lazan
+		D Infantería
+			Begin
+			L 3 4 31 Brig. Don J. Obispo
+			U 470 4 G M 161 98 Bon. Guardias
+			U 808 -2 M d 159 97 Rto. Fernando VII
+			U 463 3 R M 169 106 1/Rto. de Estremadura
+			U 462 3 R M 169 106 2/Rto. de Estremadura
+			U 666 4 V M 175 111 1ª Ligero. de Aragón
+			U 1043 -2 M Z 158 96 2ª Rto. de Aragón 
+			U 588 -2 V M 178 115 Fusileros de Aragón 
+			U 577 -2 V d 159 97 1ª Ligero de Zaragoza
+			U 640 -2 V d 158 96 2ª Ligero de Zaragoza
+			U 191 -2 M Z 158 96 1ª Tercio de Aragón
+			U 195 -2 M Z 159 97 2ª Tercio de Aragón
+			U 782 -1 M d 158 96 3ª Tercio de Aragón
+			U 879 -1 M d 159 97 4ª Tercio de Aragón
+			U 634 -1 M d 158 96 5ª Tercio de Aragón
+			U 327 -2 M P 157 95 Tercio de Torres
+			U 1112 -1 M d 158 96 Tercio de Barbastro
+			U 1865 -1 M Z 159 97 Tercio de Huesca
+			U 84 5 S M 171 107 Estrangeros Suizos
+			End
+		B Ciudadanos Armadas
+			Begin
+			U 200 -1 S P 157 95 Zaragozanos
+			U 200 -1 S P 157 95 Zaragozanos
+			U 200 -1 S P 157 95 Zaragozanos
+			U 200 -1 S P 157 95 Zaragozanos
+			U 200 -1 S P 157 95 Zaragozanos
+			U 200 -1 S P 157 95 Zaragozanos
+			U 200 -1 S P 157 95 Zaragozanos
+			U 200 -1 S P 157 95 Zaragozanos
+			U 200 -1 S P 157 95 Zaragozanos
+			U 200 -1 S d 158 96 Zaragozanos
+			U 200 -1 S d 158 96 Zaragozanos
+			U 200 -1 S d 158 96 Zaragozanos
+			U 200 -1 S d 158 96 Zaragozanos
+			U 200 -1 S d 158 96 Zaragozanos
+			U 200 -1 S d 158 96 Zaragozanos
+			U 200 -1 S d 158 96 Zaragozanos
+			U 200 -1 S d 158 96 Zaragozanos
+			U 200 -1 S d 158 96 Zaragozanos
+			U 200 -1 S d 158 96 Zaragozanos
+			U 200 -1 S P 157 95 Zaragozanos
+			U 200 -1 S W 157 95 Zaragozanos
+			U 200 -1 S W 157 95 Zaragozanos
+			U 200 -1 S W 157 95 Zaragozanos
+			U 200 -1 S W 157 95 Zaragozanos
+			U 200 -1 S W 157 95 Zaragozanos
+			U 200 -1 S W 157 95 Zaragozanos
+			U 200 -1 S W 157 95 Zaragozanos
+			U 200 -1 S W 157 95 Zaragozanos
+			U 200 -1 S W 157 95 Zaragozanos
+			U 200 -1 S W 157 95 Zaragozanos
+			U 200 -1 S Z 159 97 Zaragozanos
+			U 200 -1 S Z 159 97 Zaragozanos
+			U 200 -1 S Z 159 97 Zaragozanos
+			U 200 -1 S Z 159 97 Zaragozanos
+			U 200 -1 S Z 159 97 Zaragozanos
+			End
+       	D Artillería
+			Begin
+			U 2 4 E Y 197 15 1ª Batería
+			U 2 4 E Y 197 15 2ª Batería
+			U 2 4 E a 197 15 3ª Batería
+			U 2 4 E a 197 15 4ª Batería
+			U 2 4 E A 197 11 5ª Batería
+			U 2 4 E A 197 11 6ª Batería
+			U 2 4 E A 197 11 7ª Batería
+			U 2 4 E A 197 11 8ª Batería
+			U 2 4 E U 197 11 9ª Batería
+			U 2 4 E U 197 11 10ª Batería
+			U 2 4 E U 197 11 11ª Batería
+			U 2 4 E U 197 11 12ª Batería
+			End
+		B Monte Torrero
+			Begin
+			L 2 1 30 Col. V. Falco
+			U 250 3 R M 169 106 3/Rto. de Estremadura
+			U 75 -1 S P 157 95 Ciudadanos Armadas
+			U 75 -1 S P 157 95 Ciudadanos Armadas
+			U 50 -1 S Z 159 97 Ciudadanos Armadas
+			U 50 -1 S Z 158 96 Ciudadanos Armadas
+			U 4 4 E U 197 11 1ª Batería
+			U 4 4 E V 197 11 2ª Batería
+			End
+		S 300 199 Equipaje de Tren 
+       	End
+       D Columna de Socorro
+       	Begin
+		L 3 4 35 Brig. St. March
+		U 616 4 R M 172 108 Prov. de Soria 
+		U 800 3 M M 158 96 Vols. de Borbón
+		U 800 2 M Z 159 97 Vols. de Chelva
+		U 400 3 V M 159 97 1/Caz. de Segorbe 
+		U 400 3 V M 159 97 2/Caz. de Segorbe 
+		U 500 3 V M 158 96 2° Caz. Fernando VII 
+		S 300 199 Equipaje de Tren 
+       	End
+	S 300 199 Equipaje de Tren 
+	End
+French S 300 86 Chariot Fourniture
+British S 300 137 Supply Wagon
+Spanish S 300 199 Equipaje de Tren
+

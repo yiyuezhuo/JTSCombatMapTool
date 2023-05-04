@@ -1,0 +1,101 @@
+11
+Salamanca: Securing the Arapiles British A/I
+1812 7 22 8 30 0 0 1 8
+2 9 8 1
+2 9 8 1
+25 75 125 200
+Salam_sub1.map
+Salamanca.oob
+Pen25.pdt
+2 2 2 2 0 0 0 0
+24 24 0
+0 0 0 0 0 0 0 0
+2 1 2 1
+1 2.5.6 4 1 300 0 0 262144 7 11
+1 2.5.3.4 4 4 404 0 0 512 11 10
+1 2.5.4.5 4 4 516 0 0 262144 11 12
+1 2.5.5.4 4 4 2 0 0 0 12 9
+1 2.5.5.5 4 2 1 0 0 0 12 9
+1 2.5.3.3 4 32 427 0 0 512 12 9
+1 2.5.4.4 4 4 516 0 0 262144 12 11
+1 2.5.1 4 2 3 0 0 262144 13 9
+1 2.5.5.1 4 8 2 0 0 262144 13 9
+1 2.5.5.3 4 4 3 0 0 0 13 9
+1 2.5.3.1 4 4 2 0 0 262656 13 9
+1 2.5.3.2 4 32 463 0 0 512 13 9
+1 2.5.4.3 4 4 492 0 0 262144 13 11
+1 2.5.3.5 4 4 53 0 0 8651264 14 8
+1 2.5.4.1 4 32 2 0 0 262144 14 10
+1 2.5.4.2 4 4 492 0 0 262144 14 10
+1 2.5.4.6 4 4 269 0 0 134479872 20 12
+1 2.5.4.6 8 8 66 0 0 8650752 20 13
+1 2.5.2.3 4 4 465 0 0 134218240 21 9
+1 2.5.2.3 4 4 93 0 0 8651264 21 10
+1 2.5.2.1 4 4 2 0 0 262656 22 8
+1 2.5.2.2 4 4 512 0 0 134218240 22 8
+1 2.5.2.2 8 8 102 0 0 8651264 22 9
+1 2.5.2.4 4 4 44 0 0 8651264 23 9
+1 2.5.4.6 4 4 66 0 0 8650752 24 15
+1 1.9.3.3 16 16 93 0 0 8650752 24 25
+1 1.9.2.2 32 32 83 0 0 8650752 25 20
+1 1.9.2.2 32 32 417 0 0 134479872 25 21
+1 1.9.4.5 32 32 1 0 0 0 25 25
+1 1.9.2.3 32 32 86 0 0 8650752 26 19
+1 1.9.2.1 32 32 2 0 0 262144 26 20
+1 1.9.2.3 32 16 432 0 0 134479872 26 20
+1 1.9.2.6 32 32 435 0 0 262144 26 22
+1 1.9.2.4 32 32 91 0 0 8650752 27 19
+1 1.9.2.4 32 32 459 0 0 134479872 27 20
+1 1.9.1 32 32 3 0 0 262144 27 22
+1 1.9.2.5 32 32 403 0 0 262144 27 22
+1 1.9.3.3 32 32 470 0 0 134479872 27 25
+1 1.9.4.6 32 16 1 0 0 262144 27 26
+1 1.9.3.6 32 32 527 0 0 262144 27 27
+1 1.9.2.7 32 32 520 0 0 262144 28 21
+1 1.9.3.1 32 32 2 0 0 262144 28 24
+1 1.9.3.2 32 32 583 0 0 262144 28 24
+1 1.9.4.1 32 32 2 0 0 262144 28 25
+1 1.9.4.3 32 32 2 0 0 262144 28 25
+1 1.9.4.4 32 16 2 0 0 262144 28 25
+1 1.9.3.5 32 32 553 0 0 262144 28 26
+1 1.9.5 32 16 300 0 0 262144 28 26
+1 1.9.3.4 32 32 595 0 0 262144 29 24
+1 1.9.3.7 32 32 491 0 0 262144 29 26
+4 1812 7 22 9 0 100 2.5 0
+7 7 11 25 0
+7 12 8 25 0
+7 22 8 25 0
+7 23 16 25 0
+7 24 15 25 0
+0
+1 0
+13 AI Script #1
+1.9.2 1812 7 22 8 30 24 15 3
+1.9.2 1812 7 22 8 30 23 16 3
+1.9.3 1812 7 22 8 30 23 15 3
+1.9.4 1812 7 22 8 30 24 15 1
+1.9.4 1812 7 22 8 30 23 16 1
+2.5.5 1812 7 22 8 30 13 9 1
+2.5.4 1812 7 22 8 30 24 16 1
+1.9.2 1812 7 22 9 0 22 8 3
+2.5.3 1812 7 22 9 0 12 14 1
+1.9.3 1812 7 22 9 30 23 15 1
+2.5.2 1812 7 22 9 30 22 8 1
+2.5.3 1812 7 22 9 30 15 17 1
+2.5.4 1812 7 22 9 30 24 16 1
+Rich White
+Date: 22 July 1812 - Size: Small - Location: Salamanca, Western
+Spain\\Scenario Briefing: The Battle of Salamanca: Securing the
+Arapiles - This Getting Started scenario is designed for a French
+player against a British A/I. Having only surveyed the position
+during dusk, Wellington failed to include the Greater Arapile
+inside his lines. The following morning, however, Marmont sent
+Bonnet's entire division to secure it and Wellington, judging
+it to close to his right flank, ordered the 7th Cacadores to
+race to the hill and try to secure it before the French reached
+it. Historically, this small scale action focussed on control
+of the Greater Arapile, but the scenario gives the French player
+time to push on and secure the village of Arapiles. However,
+with only 8 turns, time is rather limited.\\Recommended Rules:
+Default - with the following alterations - Movement Threat Disorder
+and Line Movement Disruption ON

@@ -1,0 +1,124 @@
+2
+French A Corps P. Oriental
+	Begin
+	L 4 4 105 GD Duhesme
+	D 1er Division
+		Begin
+		L 3 4 81 GD Chabran
+		B 1er Brigade
+			Begin
+			L 2 4 0 GB Goulas
+			U 866 5 I M 3 18 1/7e Ligne
+			U 865 5 I M 3 18 2/7e Ligne
+			U 757 4 I M 4 19 3/16e Ligne
+			U 517 4 V M 13 28 3/2e Suisse
+			End
+		B 2e Brigade
+			Begin
+			L 2 4 1 GB Viala
+			U 545 4 I M 5 20 4/2e Ligne
+			U 652 4 I M 6 21 3/37e Ligne
+			U 693 4 I M 2 17 4/56e Ligne
+			U 669 4 I M 4 19 3/93e Ligne
+			End
+		B Artillerie de Division
+			Begin
+			L 2 4 42 Capt. Anon 1
+			U 9 5 C V 21 1 7/2e Art. à Cheval 
+			U 2 5 C V 21 1 7/2e Art. à Cheval 
+			U 2 5 C V 21 1 7/2e Art. à Cheval 
+			U 2 5 C V 21 1 7/2e Art. à Cheval 
+			U 3 5 C O 21 1 7/2e Art. à Cheval 
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D 2e Division
+		Begin
+		L 3 5 144 GD G. Lechi
+		B 1er Brigade
+			Begin
+			L 2 4 2 GB Milosewitz
+			U 686 4 I M 219 132 2/2° di Linea
+			U 550 4 I M 220 133 3/4° di Linea
+			U 741 4 I M 221 134 2/5° di Linea
+			End
+		B 2e Brigade
+			Begin
+			L 2 3 198 GB Scwharz
+			U 359 6 G M 218 131 1/Veliti Reale
+			U 902 3 I M 230 140 1/1° di Linea
+			U 902 3 I M 230 140 2/1° di Linea
+			End
+		B Artillerie de Division
+			Begin
+			L 2 4 41 Capt. Anon 2
+			U 8 5 B V 228 18 11/Art. a Piedi
+			U 3 5 B V 228 18 11/Art. a Piedi
+			U 2 5 B V 228 18 11/Art. a Piedi
+			U 3 5 B O 228 18 11/Art. a Piedi
+			End
+		S 300 86 Chariot Fourniture
+		End
+	B 1er Bde de Cavalerie
+		Begin
+		L 2 5 67 GB Bessières
+		U 409 5 H S 51 34 3e Cuirassiers Prov.
+		U 416 5 L K 34 27 3e Chasseurs Prov.
+		End
+ 	B 2e Bde de Cavalerie
+		Begin
+		L 2 3 4 Col. Banco
+		U 504 4 L K 227 83 2° Cacciatori
+		U 388 3 L K 232 84 2° Cacciatori
+		End 
+	S 300 86 Chariot Fourniture
+	End
+British A Not Present
+	Begin
+	End
+Spanish D Guarnición de Girona
+	Begin
+	L 3 5 31 Ten. Col. O’Donovan
+	B Infantería
+		Begin
+		L 2 5 32 Ten. Col. O’Daly
+		U 176 5 R M 170 112 1/Rto. Ultonia
+		U 175 5 R M 170 112 2/Rto. Ultonia
+		U 600 3 V Z 282 160 1ª Tercio de Girona
+		End
+	B Artillería
+		Begin
+		L 2 3 49 Capt. Miranda
+		U 2 4 E Y 197 15 1ª Batería
+		U 2 4 E Y 197 15 2ª Batería
+		U 2 4 E Y 197 15 3ª Batería
+		U 2 4 E Y 197 15 4ª Batería
+		U 2 4 E Y 197 15 5ª Batería
+		U 2 4 E Y 197 15 6ª Batería
+		U 2 4 E a 197 15 7ª Batería
+		U 2 4 E a 197 15 8ª Batería
+		U 2 4 E A 197 11 9ª Batería
+		U 2 4 E A 197 11 10ª Batería
+		U 2 4 E A 197 11 11ª Batería
+		U 2 4 E A 197 11 12ª Batería
+		U 2 4 E A 197 11 13ª Batería
+		U 2 4 E A 197 11 14ª Batería
+		End
+	U 100 -1 S P 157 95 Ciudadanos Armadas
+	U 100 -1 S P 157 95 Ciudadanos Armadas
+	U 100 -1 S P 157 95 Ciudadanos Armadas
+	U 100 -1 S P 157 95 Ciudadanos Armadas
+	U 100 -1 S P 157 95 Ciudadanos Armadas
+	U 100 -1 S P 157 95 Ciudadanos Armadas
+	U 75 -1 S Z 159 97 Ciudadanos Armadas
+	U 75 -1 S Z 158 96 Ciudadanos Armadas
+	U 75 -1 S Z 159 97 Ciudadanos Armadas
+	U 75 -1 S Z 158 96 Ciudadanos Armadas
+	U 75 -1 S Z 159 97 Ciudadanos Armadas
+	U 75 -1 S Z 158 96 Ciudadanos Armadas
+	S 300 199 Equipaje de Tren 
+	End
+French S 300 86 Chariot Fourniture
+British S 300 137 Supply Wagon
+Spanish S 300 199 Equipaje de Tren
+

@@ -1,0 +1,112 @@
+2
+French A Corps P. Orientales
+	Begin
+	L 4 4 105 GD Duhesme
+	D 1er Division
+		Begin
+		L 3 4 81 GD Chabran
+		B 1er Brigade
+			Begin
+			L 2 4 0 GB Goulas
+			U 866 5 I M 3 18 1/7e Ligne
+			U 865 5 I M 3 18 2/7e Ligne
+			U 757 4 I M 4 19 3/16e Ligne
+			End
+		B 2e Brigade
+			Begin
+			L 2 4 1 GB Viala
+			U 545 4 I M 5 20 4/2e Ligne
+			U 652 4 I M 6 21 3/37e Ligne
+			U 693 4 I M 2 17 4/56e Ligne
+			U 669 4 I M 4 19 3/93e Ligne
+			End
+		B Artillerie de Division
+			Begin
+			L 2 4 42 Capt. Anon 1
+			U 9 5 C V 21 1 7/2e Art. à Cheval 
+			U 2 5 C V 21 1 7/2e Art. à Cheval 
+			U 2 5 C V 21 1 7/2e Art. à Cheval 
+			U 2 5 C V 21 1 7/2e Art. à Cheval 
+			U 3 5 C O 21 1 7/2e Art. à Cheval 
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D 2e Division
+		Begin
+		L 3 5 144 GD G. Lechi
+		B 1er Brigade
+			Begin
+			L 2 4 2 GB Milossewitz
+			U 712 4 I M 219 132 2/2° di Linea
+			U 576 4 I M 220 133 3/4° di Linea
+			U 767 4 I M 221 134 2/5° di Linea
+			End
+		B 2e Brigade
+			Begin
+			L 2 3 198 GB Scwharz
+			U 517 4 V M 13 28 3/2e Suisse
+			U 382 6 G M 218 131 1/Veliti Reale
+			U 949 3 I M 230 140 1/1° di Linea
+			U 949 3 I M 230 140 2/1° di Linea
+			U 193 5 H S 51 34 3e Cuirassiers Prov.
+			End
+		B Artillerie de Division
+			Begin
+			L 2 4 41 Capt. Anon 2
+			U 9 5 B V 228 18 11/Art. a Piedi
+			U 2 5 B V 228 18 11/Art. a Piedi
+			U 2 5 B V 228 18 11/Art. a Piedi
+			U 2 5 B V 228 18 11/Art. a Piedi
+			U 2 5 B V 228 18 11/Art. a Piedi
+			U 3 5 B O 228 18 11/Art. a Piedi
+			End
+		S 300 86 Chariot Fourniture
+		End
+	B 1er Bde de Cavalerie
+		Begin
+		L 2 5 67 GB Bessières
+		U 399 5 H S 51 34 3e Cuirassiers Prov.
+		U 431 5 L K 34 27 3e Chasseurs Prov.
+		End
+ 	B 2e Bde de Cavalerie
+		Begin
+		L 2 3 4 Col. Banco
+		U 451 4 L K 227 83 2° Cacciatori
+		U 348 3 L K 232 84 2° Cacciatori
+		End 
+	S 300 86 Chariot Fourniture
+	End
+British A Not Present
+	Begin
+	End
+Spanish D Somatenes
+	Begin
+	L 3 4 360 Antonio Franch
+	U 350 -4 V Z 158 96 Som. de Manresa
+	U 200 -4 V Z 159 97 Som. de San Pedor
+	U 60 -4 S Z 158 96 Som. de Sallen
+	U 50 -3 S P 157 95 Paisanos Armadas
+	U 50 -3 S P 157 95 Paisanos Armadas
+	U 50 -3 S P 157 95 Paisanos Armadas
+	U 50 -3 S P 157 95 Paisanos Armadas
+	U 50 -3 S P 157 95 Paisanos Armadas
+	U 50 -3 S P 157 95 Paisanos Armadas
+	S 300 199 Equipaje de Tren 
+	End
+Spanish D Fuerzas Regulares
+	Begin
+	L 3 4 30 Comandante J. Baget
+	U 120 6 G M 161 98 Dest. Guardia Walonas
+	U 250 4 R M 166 103 1/Rto. Estremadura 
+	U 300 5 R M 171 107 1/Suizos de Wimpffen
+	U 300 3 R M 172 108 Vols. Provinciales
+	U 5 4 B V 197 11 Batería a Pe
+	U 2 4 B V 197 11 Batería a Pe
+	U 2 4 B V 197 11 Batería a Pe
+	U 1 4 B N 197 11 Batería a Pe
+	S 300 199 Equipaje de Tren 
+	End
+French S 300 86 Chariot Fourniture
+British S 300 137 Supply Wagon
+Spanish S 300 199 Equipaje de Tren
+

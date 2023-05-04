@@ -1,0 +1,61 @@
+2
+French A Corps de Siége
+	Begin
+	L 4 4 185 GD Reille
+	U 250 4 V M 13 28 Det./2e Suisse
+	U 650 3 I M 222 135 1/113° di Linea
+	U 650 3 I M 222 135 2/113° di Linea
+	U 2 4 B V 20 0 10/4e Art. à Pied
+	End				
+British A Royal Navy
+	Begin
+	G 14 6 b 276 5 HMS Montague
+	B Landing Party
+		Begin
+		L 2 5 397 Capt. R Otway
+		U 50 5 S G 280 159 Marines
+		U 50 5 S G 280 159 Marines
+		U 50 5 S G 280 159 Marines
+		U 50 5 S G 280 159 Marines
+		U 50 5 S G 280 159 Marines
+		End
+	S 300 137 Supply Wagon 
+	End
+Spanish A Somatenes de Cataluña
+	Begin
+	L 2 5 349 Col. Claros
+	U 500 -3 V Z 158 96 Somatenes
+	U 500 -3 V Z 159 97 Somatenes
+	U 500 -3 V Z 158 96 Somatenes
+	U 500 -3 V Z 159 97 Somatenes
+	U 500 -3 V Z 158 96 Somatenes
+	U 500 -3 V Z 159 97 Somatenes
+	U 500 -3 V Z 158 96 Somatenes
+	U 500 -3 V Z 159 97 Somatenes
+	U 100 -3 S Z 158 96 Somatenes
+	U 100 -3 S Z 158 96 Somatenes
+	U 100 -3 S Z 158 96 Somatenes
+	U 100 -3 S Z 158 96 Somatenes
+	U 100 -3 S Z 158 96 Somatenes
+	S 300 199 Equipaje de Tren
+	C Guarnición de Rosas
+		Begin
+		L 4 3 32 Anon 1
+		U 50 -3 S Q 158 95 Miqueletes
+		U 50 -3 S M 157 95 Miqueletes
+		U 50 -3 S Z 159 95 Miqueletes
+		U 50 -3 S Q 158 95 Miqueletes
+		U 50 -3 S Z 157 95 Miqueletes
+		U 50 -3 S Z 158 95 Miqueletes
+		U 50 -2 S K 159 95 Miqueletes
+		U 50 -2 S P 157 95 Miqueletes
+		U 1 4 A A 197 11 Batería a Pe
+		U 2 3 A U 197 11 Batería a Pe
+		U 2 3 B V 197 11 Batería a Pe
+		S 300 199 Equipaje de Tren
+		End
+	End
+French S 300 86 Chariot Fourniture
+British S 300 137 Supply Wagon
+Spanish S 300 199 Equipaje de Tren
+

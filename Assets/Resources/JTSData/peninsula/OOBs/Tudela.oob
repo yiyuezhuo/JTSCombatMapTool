@@ -1,0 +1,642 @@
+2
+French A Det. A. d’Espagne
+	Begin
+	L 4 6 141 Maréchal Lannes
+	C III Corps d’Armee
+		Begin
+		L 4 4 165 Maréchal Moncey
+		D 1er Division
+			Begin
+			L 3 4 0 GD Mathieu
+			B 1er Brigade
+				Begin
+				L 2 4 1 GB Buget
+				U 565 4 I M 3 18 1/14e Ligne
+				U 565 4 I M 3 18 2/14e Ligne
+				U 564 4 I M 3 18 3/14e Ligne
+				U 564 4 I M 3 18 4/14e Ligne
+				U 563 4 I M 4 19 1/44e Ligne
+				U 562 4 I M 4 19 2/44e Ligne
+				U 562 4 I M 4 19 3/44e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 14 Col. Swiderski
+				U 450 4 I M 5 20 3/70e Ligne
+				U 595 5 I M 202 121 1/2e de la Vistule
+				U 594 5 I M 202 121 2/2e de la Vistule
+				U 648 5 I M 202 121 1/3e de la Vistule
+				U 648 5 I M 202 121 2/3e de la Vistule
+				End
+			B Artillerie de Division
+				Begin
+				L 2 4 40 Capt. Anon 1
+				U 9 5 A J 20 0 22/3e Art. à Pied
+				U 3 5 A J 20 0 22/3e Art. à Pied
+				U 2 5 B V 20 0 22/3e Art. à Pied
+				U 2 5 B V 20 0 22/3e Art. à Pied
+				U 2 5 A O 20 0 22/3e Art. à Pied
+				End
+			S 300 86 Chariot Fourniture
+			End
+		D 2e Division
+			Begin
+			L 3 4 3 GD Musnier
+			B 1er Brigade
+				Begin
+				L 2 4 4 GB Brun
+				U 591 3 I M 3 18 1/114e Ligne
+				U 591 3 I M 3 18 2/114e Ligne
+				U 591 3 I M 3 18 3/114e Ligne
+				U 591 3 I M 3 18 4/114e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 5 GB Razout
+				U 588 3 I M 5 20 1/115e Ligne
+				U 588 3 I M 5 20 2/115e Ligne
+				U 587 3 I M 5 20 3/115e Ligne
+				U 587 3 I M 5 20 4/115e Ligne
+				End
+			B Artillerie de Division
+				Begin
+				L 2 4 41 Capt. Anon 2
+				U 8 5 B V 20 0 7/3e Art. à Pied
+				U 2 5 A J 20 0 7/3e Art. à Pied
+				U 2 5 B V 20 0 7/3e Art. à Pied
+				U 2 5 B V 20 0 7/3e Art. à Pied
+				U 2 5 A O 20 0 7/3e Art. à Pied
+				End
+			S 300 86 Chariot Fourniture
+			End
+		D 3e Division
+			Begin
+			L 3 4 6 GD Morlot
+			B 1er Brigade
+				Begin
+				L 2 4 7 GB Augereau
+				U 474 3 I M 5 20 1/116e Ligne
+				U 473 3 I M 5 20 2/116e Ligne
+				U 543 4 V M 17 33 1/Légion Irlandais
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 8 GB Aubrée
+				U 515 3 I M 4 19 1/117e Ligne
+				U 515 3 I M 4 19 2/117e Ligne 
+				U 515 3 I M 4 19 3/117e Ligne 
+				U 514 3 I M 4 19 4/117e Ligne 
+				End
+			B Artillerie de Division
+				Begin
+				L 2 4 40 Capt. Anon 3
+				U 6 5 B V 20 0 18/3e Art. à Pied
+				U 2 5 A J 20 0 18/3e Art. à Pied
+				U 2 5 B V 20 0 18/3e Art. à Pied
+				U 2 5 A O 20 0 18/3e Art. à Pied
+				End
+			S 300 86 Chariot Fourniture
+			End
+		D 4e Division
+			Begin
+			L 3 4 9 GD Grandjean
+			B 1er Brigade
+				Begin
+				L 2 4 0 GB Laval
+				U 578 5 I M 202 121 1/1er de la Vistule
+				U 577 5 I M 202 121 2/1er de la Vistule
+				U 637 3 I M 5 20 1/2e Lég. de Reserve
+				U 637 3 I M 5 20 2/2e Lég. de Reserve
+				U 637 3 I M 5 20 3/2e Lég. de Reserve
+				U 637 3 I M 5 20 4/2e Lég. de Reserve
+				End
+			B Artillerie de Division
+				Begin
+				L 2 4 41 Capt. Anon 4
+				U 6 5 A J 20 0 7/5e Art. à Pied
+				U 2 5 A J 20 0 7/5e Art. à Pied
+				U 2 5 B V 20 0 7/5e Art. à Pied
+				U 2 5 A O 20 0 7/5e Art. à Pied
+				End
+			S 300 86 Chariot Fourniture
+			End
+		B Cavallerie de III Corps
+			Begin
+			L 2 5 224 GB Watier
+			U 210 5 H S 51 34 1er Cuirassiers Prov.
+			U 178 4 L K 24 17 1er Hussards Prov.
+			U 162 4 L K 27 20 2e Hussards Prov.
+			U 666 6 L L 28 21 1er de la Vistule
+			End
+		B Artillerie de III Corps
+			Begin
+			L 2 4 8 GB Couin
+			U 5 5 A A 20 0 20/1er Art. à Pied
+			U 4 5 C V 21 1 7/5e Art. à Cheval
+			U 2 5 A A 20 0 20/1er Art. à Pied
+			U 1 5 A J 20 0 20/1er Art. à Pied
+			U 2 5 A O 20 0 20/1er Art. à Pied
+			U 3 5 C V 21 1 7/5e Art. à Cheval
+			U 1 5 C O 21 1 7/5e Art. à Cheval
+			End
+		S 300 86 Chariot Fourniture
+		End
+	C VI Corps d'Armée
+		Begin
+		L 4 5 172 Maréchal Ney
+		D 1er Division 
+			Begin
+			L 2 4 155 GD Marchand
+			B 1er Brigade
+				Begin
+				L 2 4 1 GB Maucune
+				U 655 5 V M 10 25 1/6e Légère
+				U 654 5 V M 10 25 2/6e Légère
+				U 654 5 V M 10 25 3/6e Légère
+				U 745 5 I M 4 19 1/39e Ligne
+				U 745 5 I M 4 19 2/39e Ligne
+				U 745 5 I M 4 19 3/39e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 156 GB Marcognet
+				U 605 5 I M 3 18 1/69e Ligne
+				U 605 5 I M 3 18 2/69e Ligne
+				U 604 5 I M 3 18 3/69e Ligne
+				U 635 5 I M 5 20 1/76e Ligne
+				U 635 5 I M 5 20 2/76e Ligne
+	 			U 635 5 I M 5 20 3/76e Ligne
+				End
+			B Artillerie de Division
+ 				Begin
+ 				L 2 3 41 Capt. Anon 5
+				U 8 5 A J 20 0 10/1er Art. à Pied
+				U 8 5 B V 20 0 14/1er Art. à Pied
+				U 2 5 A J 20 0 10/1er Art. à Pied
+				U 2 5 A J 20 0 10/1er Art. à Pied
+				U 2 5 A J 20 0 10/1er Art. à Pied
+				U 2 5 A O 20 0 10/1er Art. à Pied
+				U 2 5 B V 20 0 14/1er Art. à Pied
+				U 2 5 B V 20 0 14/1er Art. à Pied
+				U 2 5 B V 20 0 14/1er Art. à Pied
+				U 2 5 B O 20 0 14/1er Art. à Pied
+				End
+			S 300 86 Chariot Fourniture
+			End 
+		D 2e Division 
+			Begin
+			L 3 4 136 GD Lagrange
+			B 1er Brigade
+				Begin
+				L 2 4 5 GB Bardet 
+				U 500 5 V M 11 26 1/25e Légère
+				U 500 5 V M 11 26 2/25e Légère
+				U 499 5 V M 11 26 3/25e Légère
+				U 640 5 I M 3 18 1/27e Ligne
+ 				U 640 5 I M 3 18 2/27e Ligne 
+				U 640 5 I M 3 18 3/27e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 4 GB Labassée
+				U 507 5 I M 3 18 1/50e Ligne
+				U 507 5 I M 3 18 2/50e Ligne
+				U 506 5 I M 3 18 3/50e Ligne
+				U 787 5 I M 4 19 1/59e Ligne
+				U 787 5 I M 4 19 2/59e Ligne
+	 			U 787 5 I M 4 19 3/59e Ligne
+				End
+			B Artillerie de Division
+ 				Begin
+ 				L 2 3 40 Capt. Anon 6
+				U 8 5 A J 20 0 21/3e Art. à Pied
+ 				U 2 5 A J 20 0 21/3e Art. à Pied
+				U 2 5 A J 20 0 21/3e Art. à Pied
+				U 2 5 A J 20 0 21/3e Art. à Pied
+				U 2 5 A O 20 0 21/3e Art. à Pied
+				End
+			S 300 86 Chariot Fourniture
+			End
+		D Division de Réserve
+			Begin
+			L 3 4 9 GD Dessolles
+			B 1er Brigade
+				Begin
+				L 2 3 0 GB Godinot
+				U 606 5 V M 10 25 1/12e Légère
+				U 606 5 V M 10 25 2/12e Légère
+				U 605 5 V M 10 25 3/12e Legere
+				U 699 5 I M 3 18 1/51e Ligne
+				U 699 5 I M 3 18 2/51e Ligne
+				U 699 5 I M 3 18 3/51e Ligne
+				End
+			B 2e Brigade
+				Begin
+				L 2 4 189 GB J.P.A. Rey
+				U 495 5 I M 4 19 1/43e Ligne
+				U 494 5 I M 4 19 2/43e Ligne
+				U 494 5 I M 4 19 3/43e Ligne
+				U 600 5 I M 5 20 1/55e Ligne
+				U 600 5 I M 5 20 2/55e Ligne
+				U 599 5 I M 5 20 3/55e Ligne
+				End
+			B Cavallerie Attaché
+				Begin
+				L 2 4 219 Col. Vial
+				U 466 5 L K 38 31 26e Chas. à Cheval
+				End
+			B Artillerie de Division
+				Begin
+				L 2 4 40 Capt. Anon 7
+				U 8 5 A J 20 0 9/1er Art. à Pied
+				U 8 5 B V 20 0 12/1er Art. à Pied
+				U 2 5 A J 20 0 9/1er Art. à Pied
+				U 2 5 A J 20 0 9/1er Art. à Pied
+				U 2 5 A J 20 0 9/1er Art. à Pied
+				U 2 5 A O 20 0 9/1er Art. à Pied
+				U 2 5 B V 20 0 12/1er Art. à Pied
+				U 2 5 B V 20 0 12/1er Art. à Pied
+				U 2 5 B V 20 0 12/1er Art. à Pied
+				U 2 5 B O 20 0 12/1er Art. à Pied 
+				End
+			S 300 86 Chariot Fourniture
+			End
+		B Cavalerie de VI Corps
+			Begin
+			L 2 6 97 GB Colbert
+			U 574 6 L K 24 17 3e Hussards
+			U 651 5 L K 33 26 15e Chas. à Cheval
+			U 6 5 C V 21 1 5/3e Art. à Cheval
+			U 2 5 C V 21 1 5/3e Art. à Cheval
+			U 2 5 C V 21 1 5/3e Art. à Cheval
+			U 2 5 C V 21 1 5/3e Art. à Cheval 
+			End
+		B Artillerie de VI Corps
+			Begin
+			L 2 4 7 GD Seroux
+			U 4 5 A A 20 0 13/1er Art. à Pied
+			U 74 5 P M 8 23 Sappeurs du Genie
+			U 2 5 A A 20 0 13/1er Art. à Pied
+			U 2 5 A J 20 0 13/1er Art. à Pied
+			End
+		S 300 86 Chariot Fourniture
+		End
+	D 1er Div. de Dragons
+		Begin
+		L 3 5 143 GD Latour-Maubourg
+		B 1er Brigade
+			Begin
+			L 2 4 5 GB Perrimond
+			U 453 5 D M 41 0 1er Dragons
+			U 689 5 D M 42 1 2e Dragons
+			End
+		B 2e Brigade
+			Begin
+			L 2 4 6 GB Doullembourg
+			U 506 5 D M 41 0 4e Dragons
+			U 630 5 D M 48 7 14e Dragons
+			End
+		B 3e Brigade
+			Begin
+			L 2 4 7 GB Digeon
+			U 600 5 D M 48 7 20e Dragons
+			U 713 5 D M 50 9 26e Dragons
+			End
+		B Artillerie de Division
+			Begin
+			L 2 4 42 Capt. Anon 8
+			U 6 5 C V 21 1 2/2e Art. à Cheval
+			U 2 5 C V 21 1 2/2e Art. à Cheval
+			U 2 5 C V 21 1 2/2e Art. à Cheval
+			U 2 5 C O 21 1 2/2e Art. à Cheval
+			End
+		S 300 86 Chariot Fourniture
+		End
+		S 300 86 Chariot Fourniture
+	End
+British A British Army
+	Begin
+	End
+Spanish A Ejercito del Centro
+	Begin
+	L 4 4 347 CG Castanos
+	D División Combinado
+		Begin
+		L 3 4 30 MdC Villariezo
+		B 1ª Sección
+			Begin
+			L 2 5 387 MdC Venegas
+			U 650 4 R M 168 105 1/Rto. Jaen
+			U 630 5 V M 175 111 Caz. de Barbastro
+			U 680 4 R M 172 108 Prov. de Jaen
+			End
+		B 2ª Sección
+			Begin
+			L 2 4 32 MdC Carvajal
+			U 630 5 V M 177 114 Vols. de Valencia
+			U 530 4 R M 172 108 Prov. de Burgos
+			U 560 4 R M 172 108 Prov. de Plasencia
+			U 550 4 R M 172 108 Prov. de Guadix
+			U 520 4 R M 172 108 Prov. de Lorca
+			U 510 4 R M 172 108 Prov. de Toro
+			End
+		B Caballería
+			Begin
+			L 2 2 33 Col. Anon 9
+			U 190 4 H S 183 69 Rto. de Farnesio
+			U 200 4 H S 184 70 Rto. de Calatrava
+			U 100 4 H S 186 72 Rto. de Santiago
+			U 140 4 L S 189 11 Drag. de la Reina
+			U 100 4 L S 191 13 Drag. de Sagunto
+			U 54 2 K L 195 76 Lanceros de Urtera
+			End
+		B Artillería
+			Begin
+			L 2 3 48 Capt. Anon 10
+			U 4 4 A U 197 11 Batería a Pe
+			U 2 4 A U 197 11 Batería a Pe
+			U 2 4 A U 197 11 Batería a Pe
+			U 160 4 P M 198 119 Zapadores
+			End 
+		S 300 199 Equipaje de Tren
+		End
+	D 2ª División
+		Begin
+		L 3 3 34 MdC Grimarest
+		B 1ª Sección
+			Begin
+			L 2 2 35 Col. Anon 11
+			U 500 5 G M 161 98 1/Guardias Walonas
+			U 451 4 R M 163 100 1/Rto. Reina
+			U 421 3 R M 167 104 1/Rto. Burgos
+			U 325 3 V M 159 97 Tiradores de Cadiz
+			U 253 3 V M 159 97 Tiradores de España
+			U 451 2 M Z 158 96 2ª Vols de Sevilla
+			U 600 3 R M 172 108 1/1ª Vols. de Madrid
+			End
+		B 2ª Sección
+			Begin
+			L 2 2 36 Col. Anon 12
+			U 300 4 R M 167 104 1/Rto. Fijo de Ceuta
+			U 300 4 R M 167 104 2/Rto. Fijo de Ceuta
+			U 594 4 R M 172 108 Prov. de Bujalance
+			U 596 4 R M 172 108 Prov. de Cuenca
+			U 575 4 R M 172 108 Prov. de Ciudad Real
+			U 290 4 R M 172 108 Prov. de Trujillo
+			U 553 4 R M 172 108 Prov. de Granada
+			End
+		B Caballería
+			Begin
+			L 2 5 999 Brig. Ballesteros
+			U 433 4 H S 183 69 Rto. de Borbón
+			U 554 4 L L 192 14 Drag. de Lusitania
+			U 120 5 L S 193 74 Vols. de España
+			U 300 3 L S 193 74 Caz. de Sevilla
+			End
+ 		B Artillería
+			Begin
+			L 2 3 48 Capt. Anon 13
+			U 6 4 C V 197 11 Batería a Caballo
+			U 2 4 C V 197 11 Batería a Caballo
+			U 2 4 C V 197 11 Batería a Caballo
+			U 2 4 C V 197 11 Batería a Caballo
+			End 
+		S 300 199 Equipaje de Tren
+		End
+	D 4ª División
+		Begin
+		L 3 4 364 TG Conde de la Pena
+		B 1ª Sección
+			Begin
+			L 2 2 38 Col. Anon 14
+			U 750 5 V M 177 114 Vols. de Campo Mayor
+			U 299 4 R M 164 101 1/Rto. Africa
+			U 299 4 R M 164 101 3/Rto. Africa
+			U 600 4 R M 165 102 3/Rto. Zaragoza
+			U 550 4 R M 165 102 1/Rto. Murcia
+			U 550 4 R M 165 102 2/Rto. Murcia
+			U 500 4 R M 172 108 Prov. de Siguenza
+			End
+		B 2ª Sección
+			Begin
+			L 2 2 39 Col. Anon 15
+			U 707 5 R M 173 109 1/Grans. de Andalucía
+			U 707 5 R M 173 109 2/Grans. de Andalucía
+			U 236 4 R M 168 105 1/Rto. Ord. Militares
+			U 236 4 R M 168 105 2/Rto. Ord. Militares 
+			U 236 4 R M 168 105 3/Rto. Ord. Militares
+			U 400 3 R M 167 104 2/Rto. Burgos
+			U 250 2 M M 158 96 2/Rto. de Bailén
+			U 600 4 R M 170 112 2/Rto. Irlanda
+			U 1200 2 V M 159 97 Caz. Navas de Tolosa
+			End
+		B Caballería
+			Begin
+			L 2 2 30 Col. Anon 16
+			U 408 4 L S 189 11 Dragones de Pavia
+			U 70 2 K L 195 76 Lanceros de Xeres
+			End
+ 		B Artillería
+			Begin
+			L 2 3 49 Capt. Anon 17
+			U 6 4 C U 197 11 Batería a Caballo
+			U 6 4 A U 197 11 Batería a Pe
+ 			U 2 4 C U 197 11 Batería a Caballo
+ 			U 2 4 C U 197 11 Batería a Caballo
+ 			U 2 4 C U 197 11 Batería a Caballo
+ 			U 2 4 A U 197 11 Batería a Pe
+ 			U 2 4 A U 197 11 Batería a Pe
+ 			U 2 4 A U 197 11 Batería a Pe
+			U 100 4 P M 198 119 Zapadores
+			End 
+		S 300 199 Equipaje de Tren
+		End
+	D 5ª División
+		Begin
+		L 3 4 31 TG Don P. Roca
+		B 1ª Sección
+			Begin
+			L 2 4 32 Brig. Fulgosio
+			U 496 4 R M 164 101 1/Rto. Saboya
+			U 496 4 R M 164 101 3/Rto. Saboya 
+			U 462 4 R M 165 102 1/Rto. Valencia
+			U 462 4 R M 165 102 2/Rto. Valencia
+			U 233 4 R M 168 105 1/Rto. América
+			U 233 4 R M 168 105 2/Rto. América
+			U 520 2 V M 159 97 Tirs. de Cartagena
+			End
+		B 2ª Sección
+			Begin
+			L 2 3 33 Col. Anon 18
+			U 632 4 R M 172 108 Prov. de Murcia
+			U 574 4 R M 172 108 Prov. de Ávila
+			U 500 2 M M 159 97 Rto. de Liria
+			U 504 2 V M 159 97 2ª Caz. de Valencia
+			U 901 2 V M 158 96 1ª Caz. de Orihuela
+			End
+		B Caballería
+			Begin
+			L 2 2 34 Col. Anon 19
+			U 165 5 L S 193 74 Caz. de Olivenza
+			U 94 5 L S 193 74 Caz. de la Maestranza
+			End
+ 		B Artillería
+			Begin
+			L 2 3 48 Capt. Anon 20
+			U 6 4 A U 197 11 1ª Batería a Pe
+			U 6 4 B V 197 11 2ª Batería a Pe
+			U 2 4 A U 197 11 1ª Batería a Pe
+			U 2 4 A U 197 11 1ª Batería a Pe
+			U 2 4 A N 197 11 1ª Batería a Pe
+			U 2 4 B V 197 11 2ª Batería a Pe
+			U 2 4 B V 197 11 2ª Batería a Pe
+			U 2 4 B V 197 11 2ª Batería a Pe
+			End 
+		S 300 199 Equipaje de Tren
+		End
+	D División Castellano
+		Begin
+		L 3 4 346 MdC de Cartaojal
+		U 400 4 R M 165 102 1/Rto. Cantabria
+		U 400 4 R M 165 102 2/Rto. Cantabria
+		U 400 5 R M 174 110 Grans. del General
+		U 600 4 R M 172 108 Prov. de Léon
+		U 400 3 V M 159 97 Caz. de Cuenca
+		S 300 199 Equipaje de Tren 
+		End
+	B Reservas Castellanos
+		Begin
+		U 250 1 M Z 158 96 1/1ª Vols de Léon
+		U 250 1 M Z 158 96 2/1ª Vols de Léon
+		U 250 1 M Z 159 97 1/2ª Vols de Léon 
+		U 250 1 M Z 159 97 2/2ª Vols de Léon 
+		U 250 1 M Z 158 96 1/3ª Vols de Léon 
+		U 250 1 M Z 158 96 2/3ª Vols de Léon 
+		U 250 1 M Z 159 97 1/4ª Vols de Léon 
+		U 250 1 M Z 159 97 2/4ª Vols de Léon 
+		U 250 1 M Z 158 96 1/5ª Vols de Léon 
+		U 250 1 M Z 158 96 2/5ª Vols de Léon 
+		U 400 2 M M 158 96 Vols de Zamora
+		U 500 2 V M 159 97 Tiradores de Ledesma 
+		End
+	S 300 199 Equipaje de Tren 
+	End
+Spanish A Ejercito de Aragón
+	Begin
+	L 5 4 379 CG Don J. Palafox
+	D 1ª División
+		Begin
+		L 3 4 39 TG O’Neill
+		B 1ª Sección
+			Begin
+			L 2 4 38 Brig. Fivaller
+			U 609 5 G M 161 98 3/Guardias Españolas
+			U 1141 4 V M 175 111 1° Ligero de Aragón
+			U 869 3 R M 165 102 2° Rto. de Valencia
+			U 386 3 V Z 159 97 Caz. de Fernando VII
+			U 614 3 V M 159 97 2° Ligero de Zaragoza
+			End
+		B 2ª Sección
+			Begin
+			L 2 3 37 Col. Anon 21
+			U 600 4 R M 166 103 1/Rto. Estremadura
+			U 825 5 R M 171 107 Rto. Suizos de Aragón
+			U 1144 2 M Z 158 96 4° Vols. de Aragón
+			U 1029 2 M Z 158 96 1° Vols. de Murcia
+			U 968 2 M Z 159 97 2° Vols. de Murcia
+			U 1219 2 R M 158 96 1° Voluntarios de Huesca
+			U 227 3 V M 159 97 Escopeteros de Navarra 
+			End
+		B Caballería
+			Begin
+			L 2 2 36 Col. Anon 22
+			U 169 4 L S 188 10 Dragones del Rey
+			End
+ 		B Artillería
+			Begin
+			L 2 3 48 Capt. Anon 23
+			U 4 4 A U 197 11 Batería a Pe
+			U 6 4 C V 197 11 Batería a Caballo
+			U 2 4 A U 197 11 Batería a Pe
+			U 2 4 A N 197 11 Batería a Pe
+			U 2 4 C V 197 11 Batería a Caballo
+			U 2 4 C V 197 11 Batería a Caballo
+			U 2 4 C V 197 11 Batería a Caballo
+			U 47 4 P M 198 119 Zapadores
+			End 
+		S 300 199 Equipaje de Tren
+		End
+	D 2ª División
+		Begin
+		L 3 4 35 MdC St March
+		B 1ª Sección
+			Begin
+			L 2 4 34 Col. Anon 24
+			U 620 3 R M 169 106 1/Vols. de Castilla 
+			U 620 3 R M 169 106 2/Vols. de Castilla 
+			U 620 3 R M 169 106 3/Vols. de Castilla
+			U 450 3 M M 158 96 1/Vols. de Turia
+			U 450 3 M M 158 96 2/Vols. de Turia
+			U 450 3 M M 158 96 3/Vols. de Turia
+			U 1000 2 M Z 159 97 Vols. de Chelva
+			U 640 3 M M 158 96 Vols. de Borbón
+			End
+		B 2ª Sección
+			Begin
+			L 2 3 33 Col. Anon 25
+			U 550 4 R M 172 108 Prov. de Soria
+			U 700 3 V M 159 97 1/Vols. de Alicante
+			U 700 3 V M 159 97 2/Vols. de Alicante 
+			U 500 3 V M 158 96 2° Caz. de Fernando VII
+			U 600 3 V M 159 97 Cazadores de Segorbe
+			End
+		B Caballería
+			Begin
+			L 2 2 32 Col. Anon 26
+			U 620 4 L S 192 14 Drag. de Numancia
+			End
+ 		B Artillería
+			Begin
+			L 2 3 48 Capt. Anon 27
+			U 6 4 A U 197 11 1ª Batería a Pe
+			U 6 4 B V 197 11 2ª Batería a Pe
+			U 2 4 A U 197 11 1ª Batería a Pe
+			U 2 4 A U 197 11 1ª Batería a Pe
+			U 2 4 A N 197 11 1ª Batería a Pe
+			U 2 4 B V 197 11 2ª Batería a Pe
+			U 2 4 B V 197 11 2ª Batería a Pe
+			U 2 4 B V 197 11 2ª Batería a Pe
+			U 100 4 P M 198 119 Zapadores
+			End 
+		S 300 199 Equipaje de Tren
+		End
+	D 3ª División
+		Begin
+		L 3 4 368 TG Conde de Lazan
+		U 18 3 L S 193 74 Caz. Fernando VII
+		B 1ª Sección
+			Begin
+			L 2 4 30 Col. Anon 28
+			U 771 2 M M 158 96 Vols. de Aragón
+			U 486 3 V M 159 97 1° Ligero de Zaragoza
+			U 464 2 M Z 158 96 3° Vols. de Aragón
+			U 506 2 M M 159 97 Rto. Fernando VII
+			U 399 2 M Z 159 97 Tercio de Daroca
+			U 1073 3 R M 172 108 Bn. Reunión de Aragón
+			End
+		B Artillería
+			Begin
+			L 2 3 48 Capt. Anon 29
+			U 6 4 A U 197 11 Batería a Pe
+			U 2 4 A U 197 11 Batería a Pe
+			U 2 4 A U 197 11 Batería a Pe
+			U 2 4 A N 197 11 Batería a Pe
+			End 
+		S 300 199 Equipaje de Tren
+		End
+	S 300 199 Equipaje de Tren 
+	End
+French S 300 86 Chariot Fourniture
+British S 300 137 Supply Wagon
+Spanish S 300 199 Equipaje de Tren
+

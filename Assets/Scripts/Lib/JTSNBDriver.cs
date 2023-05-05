@@ -51,7 +51,7 @@ namespace YYZ.JTS.NB
         {
             get
             {
-                if (country == "")
+                if (country == null)
                     return Parent.Country;
                 return country;
             }

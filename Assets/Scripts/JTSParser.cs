@@ -20,8 +20,8 @@ public class JTSParser : MonoBehaviour
     {
         // const string path = "JTSData/peninsula/OOBs/Coruna Campaign";
         // const string path = "JTSData/peninsula/OOBs/Baza";
-        // const string path = "Coruna";
-        const string oobPath = "Coruna_oob";
+        const string oobPath = "JTSData/peninsula/OOBs/Coruna";
+        // const string oobPath = "Coruna_oob";
         const string scnPath = "Coruna_scn";
 
         // var raw = Resources.Load(oobPath);

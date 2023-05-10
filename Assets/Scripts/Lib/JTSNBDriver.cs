@@ -5,10 +5,10 @@ namespace YYZ.JTS.NB
     using System.Collections;
     using System.Collections.Generic;
     using System;
-    // using System.Diagnostics;
+    using System.Diagnostics;
     using System.Linq;
     using System.Text.RegularExpressions;
-    using UnityEngine;
+    // using UnityEngine;
 
     /*
     public enum GroupSize
@@ -349,6 +349,46 @@ namespace YYZ.JTS.NB
                 UnitStates.Add(unitState);
                 Unit2state[unitSelected] = unitState;
             }
+        }
+
+        public Dictionary<string, List<UnitState>> GroupByCountry()
+        {
+            var ret = new Dictionary<string, List<UnitState>>();
+            foreach(var unitState in UnitStates)
+            {
+                var country = unitState.OobItem.Country;
+                if (ret.TryGetValue(country, out var unitStateList))
+                {
+                    unitStateList.Add(unitState);
+                }
+                else
+                {
+                    ret[country] = new List<UnitState>() { unitState };
+                }
+            }
+            return ret;
+        }
+
+        public Dictionary<UnitGroup, List<UnitState>> GroupByBrigade()
+        {
+            var ret = new Dictionary<UnitGroup, List<UnitState>>();
+            foreach(var unitState in UnitStates)
+            {
+                var parent = unitState.OobItem.Parent;
+                var group = parent as UnitGroup;
+                if(group != null && group.Size == "B")
+                {
+                    if(ret.TryGetValue(group, out var unitStateList))
+                    {
+                        unitStateList.Add(unitState);
+                    }
+                    else
+                    {
+                        ret[group] = new List<UnitState>() { unitState };
+                    }
+                }
+            }
+            return ret;
         }
     }
 }

@@ -5,6 +5,26 @@ using System.Linq;
 
 using YYZ.JTS.NB;
 
+public class MapUnitAdaptor: IMapUnit
+{
+    UnitState unitState;
+    public MapUnitAdaptor(UnitState unitState)
+    {
+        this.unitState = unitState;
+    }
+
+    public int Strength { get => unitState.CurrentStrength; }
+    public string Name { get => unitState.OobItem.Name; }
+    public float X { get => unitState.X; }
+    public float Y { get => unitState.Y + offset; }
+    float offset { get => X % 2 == 0 ? 0f : -0.5f; }
+}
+
+public class MapGroupAdaptor<T>: IMapGroup<T> where T : IMapUnit
+{
+    public List<T> MapUnits { get; set; }
+}
+
 public class JTSParser : MonoBehaviour
 {
     // public TextAsset OobText;
@@ -50,9 +70,10 @@ public class JTSParser : MonoBehaviour
         
         foreach(var state in unitStatus.UnitStates)
         {
-            Debug.Log(state);
-            Debug.Log(state.OobItem.Country);
+            // Debug.Log(state);
+            // Debug.Log(state.OobItem.Country);
 
+            /*
             var pos = new Vector3(state.X, state.Y, 0);
             if (state.OobItem.Country == "French")
             {
@@ -61,6 +82,31 @@ public class JTSParser : MonoBehaviour
             else
             {
                 Instantiate(AlliedUnitPrefab, pos, Quaternion.identity);
+            }
+            */
+            foreach(var KV in unitStatus.GroupByBrigade())
+            {
+                var brigade = KV.Key;
+                var unitStates = KV.Value;
+
+                var prefab = brigade.Country == "French" ? FrenchUnitPrefab : AlliedUnitPrefab;
+
+                /*
+                foreach(var unitState in unitStates)
+                {
+                    var offset = unitState.X % 2 == 0 ? 0f : -0.5f;
+                    var pos = new Vector3(unitState.X, unitState.Y + offset, 0);
+                    var gameObject = Instantiate(prefab, pos, Quaternion.identity);
+                    // gameObject.transform.localScale = new Vector3();
+                }
+                */
+                IMapGroup<MapUnitAdaptor> mapGroup = new MapGroupAdaptor<MapUnitAdaptor>() { MapUnits = unitStates.Select(unitState => new MapUnitAdaptor(unitState)).ToList()};
+                var rect = mapGroup.GetRectTransform();
+
+                var pos = new Vector3((float)rect.X, (float)rect.Y, 0);
+                var deg = rect.Rotation / (2 * System.Math.PI) * 360;
+                var gameObject = Instantiate(prefab, pos, Quaternion.Euler(0, 0, (float)deg));
+                gameObject.transform.localScale = new Vector3((float)rect.WidthMain * 2, 1f, 1f);
             }
         }
         

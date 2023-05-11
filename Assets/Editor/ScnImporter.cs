@@ -10,7 +10,8 @@ public class ScnImporter : ScriptedImporter
 {
     public override void OnImportAsset(AssetImportContext ctx)
     {
-        var ta = new TextAsset(File.ReadAllText(ctx.assetPath));
+        var encoding = System.Text.Encoding.GetEncoding("iso-8859-1");
+        var ta = new TextAsset(File.ReadAllText(ctx.assetPath, encoding));
         ctx.AddObjectToAsset("main obj", ta);
         ctx.SetMainObject(ta);
     }

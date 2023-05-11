@@ -7,9 +7,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2933815631615304382, guid: 2dfbe8be48fa8d049a92e4cbcf1f5486, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933815631615304382, guid: 2dfbe8be48fa8d049a92e4cbcf1f5486, type: 3}
+      propertyPath: m_Color.b
+      value: 0.05882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933815631615304382, guid: 2dfbe8be48fa8d049a92e4cbcf1f5486, type: 3}
+      propertyPath: m_Color.g
+      value: 0.007843138
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933815631615304382, guid: 2dfbe8be48fa8d049a92e4cbcf1f5486, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933815631615304382, guid: 2dfbe8be48fa8d049a92e4cbcf1f5486, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 675d6244d2cc1ec45a3fa8100904a5a7, type: 2}
     - target: {fileID: 6224716716427875760, guid: 2dfbe8be48fa8d049a92e4cbcf1f5486, type: 3}
       propertyPath: m_Name
-      value: Unit
+      value: AlliedUnit
       objectReference: {fileID: 0}
     - target: {fileID: 6224716716427875766, guid: 2dfbe8be48fa8d049a92e4cbcf1f5486, type: 3}
       propertyPath: m_RootOrder

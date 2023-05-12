@@ -291,6 +291,22 @@ namespace YYZ.JTS.NB
         }
     }
 
+    /*
+     *  32---- 1
+     * 16/    \2 
+     *   \____/
+     *  8     4
+     */
+    public enum UnitDirection
+    {
+        RightTop = 1,
+        Right = 2,
+        RightBottom = 4,
+        LeftBottom = 8,
+        Left = 16,
+        LeftTop = 32
+    }
+
     public class UnitState
     {
         public AbstractUnit OobItem;
@@ -300,10 +316,28 @@ namespace YYZ.JTS.NB
         public int X;
         public int Y;
 
+        public int DirectionCode;
+        public int Slot;
+        public int UsedMovementPoints;
+        public int Flags;
+
         public override string ToString()
         {
-            return $"UnitState(CurrentStrength={CurrentStrength}, Fatigue={Fatigue}, X={X}, Y={Y}, {OobItem})";
+            return $"UnitState(X={X}, Y={Y}, CurrentStrength={CurrentStrength}, Fatigue={Fatigue}, DirectionCode={DirectionCode}, Slot={Slot}, UsedMovement={UsedMovementPoints}, Flags={Flags}, {OobItem})";
         }
+
+        /*
+        public static Dictionary<int, UnitDirection> DirectionMap = new() {
+            { 1, UnitDirection.RightTop},
+            { 2, UnitDirection.Right},
+            { 4, UnitDirection.RightBottom },
+            { 8, UnitDirection.LeftBottom},
+            { 16, UnitDirection.Left},
+            { 32, UnitDirection.LeftTop}
+        };
+        */
+
+        public UnitDirection Direction { get => (UnitDirection)DirectionCode; }
     }
 
     public class JTSUnitStates
@@ -311,10 +345,20 @@ namespace YYZ.JTS.NB
         // extract unit state (position, direction, current strength, disorder & fatigue state)
         // from a scenario file (*.scn) or a save file (*.btl, *.bte)
 
-        public List<UnitState> UnitStates = new List<UnitState>();
-        public Dictionary<AbstractUnit, UnitState> Unit2state = new Dictionary<AbstractUnit, UnitState>();
+        public List<UnitState> UnitStates = new();
+        public Dictionary<AbstractUnit, UnitState> Unit2state = new();
 
-        // 1 3.5.1 2 1 3 0 0 262144 7 27
+        // 1 2.3.4.4 4 4 393 300 0 4194304 36 23
+        // [0]: 1: Dynamic Command Type (Unit Info, reinforcement, ...)
+        // [1]: 2.3.4.4: Locate a unit in the OOB file
+        // [2]: 4: Direction. 1 => Top-Right, 2=> Right, 4 => Down-Right, 8 => Down-Right, 16 => Left, 32 => Top-Left
+        // [3]: 4: Some Sort of "Slot", non-leader units in the same hex will has a unique enum value (1, 2, 4, 8, ...). However I can't see how does it effect gameplay and it's also not the order shown in game.
+        // [4]: 393: Current Strength
+        // [5]: 300: Fatigue
+        // [6]: 0: Used Movement
+        // [7]: 4194304: A lot of binary Flags, which encode formation, disorder, formation, isolate and etc... 
+        // [8]: X
+        // [9]: Y
         static string unitPattern = @"(\d+) ((?:\d+\.)*\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+)";
 
         public void Extract(UnitGroup oobRoot, string s)
@@ -344,7 +388,11 @@ namespace YYZ.JTS.NB
                     CurrentStrength = int.Parse(match.Groups[5].Value),
                     Fatigue = int.Parse(match.Groups[6].Value),
                     X = int.Parse(match.Groups[9].Value),
-                    Y = int.Parse(match.Groups[10].Value)
+                    Y = int.Parse(match.Groups[10].Value),
+                    DirectionCode = int.Parse(match.Groups[3].Value),
+                    Slot = int.Parse(match.Groups[4].Value),
+                    UsedMovementPoints = int.Parse(match.Groups[7].Value),
+                    Flags = int.Parse(match.Groups[8].Value)
                 };
 
                 UnitStates.Add(unitState);
@@ -380,7 +428,11 @@ namespace YYZ.JTS.NB
                     CurrentStrength = int.Parse(ss[4]),
                     Fatigue = int.Parse(ss[5]),
                     X = int.Parse(ss[8]),
-                    Y = int.Parse(ss[9])
+                    Y = int.Parse(ss[9]),
+                    DirectionCode = int.Parse(ss[2]),
+                    Slot = int.Parse(ss[3]),
+                    UsedMovementPoints = int.Parse(ss[6]),
+                    Flags = int.Parse(ss[7])
                 };
 
                 UnitStates.Add(unitState);
@@ -449,6 +501,11 @@ namespace YYZ.JTS.NB
         public List<string> DynamicCommandBlock = new(); // unit states (positions, direction,...), reinforcement
         public List<string> AICommandBlock = new();
         public string Description;
+
+        public override string ToString()
+        {
+            return $"Scenario({Name}, ({Year},{Month},{Day},{Hour},{Minute}), {Turn}/{TurnLimit}, DC:{DynamicCommandBlock.Count}, AC:{AICommandBlock.Count})";
+        }
 
         public void Extract(string s)
         {

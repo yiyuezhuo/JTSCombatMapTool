@@ -21,6 +21,8 @@ public class MapUnitAdaptor: IMapUnit
     public string Name { get => UnitState.OobItem.Name; }
     public float X { get => UnitState.X; }
     public float Y { get => UnitState.Y + offset; }
+    public UnitDirection Direction { get => UnitState.Direction; }
+    MapUnitDirection IMapUnit.Direction { get => (MapUnitDirection)(int)UnitState.Direction; }
     float offset { get => X % 2 == 0 ? 0f : -0.5f; }
 }
 
@@ -46,8 +48,8 @@ public class MapGroupAdaptor: IMapGroup<MapUnitAdaptor>
         var oobItem = MapUnits[0].UnitState.OobItem;
         while(oobItem.Parent != null)
         {
-            lines.Add(oobItem.Name);
             oobItem = oobItem.Parent;
+            lines.Add(oobItem.Name);
         }
         return string.Join("\n", lines);
     }
@@ -115,112 +117,10 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         return string.Join(".", sl.Take(sl.Length - 1));
     }
 
+    // Start is called before the first frame update
     void Start()
     {
         Setup("011.Coruna4_BrAI");
-    }
-
-    // Start is called before the first frame update
-    void _Start()
-    {
-        // Debug.Log("French A II Corps d'Armée"); // Encoding & Font Test
-
-        // const string path = "JTSData/peninsula/OOBs/Coruna Campaign";
-        // const string path = "JTSData/peninsula/OOBs/Baza";
-        // const string oobPath = "Coruna_oob";
-        // const string scnPath = "Coruna_scn";
-
-        // var raw = Resources.Load(oobPath);
-
-        // Debug.Log($"{raw}, {raw == null}");
-
-        // var oobTextAsset = Resources.Load<TextAsset>(oobPath);
-
-        // Debug.Log($"textAsset={textAsset}");
-
-        var scnText = DataLoader.LoadScenario("011.Coruna4_BrAI");
-
-        var scenario = new JTSScenario();
-        scenario.Extract(scnText);
-
-        // Debug.Log($"scenario.OobFile={scenario.OobFile}");
-
-        var oobName = RemoveExtension(scenario.OobFile);
-        var oobText = DataLoader.LoadOob(oobName);
-
-        unitGroup = JTSOobParser.ParseUnits(oobText);
-
-        /*
-        const string oobPath = "JTSData/peninsula/OOBs/Coruna";
-        const string scnPath = "JTSData/peninsula/Scenarios/011.Coruna4_BrAI";
-
-        unitGroup = JTSOobParser.ParseUnits(LoadText(oobPath));
-        */
-
-        foreach (var unit in unitGroup.Walk())
-        {
-            var group = unit as UnitGroup;
-            if (group != null)
-                Debug.Log(group);
-            // Debug.Log(unit);
-        }
-        
-
-        unitStatus = new JTSUnitStates();
-        // unitStatus.Extract(unitGroup, LoadText(scnPath));
-        unitStatus.ExtractByLines(unitGroup, scenario.DynamicCommandBlock);
-
-        foreach (var state in unitStatus.UnitStates)
-        {
-            // Debug.Log(state);
-            // Debug.Log(state.OobItem.Country);
-
-            /*
-            var pos = new Vector3(state.X, state.Y, 0);
-            if (state.OobItem.Country == "French")
-            {
-                Instantiate(FrenchUnitPrefab, pos, Quaternion.identity);
-            }
-            else
-            {
-                Instantiate(AlliedUnitPrefab, pos, Quaternion.identity);
-            }
-            */
-            foreach(var KV in unitStatus.GroupByBrigade())
-            {
-                var brigade = KV.Key;
-                var unitStates = KV.Value;
-
-                var prefab = brigade.Country == "French" ? FrenchUnitPrefab : AlliedUnitPrefab;
-
-                /*
-                foreach(var unitState in unitStates)
-                {
-                    var offset = unitState.X % 2 == 0 ? 0f : -0.5f;
-                    var pos = new Vector3(unitState.X, unitState.Y + offset, 0);
-                    var gameObject = Instantiate(prefab, pos, Quaternion.identity);
-                    // gameObject.transform.localScale = new Vector3();
-                }
-                */
-                var mapGroup = new MapGroupAdaptor() { MapUnits = unitStates.Select(unitState => new MapUnitAdaptor(unitState)).ToList()};
-                var rect = (mapGroup as IMapGroup<MapUnitAdaptor>).GetRectTransform();
-
-                var pos = new Vector3((float)rect.X, (float)rect.Y, 0);
-                var deg = rect.Rotation / (2 * System.Math.PI) * 360;
-                //var gameObject = Instantiate(prefab, pos, Quaternion.Euler(0, 0, (float)deg));
-                // gameObject.transform.localScale = new Vector3((float)rect.WidthMain * 2, 1f, 1f);
-                var gameObject = Instantiate(prefab, pos, Quaternion.identity, UnitContainer.transform);
-                var gameUnit = gameObject.GetComponent<GameUnit>();
-                gameUnit.SetSize((float)rect.WidthMain * 2, (float)rect.WidthSub);
-                gameUnit.SetRotation((float)deg);
-                gameUnit.SetText("");
-                // gameUnit.SetText(mapGroup.Strength.ToString());
-
-                viewMap[mapGroup] = gameUnit;
-                modelMap[gameUnit] = mapGroup;
-            }
-        }
-        
     }
 
     public void Setup(string scnName)
@@ -248,29 +148,59 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         unitStatus = new JTSUnitStates();
         unitStatus.ExtractByLines(unitGroup, scenario.DynamicCommandBlock);
 
-        foreach (var state in unitStatus.UnitStates)
+        foreach (var KV in unitStatus.GroupByBrigade())
         {
-            foreach (var KV in unitStatus.GroupByBrigade())
+            var brigade = KV.Key;
+            var unitStates = KV.Value;
+
+            var prefab = brigade.Country == "French" ? FrenchUnitPrefab : AlliedUnitPrefab;
+
+            var mapGroup = new MapGroupAdaptor() { MapUnits = unitStates.Select(unitState => new MapUnitAdaptor(unitState)).ToList() };
+            Debug.Log(mapGroup.Name2);
+            var rect = (mapGroup as IMapGroup<MapUnitAdaptor>).GetRectTransform();
+
+            var pos = new Vector3((float)rect.X, (float)rect.Y, 0);
+            var deg = rect.Rotation / (2 * System.Math.PI) * 360;
+            var gameObject = Instantiate(prefab, pos, Quaternion.identity, UnitContainer.transform);
+            var gameUnit = gameObject.GetComponent<GameUnit>();
+
+            var scaleX = (float)rect.WidthMain * 2;
+            var scaleY = 1;
+            // var scaleY = (float)rect.WidthSub;
+
+            gameUnit.SetSize(scaleX, scaleY);
+            gameUnit.SetRotation((float)deg);
+            gameUnit.SetText("");
+
+            var dr = gameUnit.DirectionRect;
+            if (rect.UnitDirection == null)
             {
-                var brigade = KV.Key;
-                var unitStates = KV.Value;
-
-                var prefab = brigade.Country == "French" ? FrenchUnitPrefab : AlliedUnitPrefab;
-
-                var mapGroup = new MapGroupAdaptor() { MapUnits = unitStates.Select(unitState => new MapUnitAdaptor(unitState)).ToList() };
-                var rect = (mapGroup as IMapGroup<MapUnitAdaptor>).GetRectTransform();
-
-                var pos = new Vector3((float)rect.X, (float)rect.Y, 0);
-                var deg = rect.Rotation / (2 * System.Math.PI) * 360;
-                var gameObject = Instantiate(prefab, pos, Quaternion.identity, UnitContainer.transform);
-                var gameUnit = gameObject.GetComponent<GameUnit>();
-                gameUnit.SetSize((float)rect.WidthMain * 2, (float)rect.WidthSub);
-                gameUnit.SetRotation((float)deg);
-                gameUnit.SetText("");
-
-                viewMap[mapGroup] = gameUnit;
-                modelMap[gameUnit] = mapGroup;
+                dr.SetActive(false);
             }
+            else
+            {
+                dr.SetActive(true);
+                var rot = System.Math.Atan2(rect.UnitDirection[1], rect.UnitDirection[0]) / (2*System.Math.PI) * 360;
+                dr.transform.rotation = Quaternion.Euler(0, 0, (float)rot);
+                var d = new Vector2((float)rect.UnitDirection[0], (float)rect.UnitDirection[1]);
+                var coef = rect.UnitDirectionModeIndex == 0 || rect.UnitDirectionModeIndex == 2 ? scaleX : scaleY;
+                dr.transform.localPosition = d * (coef / 2 + dr.transform.localScale.x / 2);
+            }
+
+            viewMap[mapGroup] = gameUnit;
+            modelMap[gameUnit] = mapGroup;
+
+            Debug.Log($"rect.UnitDirection={rect.UnitDirection}");
+
+            // Debug
+            gameUnit.DebugName = mapGroup.Name2;
+            gameUnit.DebugRotation = (float)rect.Rotation;
+            gameUnit.DebugWidthMain = (float)rect.WidthMain;
+            gameUnit.DebugWidthSub = (float)rect.WidthSub;
+            gameUnit.DebugX = (float)rect.X;
+            gameUnit.DebugY = (float)rect.Y;
+            gameUnit.DebugUnitDirection = rect.UnitDirection?.Select(x => (float)x).ToArray();
+            gameUnit.DebugUnitDirectionModeIndex = rect.UnitDirectionModeIndex;
         }
     }
 
@@ -293,16 +223,6 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         Reset();
         Setup(name);
     }
-
-    /*
-    IEnumerable<GameUnit> IterateGameUnits()
-    {
-        foreach(Transform transform in UnitContainer.transform)
-        {
-            yield return transform.GetComponent<GameUnit>();
-        }
-    }
-    */
 
     public void OnUnitTextModeChanged(int idx)
     {

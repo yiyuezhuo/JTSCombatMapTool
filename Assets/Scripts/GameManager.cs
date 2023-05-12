@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using System.IO;
 
 using YYZ.JTS.NB;
 
@@ -58,6 +59,29 @@ public interface IUnitSelectionPublisher
     event EventHandler<MapGroupAdaptor> UnitSelected;
 }
 
+public static class DataLoader
+{
+    public static string ScenarioPath = "JTSData/peninsula/Scenarios";
+    public static string OobPath = "JTSData/peninsula/OOBs";
+
+    public static string LoadScenario(string name)
+    {
+        Debug.Log($"LoadScenario: name={name}");
+        var textAsset = Resources.Load<TextAsset>(ScenarioPath + "/" + name);
+        var text = textAsset.text;
+        return text;
+    }
+
+    public static string LoadOob(string name)
+    {
+        Debug.Log($"LoadOob: name={name}");
+        var textAsset = Resources.Load<TextAsset>(OobPath + "/" + name);
+        var text = textAsset.text;
+        return text;
+    }
+
+}
+
 // "Controller"
 
 public class GameManager : MonoBehaviour, IUnitSelectionPublisher
@@ -70,7 +94,7 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
     public GameObject UnitContainer;
 
     UnitGroup unitGroup;
-    JTSUnitStatus unitStatus;
+    JTSUnitStates unitStatus;
     Dictionary<MapGroupAdaptor, GameUnit> viewMap = new();
     Dictionary<GameUnit, MapGroupAdaptor> modelMap = new();
 
@@ -85,15 +109,24 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         return textAsset.text;
     }
 
-    // Start is called before the first frame update
+    static string RemoveExtension(string p)
+    {
+        var sl = p.Split(".");
+        return string.Join(".", sl.Take(sl.Length - 1));
+    }
+
     void Start()
     {
-        Debug.Log("French A II Corps d'Armée");
+        Setup("011.Coruna4_BrAI");
+    }
+
+    // Start is called before the first frame update
+    void _Start()
+    {
+        // Debug.Log("French A II Corps d'Armée"); // Encoding & Font Test
 
         // const string path = "JTSData/peninsula/OOBs/Coruna Campaign";
         // const string path = "JTSData/peninsula/OOBs/Baza";
-        const string oobPath = "JTSData/peninsula/OOBs/Coruna";
-        const string scnPath = "JTSData/peninsula/Scenarios/011.Coruna4_BrAI";
         // const string oobPath = "Coruna_oob";
         // const string scnPath = "Coruna_scn";
 
@@ -105,9 +138,26 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
 
         // Debug.Log($"textAsset={textAsset}");
 
+        var scnText = DataLoader.LoadScenario("011.Coruna4_BrAI");
+
+        var scenario = new JTSScenario();
+        scenario.Extract(scnText);
+
+        // Debug.Log($"scenario.OobFile={scenario.OobFile}");
+
+        var oobName = RemoveExtension(scenario.OobFile);
+        var oobText = DataLoader.LoadOob(oobName);
+
+        unitGroup = JTSOobParser.ParseUnits(oobText);
+
+        /*
+        const string oobPath = "JTSData/peninsula/OOBs/Coruna";
+        const string scnPath = "JTSData/peninsula/Scenarios/011.Coruna4_BrAI";
+
         unitGroup = JTSOobParser.ParseUnits(LoadText(oobPath));
-        
-        foreach(var unit in unitGroup.Walk())
+        */
+
+        foreach (var unit in unitGroup.Walk())
         {
             var group = unit as UnitGroup;
             if (group != null)
@@ -116,10 +166,11 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         }
         
 
-        unitStatus = new JTSUnitStatus();
-        unitStatus.Extract(unitGroup, LoadText(scnPath));
-        
-        foreach(var state in unitStatus.UnitStates)
+        unitStatus = new JTSUnitStates();
+        // unitStatus.Extract(unitGroup, LoadText(scnPath));
+        unitStatus.ExtractByLines(unitGroup, scenario.DynamicCommandBlock);
+
+        foreach (var state in unitStatus.UnitStates)
         {
             // Debug.Log(state);
             // Debug.Log(state.OobItem.Country);
@@ -170,6 +221,77 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
             }
         }
         
+    }
+
+    public void Setup(string scnName)
+    {
+        var scnText = DataLoader.LoadScenario(scnName);
+
+        var scenario = new JTSScenario();
+        scenario.Extract(scnText);
+
+        var oobName = RemoveExtension(scenario.OobFile);
+        var oobText = DataLoader.LoadOob(oobName);
+
+        unitGroup = JTSOobParser.ParseUnits(oobText);
+
+        /*
+        foreach (var unit in unitGroup.Walk())
+        {
+            var group = unit as UnitGroup;
+            if (group != null)
+                Debug.Log(group);
+            // Debug.Log(unit);
+        }
+        */
+
+        unitStatus = new JTSUnitStates();
+        unitStatus.ExtractByLines(unitGroup, scenario.DynamicCommandBlock);
+
+        foreach (var state in unitStatus.UnitStates)
+        {
+            foreach (var KV in unitStatus.GroupByBrigade())
+            {
+                var brigade = KV.Key;
+                var unitStates = KV.Value;
+
+                var prefab = brigade.Country == "French" ? FrenchUnitPrefab : AlliedUnitPrefab;
+
+                var mapGroup = new MapGroupAdaptor() { MapUnits = unitStates.Select(unitState => new MapUnitAdaptor(unitState)).ToList() };
+                var rect = (mapGroup as IMapGroup<MapUnitAdaptor>).GetRectTransform();
+
+                var pos = new Vector3((float)rect.X, (float)rect.Y, 0);
+                var deg = rect.Rotation / (2 * System.Math.PI) * 360;
+                var gameObject = Instantiate(prefab, pos, Quaternion.identity, UnitContainer.transform);
+                var gameUnit = gameObject.GetComponent<GameUnit>();
+                gameUnit.SetSize((float)rect.WidthMain * 2, (float)rect.WidthSub);
+                gameUnit.SetRotation((float)deg);
+                gameUnit.SetText("");
+
+                viewMap[mapGroup] = gameUnit;
+                modelMap[gameUnit] = mapGroup;
+            }
+        }
+    }
+
+    public void Reset()
+    {
+        foreach(var gameUnit in viewMap.Values)
+        {
+            Destroy(gameUnit.gameObject);
+        }
+        viewMap.Clear();
+        modelMap.Clear();
+
+        unitStatus = null;
+        unitGroup = null;
+    }
+
+    public void ReloadScenario(string name)
+    {
+        Debug.Log($"ReloadScenario name={name}");
+        Reset();
+        Setup(name);
     }
 
     /*

@@ -306,7 +306,7 @@ namespace YYZ.JTS.NB
         }
     }
 
-    public class JTSUnitStatus
+    public class JTSUnitStates
     {
         // extract unit state (position, direction, current strength, disorder & fatigue state)
         // from a scenario file (*.scn) or a save file (*.btl, *.bte)
@@ -314,6 +314,7 @@ namespace YYZ.JTS.NB
         public List<UnitState> UnitStates = new List<UnitState>();
         public Dictionary<AbstractUnit, UnitState> Unit2state = new Dictionary<AbstractUnit, UnitState>();
 
+        // 1 3.5.1 2 1 3 0 0 262144 7 27
         static string unitPattern = @"(\d+) ((?:\d+\.)*\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+) (\d+)";
 
         public void Extract(UnitGroup oobRoot, string s)
@@ -350,6 +351,43 @@ namespace YYZ.JTS.NB
                 Unit2state[unitSelected] = unitState;
             }
         }
+
+        public void ExtractByLines(UnitGroup oobRoot, List<string> sl)
+        {
+            foreach (var s in sl)
+            {
+                if (s[0] == ' ')
+                    continue;
+
+                var ss = s.Trim().Split(" ");
+
+                if (ss[0] != "1")
+                    continue;
+
+                var oobIndex = ss[1];
+                var unit = oobRoot;
+                AbstractUnit unitSelected = null;
+                // UnityEngine.Debug.Log($"oobIndex={oobIndex}, s={s}");
+                foreach (var idx in oobIndex.Split(".").Select(int.Parse))
+                {
+                    unitSelected = unit.Units[idx - 1];
+                    unit = unitSelected as UnitGroup;
+                }
+
+                var unitState = new UnitState()
+                {
+                    OobItem = unitSelected,
+                    CurrentStrength = int.Parse(ss[4]),
+                    Fatigue = int.Parse(ss[5]),
+                    X = int.Parse(ss[8]),
+                    Y = int.Parse(ss[9])
+                };
+
+                UnitStates.Add(unitState);
+                Unit2state[unitSelected] = unitState;
+            }
+        }
+
 
         public Dictionary<string, List<UnitState>> GroupByCountry()
         {
@@ -391,4 +429,69 @@ namespace YYZ.JTS.NB
             return ret;
         }
     }
+
+    public class JTSScenario
+    {
+        public string Name;
+
+        public int Year;
+        public int Month;
+        public int Day;
+        public int Hour;
+        public int Minute;
+        public int Turn;
+        public int TurnLimit;
+
+        public string MapFile;
+        public string OobFile;
+        public string PdtFile;
+
+        public List<string> DynamicCommandBlock = new(); // unit states (positions, direction,...), reinforcement
+        public List<string> AICommandBlock = new();
+        public string Description;
+
+        public void Extract(string s)
+        {
+            var sl = s.Split("\n");
+            Name = sl[1].Trim();
+
+            // 1808 10 31 8 0 0 0 1 32
+            //  0   1   2 3 4 5 6 7 8
+            var ds = sl[2].Trim().Split(" ").Select(int.Parse).ToArray();
+            Year = ds[0];
+            Month = ds[1];
+            Day = ds[2];
+            Hour = ds[3];
+            Minute = ds[4];
+            // Current Side and Step Mode (15min vs 10min?) or Night state or PBEM flag? 
+            Turn = ds[7];
+            TurnLimit = ds[8];
+
+            MapFile = sl[6];
+            OobFile = sl[7];
+            PdtFile = sl[8];
+
+            var idx = 13;
+            while (sl[idx][0] != '0')
+            {
+                DynamicCommandBlock.Add(sl[idx]);
+                idx++;
+            }
+            idx = idx + 2;
+            var pair = sl[idx].Split(" ", 2);
+            var aiCommandSize = int.Parse(pair[0]);
+            var DescriptionIdx = idx + aiCommandSize + 1;
+
+            for (var i = idx + 1; i < DescriptionIdx; i++)
+                AICommandBlock.Add(sl[i]);
+
+            var descriptionList = new List<string>();
+            for (var i = DescriptionIdx; i < sl.Length; i++)
+                descriptionList.Add(sl[i]);
+
+            Description = string.Join("\n", descriptionList);
+        }
+    }
+
+    
 }

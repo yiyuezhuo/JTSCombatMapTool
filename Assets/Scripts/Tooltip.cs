@@ -32,18 +32,18 @@ public class Tooltip : MonoBehaviour
 
     public void OnUnitSelected(object sender, MapGroupAdaptor unit)
     {
-        Debug.Log($"Selected: {unit}");
+        // Debug.Log($"Selected: {unit}");
 
         SetText(unit.Summary());
         gameObject.SetActive(true);
 
-        Debug.Log($"Input.mousePosition={Input.mousePosition}, transform.position={transform.position}");
+        // Debug.Log($"Input.mousePosition={Input.mousePosition}, transform.position={transform.position}");
         transform.position = Input.mousePosition;
     }
 
     public void OnUnitDeselected(object sender, MapGroupAdaptor unit)
     {
-        Debug.Log($"Deselected: {unit}");
+        // Debug.Log($"Deselected: {unit}");
 
         gameObject.SetActive(false);
     }

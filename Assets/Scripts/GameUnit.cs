@@ -8,7 +8,8 @@ public class GameUnit : MonoBehaviour
     public GameObject BaseRect;
     public GameObject DirectionRect;
     public TMP_Text text;
-    SpriteRenderer sRenderer;
+    SpriteRenderer baseRectRenderer;
+    SpriteRenderer directionRectRenderer;
 
     // Debug properties
 
@@ -22,10 +23,11 @@ public class GameUnit : MonoBehaviour
     public int DebugUnitDirectionModeIndex;
 
     // Start is called before the first frame update
-    void Start()
+    // void Start()
+    void Awake()
     {
-        sRenderer = BaseRect.GetComponent<SpriteRenderer>();
-        
+        baseRectRenderer = BaseRect.GetComponent<SpriteRenderer>();
+        directionRectRenderer = DirectionRect.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -50,6 +52,11 @@ public class GameUnit : MonoBehaviour
         text.text = s;
     }
 
+    public void SetUnitCategory(int mode)
+    {
+        baseRectRenderer.material.SetInt("_UnitCategory", mode);
+    }
+
     /*
     public void SetUnitDirection()
     {
@@ -59,11 +66,13 @@ public class GameUnit : MonoBehaviour
 
     public void OnDeselected()
     {
-        sRenderer.material.SetInt("_HighlightMode", 0);
+        baseRectRenderer.material.SetInt("_HighlightMode", 0);
+        directionRectRenderer.material.SetInt("_HighlightMode", 0);
     }
 
     public void OnSelected()
     {
-        sRenderer.material.SetInt("_HighlightMode", 1);
+        baseRectRenderer.material.SetInt("_HighlightMode", 1);
+        directionRectRenderer.material.SetInt("_HighlightMode", 1);
     }
 }

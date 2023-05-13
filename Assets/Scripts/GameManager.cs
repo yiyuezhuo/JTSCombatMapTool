@@ -38,13 +38,13 @@ public class MapGroupAdaptor: IMapGroup<MapUnitAdaptor>
         {
             var brigade = MapUnits[0].UnitState.OobItem.Parent;
             var division = brigade.Parent;
-            return $"{division.Name}/{brigade.Name}";
+            return $"{division.Name}\n{brigade.Name}";
         }
     }
 
     public string Summary()
     {
-        var lines = new List<string>() { Strength.ToString() };
+        var lines = new List<string>() { ReportMenAndGuns() };
         var oobItem = MapUnits[0].UnitState.OobItem;
         while(oobItem.Parent != null)
         {
@@ -53,6 +53,61 @@ public class MapGroupAdaptor: IMapGroup<MapUnitAdaptor>
         }
         return string.Join("\n", lines);
     }
+
+    public bool IsCavalryGroup()
+    {
+        foreach(var unit in MapUnits)
+        {
+            var unitOob = unit.UnitState.OobItem as UnitOob;
+            if (unitOob != null && unitOob.Category == UnitCategory.Infantry) // Accepts Cavalry Artillery Complex
+                return false;
+        }
+        return !IsArtilleryGroup();
+    }
+
+    public bool IsArtilleryGroup()
+    {
+        foreach (var unit in MapUnits)
+        {
+            var unitOob = unit.UnitState.OobItem as UnitOob;
+            if (unitOob != null && unitOob.Category != UnitCategory.Artillery) // Accepts Cavalry Artillery Complex
+                return false;
+        }
+        return true;
+    }
+
+    public string ReportMenAndGuns()
+    {
+        var men = 0;
+        var guns = 0;
+        foreach(var unit in MapUnits)
+        {
+            var unitOob = unit.UnitState.OobItem as UnitOob;
+            if(unitOob != null)
+            {
+                if(unitOob.Category == UnitCategory.Artillery)
+                {
+                    guns += unit.Strength;
+                }
+                else
+                {
+                    men += unit.Strength;
+                }
+            }
+        }
+        var menWord = men == 1 ? "man" : "men";
+        var gunsWord = guns == 1 ? "gun" : "guns";
+        if(guns == 0)
+        {
+            return men.ToString();
+        }
+        else if(men == 0)
+        {
+            return $"{guns} {gunsWord}";
+        }
+        return $"{men} {menWord}, {guns} {gunsWord}";
+    }
+
 }
 
 public interface IUnitSelectionPublisher
@@ -81,7 +136,6 @@ public static class DataLoader
         var text = textAsset.text;
         return text;
     }
-
 }
 
 // "Controller"
@@ -107,11 +161,9 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
 
     public int DistanceThreshold = 3;
 
-    static string LoadText(string path)
-    {
-        var textAsset = Resources.Load<TextAsset>(path);
-        return textAsset.text;
-    }
+    bool showIndependentArtillery = false;
+
+    public string currentScenarioName = "011.Coruna4_BrAI";
 
     static string RemoveExtension(string p)
     {
@@ -122,7 +174,7 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
     // Start is called before the first frame update
     void Start()
     {
-        Setup("011.Coruna4_BrAI");
+        Setup(currentScenarioName);
     }
 
     static float MapUnitDistance(MapUnitAdaptor a, MapUnitAdaptor b)
@@ -177,6 +229,10 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
     void CreateGameUnit(List<MapUnitAdaptor> mapUnits, GameObject prefab)
     {
         var mapGroup = new MapGroupAdaptor() { MapUnits = mapUnits };
+
+        if (!showIndependentArtillery && mapGroup.IsArtilleryGroup())
+            return;
+
         // Debug.Log(mapGroup.Name2);
         var rect = (mapGroup as IMapGroup<MapUnitAdaptor>).GetRectTransform();
 
@@ -185,7 +241,7 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         var gameObject = Instantiate(prefab, pos, Quaternion.identity, UnitContainer.transform);
         var gameUnit = gameObject.GetComponent<GameUnit>();
 
-        var scaleX = (float)rect.WidthMain * 3;
+        var scaleX = Mathf.Max(1, (float)rect.WidthMain * 3);
         var scaleY = 1;
         // var scaleY = (float)rect.WidthSub;
 
@@ -206,6 +262,11 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
             var d = new Vector2((float)rect.UnitDirection[0], (float)rect.UnitDirection[1]);
             var coef = rect.UnitDirectionModeIndex == 0 || rect.UnitDirectionModeIndex == 2 ? scaleX : scaleY;
             dr.transform.localPosition = d * (coef / 2 + dr.transform.localScale.x / 2);
+        }
+
+        if(mapGroup.IsCavalryGroup())
+        {
+            gameUnit.SetUnitCategory(1);
         }
 
         viewMap[mapGroup] = gameUnit;
@@ -237,8 +298,15 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         unitGroup = null;
     }
 
+    public void OnToggleShowIndependentArtillery(bool showIndependentArtillery)
+    {
+        this.showIndependentArtillery = showIndependentArtillery;
+        ReloadScenario(currentScenarioName);
+    }
+
     public void ReloadScenario(string name)
     {
+        currentScenarioName = name;
         Debug.Log($"ReloadScenario name={name}");
         Reset();
         Setup(name);
@@ -255,9 +323,13 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
                 break;
             case 1: // Strength
                 foreach (var KV in viewMap)
-                    KV.Value.SetText(KV.Key.Strength.ToString());
+                    KV.Value.SetText(KV.Key.ReportMenAndGuns());
                 break;
-            case 2: // Name
+            case 2: // Direct (Brigade in most cases) Name
+                foreach (var KV in viewMap)
+                    KV.Value.SetText(KV.Key.Name);
+                break;
+            case 3: // 2 level Namee
                 foreach (var KV in viewMap)
                     KV.Value.SetText(KV.Key.Name2);
                 break;

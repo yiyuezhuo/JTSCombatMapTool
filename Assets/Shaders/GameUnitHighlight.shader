@@ -4,7 +4,8 @@ Shader "Unlit/GameUnitHighlight"
     {
         _MainTex("Texture", 2D) = "white" {}
         _Color ("Main Color", Color) = (0.5, 0.5, 0.5, 1.0)
-        _HighlightMode("HighlightMode", Int) = 0 //
+        _HighlightMode("HighlightMode", Int) = 0 // 0 => Normal, 1 => Highlight
+        _UnitCategory("UnitType", Int) = 0 // 0 => Infantry, 1 => Cavalry
     }
     SubShader
     {
@@ -39,6 +40,7 @@ Shader "Unlit/GameUnitHighlight"
             float4 _Color;
             float4 _MainTex_ST;
             int _HighlightMode;
+            int _UnitCategory;
 
             v2f vert (appdata v)
             {
@@ -53,9 +55,19 @@ Shader "Unlit/GameUnitHighlight"
             {
                 // sample the texture
                 fixed4 col = _Color;
+                
+                if (_HighlightMode == 1) {
+                    col = col / 2 + fixed4(0.5, 0.5, 0.5, 0.5);
+                }
+                if (_UnitCategory == 1 && i.uv.x < i.uv.y)
+                {
+                    col = fixed4(0.9, 0.9, 0.9, 1);
+                }
+                /*
                 if (_HighlightMode == 1 && (i.uv.x < 0.05 || i.uv.x > 0.95 || i.uv.y < 0.05 || i.uv.y > 0.95)) {
                     col = fixed4(0.5,0.5,0,1);
                 }
+                */
                 
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);

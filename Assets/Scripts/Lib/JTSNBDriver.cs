@@ -21,22 +21,22 @@ namespace YYZ.JTS.NB
     }
     */
 
-    public enum UnitType
+    public enum UnitCategory
     {
         Infantry,
         Cavalry,
         Artillery
     }
 
-    public class UnitSubType
+    public class UnitType
     {
         public string Name;
-        public UnitType Type;
+        public UnitCategory Category;
         public string Code;
 
         public override string ToString()
         {
-            return $"UnitSubType({Name}, {Type}, {Code})";
+            return $"UnitSubType({Name}, {Category}, {Code})";
         }
     }
 
@@ -105,13 +105,13 @@ namespace YYZ.JTS.NB
                 if (_unit != null)
                 {
                     // Debug.Log(_unit);
-                    switch (_unit.Type.Type)
+                    switch (_unit.Type.Category)
                     {
-                        case UnitType.Infantry:
-                        case UnitType.Cavalry:
+                        case UnitCategory.Infantry:
+                        case UnitCategory.Cavalry:
                             strength += _unit.Strength;
                             break;
-                        case UnitType.Artillery:
+                        case UnitCategory.Artillery:
                             guns += _unit.Strength;
                             break;
                     }
@@ -141,47 +141,49 @@ namespace YYZ.JTS.NB
         public int Strength;
         public int Morale;
         // public string Type;
-        public UnitSubType Type;
+        public UnitType Type;
         public string Weapon;
         public string Icon3D;
         public override string ToString() => $"Unit({Name}, {Strength}, Morale={Morale}, Type={Type}, Weapon={Weapon})";
 
-        public static UnitSubType[] UnitSubTypes =
+        public static UnitType[] UnitSubTypes =
         {
-            new UnitSubType(){Name="Heavy Artillery", Type=UnitType.Artillery, Code="A"},
-            new UnitSubType(){Name="Light Artillery", Type=UnitType.Artillery, Code="B"},
-            new UnitSubType(){Name="Horse Artillery", Type=UnitType.Artillery, Code="C"},
-            new UnitSubType(){Name="Emplaced Guns", Type=UnitType.Artillery, Code="E"},
+            new UnitType(){Name="Heavy Artillery", Category=UnitCategory.Artillery, Code="A"},
+            new UnitType(){Name="Light Artillery", Category=UnitCategory.Artillery, Code="B"},
+            new UnitType(){Name="Horse Artillery", Category=UnitCategory.Artillery, Code="C"},
+            new UnitType(){Name="Emplaced Guns", Category=UnitCategory.Artillery, Code="E"},
 
-            new UnitSubType(){Name="Dragoon", Type=UnitType.Cavalry, Code="D"},
-            new UnitSubType(){Name="Light Cavalry", Type=UnitType.Cavalry, Code="L"},
-            new UnitSubType(){Name="Heavy Cavalry", Type=UnitType.Cavalry, Code="H"},
-            new UnitSubType(){Name="Cossack", Type=UnitType.Cavalry, Code="K"},
+            new UnitType(){Name="Dragoon", Category=UnitCategory.Cavalry, Code="D"},
+            new UnitType(){Name="Light Cavalry", Category=UnitCategory.Cavalry, Code="L"},
+            new UnitType(){Name="Heavy Cavalry", Category=UnitCategory.Cavalry, Code="H"},
+            new UnitType(){Name="Cossack", Category=UnitCategory.Cavalry, Code="K"},
 
-            new UnitSubType(){Name="Line Infantry", Type=UnitType.Infantry, Code="I"},
-            new UnitSubType(){Name="Militia", Type=UnitType.Infantry, Code="M"},
-            new UnitSubType(){Name="Light Infantry", Type=UnitType.Infantry, Code="V"},
-            new UnitSubType(){Name="Guard Infantry", Type=UnitType.Infantry, Code="G"},
-            new UnitSubType(){Name="Restricted Infantry", Type=UnitType.Infantry, Code="R"},
+            new UnitType(){Name="Line Infantry", Category=UnitCategory.Infantry, Code="I"},
+            new UnitType(){Name="Militia", Category=UnitCategory.Infantry, Code="M"},
+            new UnitType(){Name="Light Infantry", Category=UnitCategory.Infantry, Code="V"},
+            new UnitType(){Name="Guard Infantry", Category=UnitCategory.Infantry, Code="G"},
+            new UnitType(){Name="Restricted Infantry", Category=UnitCategory.Infantry, Code="R"},
 
-            new UnitSubType(){Name="Line Infantry (2 rank)", Type=UnitType.Infantry, Code="T"},
-            new UnitSubType(){Name="Light Infantry (2 rank)", Type=UnitType.Infantry, Code="U"},
-            new UnitSubType(){Name="Guard Infantry (2 rank)", Type=UnitType.Infantry, Code="F"},
+            new UnitType(){Name="Line Infantry (2 rank)", Category=UnitCategory.Infantry, Code="T"},
+            new UnitType(){Name="Light Infantry (2 rank)", Category=UnitCategory.Infantry, Code="U"},
+            new UnitType(){Name="Guard Infantry (2 rank)", Category=UnitCategory.Infantry, Code="F"},
 
-            new UnitSubType(){Name="Independent Skirmisher", Type=UnitType.Infantry, Code="S"},
-            new UnitSubType(){Name="Pioneer", Type=UnitType.Infantry, Code="P"},
+            new UnitType(){Name="Independent Skirmisher", Category=UnitCategory.Infantry, Code="S"},
+            new UnitType(){Name="Pioneer", Category=UnitCategory.Infantry, Code="P"},
         };
 
-        public static Dictionary<string, UnitSubType> UnitTypeMap;// = new Dictionary<string, UnitType>()
+        public static Dictionary<string, UnitType> UnitTypeMap;// = new Dictionary<string, UnitType>()
 
         static UnitOob()
         {
-            UnitTypeMap = new Dictionary<string, UnitSubType>();
+            UnitTypeMap = new Dictionary<string, UnitType>();
             foreach (var unitSubType in UnitSubTypes)
             {
                 UnitTypeMap[unitSubType.Code] = unitSubType;
             }
         }
+
+        public UnitCategory Category => Type.Category;
     }
 
     public class Leader : AbstractUnit
@@ -326,17 +328,6 @@ namespace YYZ.JTS.NB
             return $"UnitState(X={X}, Y={Y}, CurrentStrength={CurrentStrength}, Fatigue={Fatigue}, DirectionCode={DirectionCode}, Slot={Slot}, UsedMovement={UsedMovementPoints}, Flags={Flags}, {OobItem})";
         }
 
-        /*
-        public static Dictionary<int, UnitDirection> DirectionMap = new() {
-            { 1, UnitDirection.RightTop},
-            { 2, UnitDirection.Right},
-            { 4, UnitDirection.RightBottom },
-            { 8, UnitDirection.LeftBottom},
-            { 16, UnitDirection.Left},
-            { 32, UnitDirection.LeftTop}
-        };
-        */
-
         public UnitDirection Direction { get => (UnitDirection)DirectionCode; }
     }
 
@@ -373,14 +364,6 @@ namespace YYZ.JTS.NB
                     unitSelected = unit.Units[idx-1];
                     unit = unitSelected as UnitGroup;
                 }
-                
-                /*
-                Debug.Log($"match={match}");
-                for(var i=0; i<match.Groups.Count; i++)
-                {
-                    Debug.Log($"match.Groups[{i}].Value={match.Groups[i].Value}");
-                }
-                */
 
                 var unitState = new UnitState()
                 {

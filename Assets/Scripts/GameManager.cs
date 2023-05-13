@@ -105,6 +105,8 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
     public event EventHandler<MapGroupAdaptor> UnitDeselected;
     public event EventHandler<MapGroupAdaptor> UnitSelected;
 
+    public int DistanceThreshold = 3;
+
     static string LoadText(string path)
     {
         var textAsset = Resources.Load<TextAsset>(path);
@@ -121,6 +123,13 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
     void Start()
     {
         Setup("011.Coruna4_BrAI");
+    }
+
+    static float MapUnitDistance(MapUnitAdaptor a, MapUnitAdaptor b)
+    {
+        var dx = a.X - b.X;
+        var dy = a.Y - b.Y;
+        return Mathf.Sqrt(dx * dx + dy * dy);
     }
 
     public void Setup(string scnName)
@@ -152,56 +161,67 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         {
             var brigade = KV.Key;
             var unitStates = KV.Value;
+            var _mapUnits = unitStates.Select(unitState => new MapUnitAdaptor(unitState)).ToList();
 
             var prefab = brigade.Country == "French" ? FrenchUnitPrefab : AlliedUnitPrefab;
+            var mapUnitsList = YYZ.Stats.Clustering.Cluster(_mapUnits, MapUnitDistance, DistanceThreshold);
+            Debug.Log($"mapUnitsList.Count={mapUnitsList.Count}");
 
-            var mapGroup = new MapGroupAdaptor() { MapUnits = unitStates.Select(unitState => new MapUnitAdaptor(unitState)).ToList() };
-            Debug.Log(mapGroup.Name2);
-            var rect = (mapGroup as IMapGroup<MapUnitAdaptor>).GetRectTransform();
-
-            var pos = new Vector3((float)rect.X, (float)rect.Y, 0);
-            var deg = rect.Rotation / (2 * System.Math.PI) * 360;
-            var gameObject = Instantiate(prefab, pos, Quaternion.identity, UnitContainer.transform);
-            var gameUnit = gameObject.GetComponent<GameUnit>();
-
-            var scaleX = (float)rect.WidthMain * 2;
-            var scaleY = 1;
-            // var scaleY = (float)rect.WidthSub;
-
-            gameUnit.SetSize(scaleX, scaleY);
-            gameUnit.SetRotation((float)deg);
-            gameUnit.SetText("");
-
-            var dr = gameUnit.DirectionRect;
-            if (rect.UnitDirection == null)
+            foreach (var mapUnits in mapUnitsList)
             {
-                dr.SetActive(false);
+                CreateGameUnit(mapUnits, prefab);
             }
-            else
-            {
-                dr.SetActive(true);
-                var rot = System.Math.Atan2(rect.UnitDirection[1], rect.UnitDirection[0]) / (2*System.Math.PI) * 360;
-                dr.transform.rotation = Quaternion.Euler(0, 0, (float)rot);
-                var d = new Vector2((float)rect.UnitDirection[0], (float)rect.UnitDirection[1]);
-                var coef = rect.UnitDirectionModeIndex == 0 || rect.UnitDirectionModeIndex == 2 ? scaleX : scaleY;
-                dr.transform.localPosition = d * (coef / 2 + dr.transform.localScale.x / 2);
-            }
-
-            viewMap[mapGroup] = gameUnit;
-            modelMap[gameUnit] = mapGroup;
-
-            Debug.Log($"rect.UnitDirection={rect.UnitDirection}");
-
-            // Debug
-            gameUnit.DebugName = mapGroup.Name2;
-            gameUnit.DebugRotation = (float)rect.Rotation;
-            gameUnit.DebugWidthMain = (float)rect.WidthMain;
-            gameUnit.DebugWidthSub = (float)rect.WidthSub;
-            gameUnit.DebugX = (float)rect.X;
-            gameUnit.DebugY = (float)rect.Y;
-            gameUnit.DebugUnitDirection = rect.UnitDirection?.Select(x => (float)x).ToArray();
-            gameUnit.DebugUnitDirectionModeIndex = rect.UnitDirectionModeIndex;
         }
+    }
+
+    void CreateGameUnit(List<MapUnitAdaptor> mapUnits, GameObject prefab)
+    {
+        var mapGroup = new MapGroupAdaptor() { MapUnits = mapUnits };
+        // Debug.Log(mapGroup.Name2);
+        var rect = (mapGroup as IMapGroup<MapUnitAdaptor>).GetRectTransform();
+
+        var pos = new Vector3((float)rect.X, (float)rect.Y, 0);
+        var deg = rect.Rotation / (2 * System.Math.PI) * 360;
+        var gameObject = Instantiate(prefab, pos, Quaternion.identity, UnitContainer.transform);
+        var gameUnit = gameObject.GetComponent<GameUnit>();
+
+        var scaleX = (float)rect.WidthMain * 3;
+        var scaleY = 1;
+        // var scaleY = (float)rect.WidthSub;
+
+        gameUnit.SetSize(scaleX, scaleY);
+        gameUnit.SetRotation((float)deg);
+        gameUnit.SetText("");
+
+        var dr = gameUnit.DirectionRect;
+        if (rect.UnitDirection == null)
+        {
+            dr.SetActive(false);
+        }
+        else
+        {
+            dr.SetActive(true);
+            var rot = System.Math.Atan2(rect.UnitDirection[1], rect.UnitDirection[0]) / (2 * System.Math.PI) * 360;
+            dr.transform.rotation = Quaternion.Euler(0, 0, (float)rot);
+            var d = new Vector2((float)rect.UnitDirection[0], (float)rect.UnitDirection[1]);
+            var coef = rect.UnitDirectionModeIndex == 0 || rect.UnitDirectionModeIndex == 2 ? scaleX : scaleY;
+            dr.transform.localPosition = d * (coef / 2 + dr.transform.localScale.x / 2);
+        }
+
+        viewMap[mapGroup] = gameUnit;
+        modelMap[gameUnit] = mapGroup;
+
+        Debug.Log($"rect.UnitDirection={rect.UnitDirection}");
+
+        // Debug
+        gameUnit.DebugName = mapGroup.Name2;
+        gameUnit.DebugRotation = (float)rect.Rotation;
+        gameUnit.DebugWidthMain = (float)rect.WidthMain;
+        gameUnit.DebugWidthSub = (float)rect.WidthSub;
+        gameUnit.DebugX = (float)rect.X;
+        gameUnit.DebugY = (float)rect.Y;
+        gameUnit.DebugUnitDirection = rect.UnitDirection?.Select(x => (float)x).ToArray();
+        gameUnit.DebugUnitDirectionModeIndex = rect.UnitDirectionModeIndex;
     }
 
     public void Reset()

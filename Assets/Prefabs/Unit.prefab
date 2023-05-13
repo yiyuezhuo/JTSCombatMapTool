@@ -151,6 +151,14 @@ MonoBehaviour:
   BaseRect: {fileID: 6426653472762725601}
   DirectionRect: {fileID: 6659048179963689541}
   text: {fileID: 2470282476461018635}
+  DebugName: 
+  DebugRotation: 0
+  DebugWidthMain: 0
+  DebugWidthSub: 0
+  DebugX: 0
+  DebugY: 0
+  DebugUnitDirection: []
+  DebugUnitDirectionModeIndex: 0
 --- !u!1 &6426653472762725601
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,8 +295,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6659048179963689541}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6224716716427875766}

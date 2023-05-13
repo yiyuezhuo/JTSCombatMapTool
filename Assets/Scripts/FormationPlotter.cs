@@ -92,6 +92,8 @@ public interface IMapGroup<T> where T : IMapUnit
 
     public static Matrix<double> GetCovarianceMatrix(Matrix<double> matrix) // https://stackoverflow.com/questions/32256998/find-covariance-of-math-net-matrix
     { // It's transposed version of numpy
+        // M x N => N x N
+        // M x 2 => 2 x 2 (In our case)
         var columnAverages = matrix.ColumnSums() / matrix.RowCount;
         var centeredColumns = matrix.EnumerateColumns().Zip(columnAverages, (col, avg) => col - avg);
         var centered = DenseMatrix.OfColumnVectors(centeredColumns);
@@ -100,13 +102,32 @@ public interface IMapGroup<T> where T : IMapUnit
         return centered.TransposeThisAndMultiply(centered) / normalizationFactor;
     }
 
+    public static Matrix<double> GetCovarianceMatrixWeighted(Matrix<double> matrix, double[] w)
+    {
+        // https://stats.stackexchange.com/questions/61225/correct-equation-for-weighted-unbiased-sample-covariance
+        var columnAverages = matrix.ColumnSums() / matrix.RowCount;
+        var centeredColumns = matrix.EnumerateColumns().Zip(columnAverages, (col, avg) => col - avg);
+        var centered = DenseMatrix.OfColumnVectors(centeredColumns);
+        var normalizationFactor = w.Sum();
+
+        // UnityEngine.Debug.Log($"matrix.RowCount={matrix.RowCount}, matrix.ColumnCount={matrix.ColumnCount}, w.Length={w.Length}");
+        var W = new DiagonalMatrix(matrix.RowCount, matrix.RowCount, w);
+        return centered.TransposeThisAndMultiply(W).Multiply(centered) / normalizationFactor;
+    }
+
     public FormationTransform GetRectTransform()
     {
-        // TODO: Weighted by Strength
         var coordMat = Matrix<double>.Build.Dense(2, MapUnits.Count, (i, j) => i == 0 ? MapUnits[j].X : MapUnits[j].Y); // We don't do offset in this level.
-        var covMat = GetCovarianceMatrix(coordMat.Transpose());
 
-        if(covMat[0,0] > 0 || covMat[1,1] > 0)
+        // Non-Weighted Version
+        // var covMat = GetCovarianceMatrix(coordMat.Transpose());
+
+        // Weighted Version
+        var weights = MapUnits.Select(unit => (double)unit.Strength).ToArray();
+        var weightsSum = weights.Sum();
+        var covMat = GetCovarianceMatrixWeighted(coordMat.Transpose(), weights);
+
+        if (covMat[0,0] > 0 || covMat[1,1] > 0)
         {
             var factorEvd = covMat.Evd(Symmetricity.Symmetric); // eigen values and Vectors are in ascending order.
 
@@ -123,11 +144,22 @@ public interface IMapGroup<T> where T : IMapUnit
             var referenceDirections = PlotterUtilities.GetOrthogonal(mainDir.ToArray()).ToList();
             var unitDirections = MapUnits.Select(unit => PlotterUtilities.DirectionMapYInverted[unit.Direction]).ToList();
 
+            // Non-Weighted Version
+            /*
             var votes = referenceDirections.Select(rd => unitDirections.Sum(ud => rd[0] * ud[0] + rd[1] * ud[1] > PlotterUtilities.cos45 ? 1 : 0)).ToList();
-            var threshold = MapUnits.Count / 2.0; // TODO: Weighted by Strength
+            var threshold = MapUnits.Count / 2.0;
+            */
 
-            UnityEngine.Debug.Log($"referenceDirections={PlotterUtilities.ListOfArrayToString(referenceDirections)}, unitDirections={PlotterUtilities.ListOfArrayToString(unitDirections)}");
-            UnityEngine.Debug.Log($"MapUnits.Count={MapUnits.Count}, Vote: {string.Join(",", votes)}");
+            // Weighted Version
+            var votes = referenceDirections.Select(rd =>
+                unitDirections.Zip(weights,
+                    (ud, w) => rd[0] * ud[0] + rd[1] * ud[1] > PlotterUtilities.cos45 ? w : 0
+                ).Sum()
+            ).ToList();
+            var threshold = weightsSum / 2.0;
+
+            // UnityEngine.Debug.Log($"referenceDirections={PlotterUtilities.ListOfArrayToString(referenceDirections)}, unitDirections={PlotterUtilities.ListOfArrayToString(unitDirections)}");
+            // UnityEngine.Debug.Log($"MapUnits.Count={MapUnits.Count}, Vote: {string.Join(",", votes)}");
 
             int i;
             for (i = 0; i < 4; i++)
@@ -153,6 +185,9 @@ public interface IMapGroup<T> where T : IMapUnit
         else // fallback for group which has units in a hex. Just voting
         {
             var unitDirection = new double[] { 0, 0 };
+
+            // Non-Weighted Version
+            /*
             foreach(var unit in MapUnits)
             {
                 var dxy = PlotterUtilities.DirectionMapYInverted[unit.Direction];
@@ -161,6 +196,17 @@ public interface IMapGroup<T> where T : IMapUnit
             }
             for (var i = 0; i < 2; i++)
                 unitDirection[i] /= MapUnits.Count; // TODO: weighted by strength
+            */
+
+            // Weighted Version
+            for(var i=0; i<MapUnits.Count; i++)
+            {
+                var dxy = PlotterUtilities.DirectionMapYInverted[MapUnits[i].Direction];
+                for (var j = 0; j < 2; j++)
+                    unitDirection[j] += dxy[j] * weights[i];
+            }
+            for(var i=0; i<2; i++)
+                unitDirection[i] /= weightsSum;
 
             var Rotation = System.Math.Atan2(unitDirection[1], unitDirection[0]);
 

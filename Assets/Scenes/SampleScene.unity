@@ -3577,7 +3577,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Show Independent Artillery Group
+  m_Text: Show Independent Artillery Groups
 --- !u!222 &1868812398
 CanvasRenderer:
   m_ObjectHideFlags: 0

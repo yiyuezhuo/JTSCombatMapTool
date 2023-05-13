@@ -217,7 +217,7 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
 
             var prefab = brigade.Country == "French" ? FrenchUnitPrefab : AlliedUnitPrefab;
             var mapUnitsList = YYZ.Stats.Clustering.Cluster(_mapUnits, MapUnitDistance, DistanceThreshold);
-            Debug.Log($"mapUnitsList.Count={mapUnitsList.Count}");
+            // Debug.Log($"mapUnitsList.Count={mapUnitsList.Count}");
 
             foreach (var mapUnits in mapUnitsList)
             {
@@ -272,7 +272,7 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         viewMap[mapGroup] = gameUnit;
         modelMap[gameUnit] = mapGroup;
 
-        Debug.Log($"rect.UnitDirection={rect.UnitDirection}");
+        // Debug.Log($"rect.UnitDirection={rect.UnitDirection}");
 
         // Debug
         gameUnit.DebugName = mapGroup.Name2;

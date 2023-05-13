@@ -105,47 +105,75 @@ public interface IMapGroup<T> where T : IMapUnit
         // TODO: Weighted by Strength
         var coordMat = Matrix<double>.Build.Dense(2, MapUnits.Count, (i, j) => i == 0 ? MapUnits[j].X : MapUnits[j].Y); // We don't do offset in this level.
         var covMat = GetCovarianceMatrix(coordMat.Transpose());
-        
-        var factorEvd = covMat.Evd(Symmetricity.Symmetric); // eigen values and Vectors are in ascending order.
 
-        var mainDir = factorEvd.EigenVectors.Column(1);
-        var mainVal = System.Math.Sqrt(factorEvd.EigenValues[1].Real);
-        var subVal = System.Math.Sqrt(factorEvd.EigenValues[0].Real);
-        // var subDir = factorEvd.EigenVectors.Column(0);
-        var Rotation = System.Math.Atan2(mainDir[1], mainDir[0]);
-
-        var mean = coordMat.RowSums() / coordMat.ColumnCount;
-
-        // "Vote" sub unit direction
-
-        var referenceDirections = PlotterUtilities.GetOrthogonal(mainDir.ToArray()).ToList();
-        var unitDirections = MapUnits.Select(unit => PlotterUtilities.DirectionMapYInverted[unit.Direction]).ToList();
-
-        var votes = referenceDirections.Select(rd => unitDirections.Sum(ud => rd[0] * ud[0] + rd[1] * ud[1] > PlotterUtilities.cos45 ? 1 : 0)).ToList();
-        var threshold = MapUnits.Count / 2.0; // TODO: Weighted by Strength
-
-        UnityEngine.Debug.Log($"referenceDirections={PlotterUtilities.ListOfArrayToString(referenceDirections)}, unitDirections={PlotterUtilities.ListOfArrayToString(unitDirections)}");
-        UnityEngine.Debug.Log($"MapUnits.Count={MapUnits.Count}, Vote: {string.Join(",", votes)}");
-
-        int i;
-        for (i=0; i < 4; i++)
+        if(covMat[0,0] > 0 || covMat[1,1] > 0)
         {
-            if(votes[i] > threshold)
+            var factorEvd = covMat.Evd(Symmetricity.Symmetric); // eigen values and Vectors are in ascending order.
+
+            var mainDir = factorEvd.EigenVectors.Column(1);
+            var mainVal = System.Math.Sqrt(factorEvd.EigenValues[1].Real);
+            var subVal = System.Math.Sqrt(factorEvd.EigenValues[0].Real);
+            // var subDir = factorEvd.EigenVectors.Column(0);
+            var Rotation = System.Math.Atan2(mainDir[1], mainDir[0]);
+
+            var mean = coordMat.RowSums() / coordMat.ColumnCount;
+
+            // "Vote" sub unit direction
+
+            var referenceDirections = PlotterUtilities.GetOrthogonal(mainDir.ToArray()).ToList();
+            var unitDirections = MapUnits.Select(unit => PlotterUtilities.DirectionMapYInverted[unit.Direction]).ToList();
+
+            var votes = referenceDirections.Select(rd => unitDirections.Sum(ud => rd[0] * ud[0] + rd[1] * ud[1] > PlotterUtilities.cos45 ? 1 : 0)).ToList();
+            var threshold = MapUnits.Count / 2.0; // TODO: Weighted by Strength
+
+            UnityEngine.Debug.Log($"referenceDirections={PlotterUtilities.ListOfArrayToString(referenceDirections)}, unitDirections={PlotterUtilities.ListOfArrayToString(unitDirections)}");
+            UnityEngine.Debug.Log($"MapUnits.Count={MapUnits.Count}, Vote: {string.Join(",", votes)}");
+
+            int i;
+            for (i = 0; i < 4; i++)
             {
-                break;
+                if (votes[i] > threshold)
+                {
+                    break;
+                }
             }
-        }
-        var unitDirection = i == 4 ? null : referenceDirections[i];
+            var unitDirection = i == 4 ? null : referenceDirections[i];
 
-        return new FormationTransform()
+            return new FormationTransform()
+            {
+                Rotation = Rotation,
+                WidthMain = mainVal,
+                WidthSub = subVal,
+                X = mean[0],
+                Y = mean[1],
+                UnitDirection = unitDirection,
+                UnitDirectionModeIndex = i
+            };
+        }
+        else // fallback for group which has units in a hex. Just voting
         {
-            Rotation = Rotation,
-            WidthMain = mainVal,
-            WidthSub = subVal,
-            X = mean[0],
-            Y = mean[1],
-            UnitDirection=unitDirection,
-            UnitDirectionModeIndex = i
-        };
+            var unitDirection = new double[] { 0, 0 };
+            foreach(var unit in MapUnits)
+            {
+                var dxy = PlotterUtilities.DirectionMapYInverted[unit.Direction];
+                for (var i= 0;i < 2;i++)
+                    unitDirection[i] += dxy[i];
+            }
+            for (var i = 0; i < 2; i++)
+                unitDirection[i] /= MapUnits.Count; // TODO: weighted by strength
+
+            var Rotation = System.Math.Atan2(unitDirection[1], unitDirection[0]);
+
+            return new FormationTransform()
+            {
+                Rotation = Rotation,
+                WidthMain = 0, // Indicate it's a fallback a hex group
+                WidthSub = 0,
+                X = MapUnits[0].X,
+                Y = MapUnits[0].Y,
+                UnitDirection = unitDirection,
+                UnitDirectionModeIndex = 0
+            };
+        }
     }
 }

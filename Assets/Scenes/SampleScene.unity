@@ -2035,7 +2035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InputField: {fileID: 197120065}
   title: Select the State File
-  extention: .scn, .btl
+  extention: scn, btl
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3637,6 +3637,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1710852948}
+        m_TargetAssemblyTypeName: PlotManager, Assembly-CSharp
+        m_MethodName: Record
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  InitialScenarioName: 011.Coruna4_BrAI
 --- !u!1 &1031097601
 GameObject:
   m_ObjectHideFlags: 0
@@ -4683,7 +4696,6 @@ MonoBehaviour:
   AlliedUnitPrefab: {fileID: 7799588107180821209, guid: 4bfe011efe9871546954ca9666bb225e, type: 3}
   UnitContainer: {fileID: 1043526283}
   DistanceThreshold: 3
-  currentScenarioName: 011.Coruna4_BrAI
 --- !u!4 &1424496929
 Transform:
   m_ObjectHideFlags: 0
@@ -4909,7 +4921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1708107341
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4926,10 +4938,10 @@ RectTransform:
   m_Father: {fileID: 1349836825}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 50}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 200, y: -525}
+  m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1708107342
 MonoBehaviour:
@@ -5022,6 +5034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1710852944}
+  - component: {fileID: 1710852948}
   - component: {fileID: 1710852947}
   - component: {fileID: 1710852946}
   - component: {fileID: 1710852945}
@@ -5096,7 +5109,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1710852946}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1710852948}
+        m_TargetAssemblyTypeName: PlotManager, Assembly-CSharp
+        m_MethodName: Plot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1710852946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5135,6 +5160,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710852943}
   m_CullTransparentMesh: 1
+--- !u!114 &1710852948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710852943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac69abc8adb7ba944a693f2475c4b7a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 1424496928}
+  ScnInputField: {fileID: 197120065}
+  OobInputField: {fileID: 371840205}
 --- !u!1 &1735374381
 GameObject:
   m_ObjectHideFlags: 0

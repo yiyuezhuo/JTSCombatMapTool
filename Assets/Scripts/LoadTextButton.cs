@@ -34,7 +34,9 @@ public class LoadTextButton : MonoBehaviour
         {
             // string path = EditorUtility.OpenFilePanel("Select the Oob File", "", "oob");
             string path = EditorUtility.OpenFilePanel(title, "", extention);
-            // Debug.Log($"path={path}");
+            Debug.Log($"path={path}");
+            if (string.IsNullOrWhiteSpace(path))
+                return;
             var text = File.ReadAllText(path); // TODO: Determine Encoding
             // Debug.Log($"text={text}");
             InputField.text = text;
@@ -46,6 +48,7 @@ public class LoadTextButton : MonoBehaviour
             // Consider: https://assetstore.unity.com/packages/tools/gui/runtime-file-browser-113006
             FileUploaderHelper.RequestFile((path) =>
             {
+                Debug.Log($"path={path}");
                 if (string.IsNullOrWhiteSpace(path))
                     return;
 

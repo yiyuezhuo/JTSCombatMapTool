@@ -38,8 +38,6 @@ public class OptionSelectedEvent : UnityEvent<TextInput>
 
 public class ScenarioDropdown : MonoBehaviour
 {
-    // public static string scenarioPath = "JTSData/peninsula/Scenarios";
-
     TMP_Dropdown dropdown;
     public OptionSelectedEvent OptionSelected;
 

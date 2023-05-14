@@ -64,14 +64,22 @@ public class GameUnit : MonoBehaviour
         baseRectRenderer.material.SetInt("_Old", mode);
         directionRectRenderer.material.SetInt("_Old", mode);
 
-        if(mode == 1)
+        if (mode == 1)
         {
             text.gameObject.SetActive(false);
+            SetRectDepth(1);
         }
         else
         {
             text.gameObject.SetActive(true);
+            SetRectDepth(0);
         }
+    }
+
+    void SetRectDepth(float depth)
+    {
+        BaseRect.transform.position = new Vector3(BaseRect.transform.position.x, BaseRect.transform.position.y, depth);
+        DirectionRect.transform.position = new Vector3(DirectionRect.transform.position.x, DirectionRect.transform.position.y, depth);
     }
 
     /*

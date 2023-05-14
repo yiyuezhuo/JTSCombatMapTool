@@ -2,7 +2,7 @@
 
 JTS games have many counters and big maps, so sometimes it's hard to grasp the situation, for yourself or readers of your AAR! So I made the tool. Now, it supports JTS/WDS Napoleonic Battles title (I tested it only on [Wellington's Peninsular War](https://wargameds.com/collections/napoleonic-battles/products/wellingtons-peninsular-war) and [The Final Struggle](https://wargameds.com/collections/napoleonic-battles/products/the-final-struggle)). It should support other titles of NB if they have the same data structure.
 
-The civil war series may be supported in the near future since they should have a similar data structure but I have not done the research.
+The Civil War Battles series may be supported in the near future since they should have a similar data structure but I have not done the research.
 
 ## Motivation
 

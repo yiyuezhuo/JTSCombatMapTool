@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: January Desk
   productName: JTSCombatMapTool
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -134,7 +134,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0
+  bundleVersion: 0.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -568,7 +568,7 @@ PlayerSettings:
   webGLTemplate: APPLICATION:Default
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
-  webGLCompressionFormat: 0
+  webGLCompressionFormat: 1
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
@@ -585,7 +585,7 @@ PlayerSettings:
   allowUnsafeCode: 0
   useDeterministicCompilation: 1
   enableRoslynAnalyzers: 1
-  selectedPlatform: 0
+  selectedPlatform: 2
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   gcIncremental: 1

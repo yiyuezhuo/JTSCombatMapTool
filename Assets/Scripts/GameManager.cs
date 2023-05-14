@@ -108,6 +108,21 @@ public class MapGroupAdaptor: IMapGroup<MapUnitAdaptor>
         return $"{men} {menWord}, {guns} {gunsWord}";
     }
 
+    public float[] GetCenter()
+    {
+        var X = 0f;
+        var Y = 0f;
+        var S = 0f;
+        foreach(var mapUnit in MapUnits)
+        {
+            X += mapUnit.X * mapUnit.Strength;
+            Y += mapUnit.Y * mapUnit.Strength;
+            S += mapUnit.Strength;
+        }
+
+        return new float[] { X / S, Y / S };
+    }
+
 }
 
 public interface IUnitSelectionPublisher
@@ -131,8 +146,11 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
 
     public GameObject FrenchUnitPrefab;
     public GameObject AlliedUnitPrefab;
+    public GameObject ManeuverLineFrenchPrefab;
+    public GameObject ManeuverLineAlliedPrefab;
 
     public GameObject UnitContainer;
+    public GameObject ManeuverLineContainer;
 
     UnitGroup unitGroup;
     // JTSUnitStates unitStatus;
@@ -141,6 +159,7 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
     List<MapGroupAdaptor> mapGroupsOld;
     Dictionary<MapGroupAdaptor, GameUnit> viewMap = new();
     Dictionary<GameUnit, MapGroupAdaptor> modelMap = new();
+    Dictionary<Tuple<MapGroupAdaptor, MapGroupAdaptor>, LineRenderer> lineViewMap = new();
 
     GameUnit selectingGameUnit;
 
@@ -171,19 +190,48 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         return Mathf.Sqrt(dx * dx + dy * dy);
     }
 
-    /*
-    public void Setup(string scnName)
+    IEnumerable<Tuple<MapGroupAdaptor, MapGroupAdaptor>> MatchMapGroups()
     {
-        var scnText = DataLoader.LoadScenario(scnName);
+        var lookup = new Dictionary<MapGroupAdaptor, Dictionary<AbstractUnit, int>>();
+        foreach(var _mapGroups in new List<List<MapGroupAdaptor>>() { mapGroups, mapGroupsOld})
+        {
+            foreach(var mapGroup in _mapGroups)
+            {
+                var dic = new Dictionary<AbstractUnit, int>();
+                foreach (var mapUnit in mapGroup.MapUnits)
+                {
+                    dic[mapUnit.UnitState.OobItem] = mapUnit.Strength;
+                }
+                lookup[mapGroup] = dic;
+            }
+        }
 
-        var scenario = new JTSScenario();
-        scenario.Extract(scnText);
+        foreach(var mapGroup in mapGroups)
+        {
+            var unit2strength = lookup[mapGroup];
+            var weightTotal = unit2strength.Values.Sum();
 
-        var oobName = RemoveExtension(scenario.OobFile);
-        var oobText = DataLoader.LoadOob(oobName);
+            foreach (var mapGroupOld in mapGroupsOld)
+            {
+                var unit2strengthOld = lookup[mapGroupOld];
+                var weight = 0;
+                foreach(var KV in unit2strength)
+                {
+                    if(unit2strengthOld.TryGetValue(KV.Key, out var strengthOld))
+                    {
+                        var strength = KV.Value;
+                        weight += strength;
+                    }
+                }
+                if(weight > weightTotal / 2)
+                {
+                    yield return new Tuple<MapGroupAdaptor, MapGroupAdaptor>(mapGroup, mapGroupOld);
+                    break;
+                }
+            }
+        }
+    }
 
-        unitGroup = JTSOobParser.ParseUnits(oobText);
-    */
     public void Setup()
     {
         var scenario = new JTSScenario();
@@ -208,23 +256,52 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
 
         if(ShowMode == 1)
         {
-            var scenarioOld = new JTSScenario();
-            scenarioOld.Extract(Text.ScnOld);
-            if(scenarioOld.OobFile != scenario.OobFile)
+            if (Text.ScnOld == null || Text.ScnOld == "")
             {
-                Debug.Log("Oob File doesn't match. Potential problem?");
-                //return;
+                Debug.Log("Old File is not loaded?");
             }
-            var unitStatusOld = new JTSUnitStates();
-            unitStatusOld.ExtractByLines(unitGroup, scenarioOld.DynamicCommandBlock);
-
-            mapGroupsOld = CreateGameUnits(unitStatusOld);
-
-            foreach(var mapGroup in mapGroupsOld)
+            else
             {
-                Debug.Log($"viewMap.Count={viewMap.Count}, viewMap.ContainsKey(mapGroup)={viewMap.ContainsKey(mapGroup)}");
-                var view = viewMap[mapGroup];
-                view.SetOld(1);
+                var scenarioOld = new JTSScenario();
+                scenarioOld.Extract(Text.ScnOld);
+                if (scenarioOld.OobFile != scenario.OobFile)
+                {
+                    Debug.Log("Oob File doesn't match. Potential problem?");
+                    //return;
+                }
+                var unitStatusOld = new JTSUnitStates();
+                unitStatusOld.ExtractByLines(unitGroup, scenarioOld.DynamicCommandBlock);
+
+                mapGroupsOld = CreateGameUnits(unitStatusOld);
+
+                foreach (var mapGroup in mapGroupsOld)
+                {
+                    // Debug.Log($"viewMap.Count={viewMap.Count}, viewMap.ContainsKey(mapGroup)={viewMap.ContainsKey(mapGroup)}");
+                    var view = viewMap[mapGroup];
+                    view.SetOld(1);
+
+                }
+
+                foreach (var mapGroupNewOldPair in MatchMapGroups())
+                {
+                    var mapGroup = mapGroupNewOldPair.Item1;
+                    var mapGroupOld = mapGroupNewOldPair.Item2;
+                    var maneuverLinePrefab = mapGroup.MapUnits[0].UnitState.OobItem.Country == "French" ? ManeuverLineFrenchPrefab : ManeuverLineAlliedPrefab; // TODO: Supports more color.
+                    var center = mapGroup.GetCenter();
+                    var centerOld = mapGroupOld.GetCenter();
+
+                    // Debug.Log($"mapGroup.Name2={mapGroup.Name2}, mapGroupOld.Name2={mapGroupOld.Name2}, center={center}, centerOld={centerOld}");
+
+                    if ((center[0] - centerOld[0]) != 0 || (center[1] - centerOld[1]) != 0)
+                    {
+                        var lineObj = Instantiate(maneuverLinePrefab, ManeuverLineContainer.transform);
+                        var line = lineObj.GetComponent<LineRenderer>();
+                        line.SetPositions(new Vector3[] { new Vector3(centerOld[0], centerOld[1], -1), new Vector3(center[0], center[1], -1) });
+
+                        lineViewMap[mapGroupNewOldPair] = line;
+                    }
+
+                }
             }
         }
 
@@ -269,7 +346,7 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
 
         var scaleX = Mathf.Max(1, (float)rect.WidthMain * 3);
         var scaleY = 1;
-        // var scaleY = (float)rect.WidthSub;
+        // var scaleY = Mathf.Max(1, (float)rect.WidthSub);
 
         gameUnit.SetSize(scaleX, scaleY);
         gameUnit.SetRotation((float)deg);
@@ -295,7 +372,7 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
             gameUnit.SetUnitCategory(1);
         }
 
-        if (!showIndependentArtillery && mapGroup.IsArtilleryGroup())
+        if (!showIndependentArtillery && mapGroup.IsArtilleryGroup()) // TODO: Since artillery units are usually used in detached state which break formation shape estimation, maybe add an option that just ignores all artillery unit?
         {
             gameUnit.gameObject.SetActive(false);
         }
@@ -322,8 +399,13 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         {
             Destroy(gameUnit.gameObject);
         }
+        foreach(var line in lineViewMap.Values)
+        {
+            Destroy(line.gameObject);
+        }
         viewMap.Clear();
         modelMap.Clear();
+        lineViewMap.Clear();
 
         unitGroup = null;
         mapGroups = null;

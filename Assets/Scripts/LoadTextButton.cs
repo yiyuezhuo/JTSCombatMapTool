@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.IO;
 using TMPro;
+using System.Linq;
 
 #if UNITY_EDITOR 
 using UnityEditor;
@@ -46,6 +47,7 @@ public class LoadTextButton : MonoBehaviour
 #endif
             // TODO: Add File Browser Supporting for other plateforms other than WebGL
             // Consider: https://assetstore.unity.com/packages/tools/gui/runtime-file-browser-113006
+            var _extentions = string.Join(",", extention.Split(",").Select(s => $".{s}")); // "scn,btl" => ".scn,.btl"
             FileUploaderHelper.RequestFile((path) =>
             {
                 Debug.Log($"path={path}");
@@ -53,7 +55,8 @@ public class LoadTextButton : MonoBehaviour
                     return;
 
                 StartCoroutine(UploadText(path));
-            }, ".oob");
+            }, _extentions);
+            // }, ".oob");
 #if UNITY_EDITOR
         }
 #endif

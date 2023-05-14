@@ -48,6 +48,7 @@ public class PlotManager : MonoBehaviour
         var t = ScnInputField.text;
         ScnInputField.text = ScnOldInputField.text;
         ScnOldInputField.text = t;
-        PlotComparison();
+        if(ScnInputField.text != null && ScnInputField.text != "" && ScnOldInputField.text != null && ScnOldInputField.text != "")
+            PlotComparison();
     }
 }

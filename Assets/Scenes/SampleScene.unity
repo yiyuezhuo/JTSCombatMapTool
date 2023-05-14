@@ -499,7 +499,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &133350086
 GameObject:
@@ -773,13 +773,13 @@ MonoBehaviour:
 
     1 1.7.3.4 1 1 6 0 0 262144 1 38
 
-    1 1.7.2.3
-    1 1 271 0 0 262144 2 35
+    1 1.7.2.3 1
+    1 271 0 0 262144 2 35
 
     1 1.7.3.1 1 1 2 0 0 262144 2 36
 
-    1 1.7.3.2
-    1 1 161 0 0 262144 2 36
+    1 1.7.3.2 1 1
+    161 0 0 262144 2 36
 
 '
   m_CaretBlinkRate: 0.85
@@ -2248,7 +2248,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527622979
 GameObject:
@@ -2964,13 +2964,13 @@ MonoBehaviour:
 
     1 1.7.3.4 1 1 6 0 0 262144 1 38
 
-    1 1.7.2.3
-    1 1 271 0 0 262144 2 35
+    1 1.7.2.3 1
+    1 271 0 0 262144 2 35
 
     1 1.7.3.1 1 1 2 0 0 262144 2 36
 
-    1 1.7.3.2
-    1 1 161 0 0 262144 2 36
+    1 1.7.3.2 1 1
+    161 0 0 262144 2 36
 
 '
   m_CaretBlinkRate: 0.85
@@ -3447,11 +3447,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "11\r\nThe Battle of Coruna, 16th January 1809 British A/I\r\n1809 1 16
-    14 0 0 0 1 15\r\n2 9 8 1\r\n2 8 9 1\r\n0 100 250 500\r\nCoruna.map\r\nCoruna.oob\r\nCoruna.pdt\r\n0
-    0 0 0 0 0 0 0\r\n100 90 30\r\n0 0 0 0 0 0 0 0\r\n2 1 2 1\r\n1 1.7.3.3 1 1 348
-    0 0 262144 1 37\r\n1 1.7.3.4 1 1 6 0 0 262144 1 38\r\n1 1.7.2.3 1 1 271 0 0 262144
-    2 35\r\n1 1.7.3.1 1 1 2 0 0 262144 2 36\r\n1 1.7.3.2 1 1 161 0 0 262144 2 36\r\n\u200B"
+  m_text: "11\nThe Battle of Coruna, 16th January 1809 British A/I\n1809 1 16 14
+    0 0 0 1 15\n2 9 8 1\n2 8 9 1\n0 100 250 500\nCoruna.map\nCoruna.oob\nCoruna.pdt\n0
+    0 0 0 0 0 0 0\n100 90 30\n0 0 0 0 0 0 0 0\n2 1 2 1\n1 1.7.3.3 1 1 348 0 0 262144
+    1 37\n1 1.7.3.4 1 1 6 0 0 262144 1 38\n1 1.7.2.3 1 1 271 0 0 262144 2 35\n1 1.7.3.1
+    1 1 2 0 0 262144 2 36\n1 1.7.3.2 1 1 161 0 0 262144 2 36\n\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4509,7 +4509,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070573733
 GameObject:
@@ -4796,6 +4796,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1 &1227895210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1227895211}
+  m_Layer: 0
+  m_Name: ManeuverLineContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1227895211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227895210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1229456880
 GameObject:
   m_ObjectHideFlags: 0
@@ -5392,7 +5423,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FrenchUnitPrefab: {fileID: 7473275516617706600, guid: e5acd46dff273604ab1fae4a42efb2f9, type: 3}
   AlliedUnitPrefab: {fileID: 7799588107180821209, guid: 4bfe011efe9871546954ca9666bb225e, type: 3}
+  ManeuverLineFrenchPrefab: {fileID: 7423195097295692771, guid: 541a7d4ab2587e643b1ff76912d6ebb8, type: 3}
+  ManeuverLineAlliedPrefab: {fileID: 4044155815533926035, guid: b625a0a26334f864bada65b8d1d52935, type: 3}
   UnitContainer: {fileID: 1043526283}
+  ManeuverLineContainer: {fileID: 1227895210}
   DistanceThreshold: 3
   TextMode: 0
   ShowMode: 0
@@ -5522,11 +5556,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "11\r\nThe Battle of Coruna, 16th January 1809 British A/I\r\n1809 1 16
-    14 0 0 0 1 15\r\n2 9 8 1\r\n2 8 9 1\r\n0 100 250 500\r\nCoruna.map\r\nCoruna.oob\r\nCoruna.pdt\r\n0
-    0 0 0 0 0 0 0\r\n100 90 30\r\n0 0 0 0 0 0 0 0\r\n2 1 2 1\r\n1 1.7.3.3 1 1 348
-    0 0 262144 1 37\r\n1 1.7.3.4 1 1 6 0 0 262144 1 38\r\n1 1.7.2.3 1 1 271 0 0 262144
-    2 35\r\n1 1.7.3.1 1 1 2 0 0 262144 2 36\r\n1 1.7.3.2 1 1 161 0 0 262144 2 36\r\n\u200B"
+  m_text: "11\nThe Battle of Coruna, 16th January 1809 British A/I\n1809 1 16 14
+    0 0 0 1 15\n2 9 8 1\n2 8 9 1\n0 100 250 500\nCoruna.map\nCoruna.oob\nCoruna.pdt\n0
+    0 0 0 0 0 0 0\n100 90 30\n0 0 0 0 0 0 0 0\n2 1 2 1\n1 1.7.3.3 1 1 348 0 0 262144
+    1 37\n1 1.7.3.4 1 1 6 0 0 262144 1 38\n1 1.7.2.3 1 1 271 0 0 262144 2 35\n1 1.7.3.1
+    1 1 2 0 0 262144 2 36\n1 1.7.3.2 1 1 161 0 0 262144 2 36\n\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5641,7 +5675,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 75}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1572081564
 MonoBehaviour:
@@ -6112,7 +6146,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 75}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710852945
 MonoBehaviour:
@@ -6303,7 +6337,7 @@ RectTransform:
   - {fileID: 1349836825}
   - {fileID: 1239890709}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -6942,8 +6976,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24, y: 0}
-  m_SizeDelta: {x: 352, y: 50}
+  m_AnchoredPosition: {x: 27, y: 0}
+  m_SizeDelta: {x: 346, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868812397
 MonoBehaviour:

@@ -116,26 +116,10 @@ public interface IUnitSelectionPublisher
     event EventHandler<MapGroupAdaptor> UnitSelected;
 }
 
-public static class DataLoader
+public class TextInput
 {
-    public static string ScenarioPath = "JTSData/peninsula/Scenarios";
-    public static string OobPath = "JTSData/peninsula/OOBs";
-
-    public static string LoadScenario(string name)
-    {
-        Debug.Log($"LoadScenario: name={name}");
-        var textAsset = Resources.Load<TextAsset>(ScenarioPath + "/" + name);
-        var text = textAsset.text;
-        return text;
-    }
-
-    public static string LoadOob(string name)
-    {
-        Debug.Log($"LoadOob: name={name}");
-        var textAsset = Resources.Load<TextAsset>(OobPath + "/" + name);
-        var text = textAsset.text;
-        return text;
-    }
+    public string Scn;
+    public string Oob;
 }
 
 // "Controller"
@@ -163,18 +147,13 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
 
     bool showIndependentArtillery = false;
 
-    public string currentScenarioName = "011.Coruna4_BrAI";
+    public TextInput Text;
 
-    static string RemoveExtension(string p)
-    {
-        var sl = p.Split(".");
-        return string.Join(".", sl.Take(sl.Length - 1));
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-        Setup(currentScenarioName);
+        // Setup(currentScenarioName);
     }
 
     static float MapUnitDistance(MapUnitAdaptor a, MapUnitAdaptor b)
@@ -184,6 +163,7 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         return Mathf.Sqrt(dx * dx + dy * dy);
     }
 
+    /*
     public void Setup(string scnName)
     {
         var scnText = DataLoader.LoadScenario(scnName);
@@ -195,6 +175,13 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         var oobText = DataLoader.LoadOob(oobName);
 
         unitGroup = JTSOobParser.ParseUnits(oobText);
+    */
+    public void Setup()
+    {
+        var scenario = new JTSScenario();
+        scenario.Extract(Text.Scn);
+
+        unitGroup = JTSOobParser.ParseUnits(Text.Oob);
 
         /*
         foreach (var unit in unitGroup.Walk())
@@ -301,15 +288,16 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
     public void OnToggleShowIndependentArtillery(bool showIndependentArtillery)
     {
         this.showIndependentArtillery = showIndependentArtillery;
-        ReloadScenario(currentScenarioName);
+        Reset();
+        Setup();
     }
 
-    public void ReloadScenario(string name)
+    public void ReloadScenario(TextInput text)
     {
-        currentScenarioName = name;
-        Debug.Log($"ReloadScenario name={name}");
+        Text = text;
+        // Debug.Log($"ReloadScenario name={name}");
         Reset();
-        Setup(name);
+        Setup();
     }
 
     public void OnUnitTextModeChanged(int idx)

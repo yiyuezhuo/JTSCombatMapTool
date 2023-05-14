@@ -27,6 +27,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _HighlightMode: 0
+    - _Old: 0
+    - _UnitCategory: 0
     m_Colors:
     - _Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
   m_BuildTextureStacks: []

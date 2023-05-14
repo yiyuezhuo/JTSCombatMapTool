@@ -59,6 +59,21 @@ public class GameUnit : MonoBehaviour
         baseRectRenderer.material.SetInt("_UnitCategory", mode);
     }
 
+    public void SetOld(int mode)
+    {
+        baseRectRenderer.material.SetInt("_Old", mode);
+        directionRectRenderer.material.SetInt("_Old", mode);
+
+        if(mode == 1)
+        {
+            text.gameObject.SetActive(false);
+        }
+        else
+        {
+            text.gameObject.SetActive(true);
+        }
+    }
+
     /*
     public void SetUnitDirection()
     {

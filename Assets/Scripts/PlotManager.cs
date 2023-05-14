@@ -8,6 +8,7 @@ public class PlotManager : MonoBehaviour
     public GameManager gameManager;
     public TMP_InputField ScnInputField;
     public TMP_InputField OobInputField;
+    public TMP_InputField ScnOldInputField;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,14 @@ public class PlotManager : MonoBehaviour
     public void Plot()
     {
         var input = new TextInput() { Oob = OobInputField.text, Scn = ScnInputField.text };
+        gameManager.ShowMode = 0;
+        gameManager.ReloadScenario(input);
+    }
+
+    public void PlotComparison()
+    {
+        var input = new TextInput() { Oob = OobInputField.text, Scn = ScnInputField.text, ScnOld = ScnOldInputField.text};
+        gameManager.ShowMode = 1;
         gameManager.ReloadScenario(input);
     }
 
@@ -31,5 +40,14 @@ public class PlotManager : MonoBehaviour
     {
         ScnInputField.text = text.Scn;
         OobInputField.text = text.Oob;
+        ScnOldInputField.text = text.ScnOld != null ? text.ScnOld : "";
+    }
+
+    public void SwapStates()
+    {
+        var t = ScnInputField.text;
+        ScnInputField.text = ScnOldInputField.text;
+        ScnOldInputField.text = t;
+        PlotComparison();
     }
 }

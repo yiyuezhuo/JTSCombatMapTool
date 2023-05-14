@@ -6,12 +6,15 @@ Shader "Unlit/GameUnitHighlight"
         _Color ("Main Color", Color) = (0.5, 0.5, 0.5, 1.0)
         _HighlightMode("HighlightMode", Int) = 0 // 0 => Normal, 1 => Highlight
         _UnitCategory("UnitType", Int) = 0 // 0 => Infantry, 1 => Cavalry
+        _Old("Old", Int) = 0 // 0 => New, 1 => Old
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        // Tags { "RenderType"="Opaque" }
+        Tags {"Queue" = "Transparent" "RenderType" = "Transparent"}
         LOD 100
         Cull Off // double edge
+        Blend SrcAlpha OneMinusSrcAlpha
 
         Pass
         {
@@ -41,6 +44,7 @@ Shader "Unlit/GameUnitHighlight"
             float4 _MainTex_ST;
             int _HighlightMode;
             int _UnitCategory;
+            int _Old;
 
             v2f vert (appdata v)
             {
@@ -68,6 +72,11 @@ Shader "Unlit/GameUnitHighlight"
                     col = fixed4(0.5,0.5,0,1);
                 }
                 */
+                if (_Old == 1)
+                {
+                    col.a = 0.1;
+                    // col = fixed4(col.r, col.g, col.b, 0.1);
+                }
                 
                 // apply fog
                 UNITY_APPLY_FOG(i.fogCoord, col);

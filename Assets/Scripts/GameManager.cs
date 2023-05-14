@@ -120,6 +120,7 @@ public class TextInput
 {
     public string Scn;
     public string Oob;
+    public string ScnOld;
 }
 
 // "Controller"
@@ -134,7 +135,10 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
     public GameObject UnitContainer;
 
     UnitGroup unitGroup;
-    JTSUnitStates unitStatus;
+    // JTSUnitStates unitStatus;
+    // JTSUnitStates unitStatusOld;
+    List<MapGroupAdaptor> mapGroups;
+    List<MapGroupAdaptor> mapGroupsOld;
     Dictionary<MapGroupAdaptor, GameUnit> viewMap = new();
     Dictionary<GameUnit, MapGroupAdaptor> modelMap = new();
 
@@ -148,6 +152,10 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
     bool showIndependentArtillery = false;
 
     public TextInput Text;
+
+    public int TextMode = 0;
+
+    public int ShowMode = 0; // 0 => Single, 1 => Comparison
 
 
     // Start is called before the first frame update
@@ -193,9 +201,39 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         }
         */
 
-        unitStatus = new JTSUnitStates();
+        var unitStatus = new JTSUnitStates();
         unitStatus.ExtractByLines(unitGroup, scenario.DynamicCommandBlock);
 
+        mapGroups = CreateGameUnits(unitStatus);
+
+        if(ShowMode == 1)
+        {
+            var scenarioOld = new JTSScenario();
+            scenarioOld.Extract(Text.ScnOld);
+            if(scenarioOld.OobFile != scenario.OobFile)
+            {
+                Debug.Log("Oob File doesn't match. Potential problem?");
+                //return;
+            }
+            var unitStatusOld = new JTSUnitStates();
+            unitStatusOld.ExtractByLines(unitGroup, scenarioOld.DynamicCommandBlock);
+
+            mapGroupsOld = CreateGameUnits(unitStatusOld);
+
+            foreach(var mapGroup in mapGroupsOld)
+            {
+                Debug.Log($"viewMap.Count={viewMap.Count}, viewMap.ContainsKey(mapGroup)={viewMap.ContainsKey(mapGroup)}");
+                var view = viewMap[mapGroup];
+                view.SetOld(1);
+            }
+        }
+
+        UpdateTexts();
+    }
+
+    List<MapGroupAdaptor> CreateGameUnits(JTSUnitStates unitStatus)
+    {
+        var mapGroupList = new List<MapGroupAdaptor>();
         foreach (var KV in unitStatus.GroupByBrigade())
         {
             var brigade = KV.Key;
@@ -208,17 +246,18 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
 
             foreach (var mapUnits in mapUnitsList)
             {
-                CreateGameUnit(mapUnits, prefab);
+                var mapGroup = new MapGroupAdaptor() { MapUnits = mapUnits };
+                CreateGameUnit(mapGroup, prefab);
+                mapGroupList.Add(mapGroup);
             }
         }
+        return mapGroupList;
     }
 
-    void CreateGameUnit(List<MapUnitAdaptor> mapUnits, GameObject prefab)
+    void CreateGameUnit(MapGroupAdaptor mapGroup, GameObject prefab)
     {
-        var mapGroup = new MapGroupAdaptor() { MapUnits = mapUnits };
+        // var mapGroup = new MapGroupAdaptor() { MapUnits = mapUnits };
 
-        if (!showIndependentArtillery && mapGroup.IsArtilleryGroup())
-            return;
 
         // Debug.Log(mapGroup.Name2);
         var rect = (mapGroup as IMapGroup<MapUnitAdaptor>).GetRectTransform();
@@ -256,6 +295,11 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
             gameUnit.SetUnitCategory(1);
         }
 
+        if (!showIndependentArtillery && mapGroup.IsArtilleryGroup())
+        {
+            gameUnit.gameObject.SetActive(false);
+        }
+
         viewMap[mapGroup] = gameUnit;
         modelMap[gameUnit] = mapGroup;
 
@@ -281,8 +325,9 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         viewMap.Clear();
         modelMap.Clear();
 
-        unitStatus = null;
         unitGroup = null;
+        mapGroups = null;
+        mapGroupsOld = null;
     }
 
     public void OnToggleShowIndependentArtillery(bool showIndependentArtillery)
@@ -295,15 +340,18 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
     public void ReloadScenario(TextInput text)
     {
         Text = text;
+        if(text.ScnOld == null)
+        {
+            ShowMode = 0;
+        }
         // Debug.Log($"ReloadScenario name={name}");
         Reset();
         Setup();
     }
 
-    public void OnUnitTextModeChanged(int idx)
+    void UpdateTexts()
     {
-        Debug.Log($"Text Mode Changed to {idx}");
-        switch(idx)
+        switch (TextMode)
         {
             case 0: // None
                 foreach (var KV in viewMap)
@@ -322,6 +370,13 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
                     KV.Value.SetText(KV.Key.Name2);
                 break;
         }
+    }
+
+    public void OnUnitTextModeChanged(int idx)
+    {
+        Debug.Log($"Text Mode Changed to {idx}");
+        TextMode = idx;
+        UpdateTexts();
     }
 
     // Update is called once per frame

@@ -24,7 +24,7 @@ namespace YYZ.Stats
                     if (d <= threshold)
                     {
                         dists.Add(new Tuple<T, T, float>(nodes[i], nodes[j], d));
-                    }                    
+                    }
                 }
             }
 

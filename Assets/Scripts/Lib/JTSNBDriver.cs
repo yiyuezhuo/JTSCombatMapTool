@@ -146,7 +146,8 @@ namespace YYZ.JTS.NB
         public string Icon3D;
         public override string ToString() => $"Unit({Name}, {Strength}, Morale={Morale}, Type={Type}, Weapon={Weapon})";
 
-        public static UnitType[] UnitSubTypes =
+        /*
+        static UnitType[] NBUnitSubTypes = // Napoleonic Battles
         {
             new UnitType(){Name="Heavy Artillery", Category=UnitCategory.Artillery, Code="A"},
             new UnitType(){Name="Light Artillery", Category=UnitCategory.Artillery, Code="B"},
@@ -172,14 +173,62 @@ namespace YYZ.JTS.NB
             new UnitType(){Name="Pioneer", Category=UnitCategory.Infantry, Code="P"},
         };
 
-        public static Dictionary<string, UnitType> UnitTypeMap;// = new Dictionary<string, UnitType>()
+        public static UnitType[] CwbSubTypes = // Civil War Battles
+        {
+            new UnitType(){Name="Artillery", Category=UnitCategory.Artillery, Code="A"},
+            new UnitType(){Name="Cavalry", Category=UnitCategory.Cavalry, Code="C"},
+            new UnitType(){Name="Horse Artillery", Category=UnitCategory.Artillery, Code="H"},
+            new UnitType(){Name="Infantry", Category=UnitCategory.Infantry, Code="I"},
+            new UnitType(){Name="Militia", Category=UnitCategory.Infantry, Code="M"},
+            new UnitType(){Name="Infantry (Z)", Category=UnitCategory.Infantry, Code="Z"},
+        };
+        */
+
+        static Dictionary<string, UnitType[]> SubTypesMap = new()
+        {
+            {"NB", new UnitType[]{
+                new UnitType(){Name="Heavy Artillery", Category=UnitCategory.Artillery, Code="A"},
+                new UnitType(){Name="Light Artillery", Category=UnitCategory.Artillery, Code="B"},
+                new UnitType(){Name="Horse Artillery", Category=UnitCategory.Artillery, Code="C"},
+                new UnitType(){Name="Emplaced Guns", Category=UnitCategory.Artillery, Code="E"},
+
+                new UnitType(){Name="Dragoon", Category=UnitCategory.Cavalry, Code="D"},
+                new UnitType(){Name="Light Cavalry", Category=UnitCategory.Cavalry, Code="L"},
+                new UnitType(){Name="Heavy Cavalry", Category=UnitCategory.Cavalry, Code="H"},
+                new UnitType(){Name="Cossack", Category=UnitCategory.Cavalry, Code="K"},
+
+                new UnitType(){Name="Line Infantry", Category=UnitCategory.Infantry, Code="I"},
+                new UnitType(){Name="Militia", Category=UnitCategory.Infantry, Code="M"},
+                new UnitType(){Name="Light Infantry", Category=UnitCategory.Infantry, Code="V"},
+                new UnitType(){Name="Guard Infantry", Category=UnitCategory.Infantry, Code="G"},
+                new UnitType(){Name="Restricted Infantry", Category=UnitCategory.Infantry, Code="R"},
+
+                new UnitType(){Name="Line Infantry (2 rank)", Category=UnitCategory.Infantry, Code="T"},
+                new UnitType(){Name="Light Infantry (2 rank)", Category=UnitCategory.Infantry, Code="U"},
+                new UnitType(){Name="Guard Infantry (2 rank)", Category=UnitCategory.Infantry, Code="F"},
+
+                new UnitType(){Name="Independent Skirmisher", Category=UnitCategory.Infantry, Code="S"},
+                new UnitType(){Name="Pioneer", Category=UnitCategory.Infantry, Code="P"},
+            }},
+            {"CWB", new UnitType[]{
+                new UnitType(){Name="Artillery", Category=UnitCategory.Artillery, Code="A"},
+                new UnitType(){Name="Cavalry", Category=UnitCategory.Cavalry, Code="C"},
+                new UnitType(){Name="Horse Artillery", Category=UnitCategory.Artillery, Code="H"},
+                new UnitType(){Name="Infantry", Category=UnitCategory.Infantry, Code="I"},
+                new UnitType(){Name="Militia", Category=UnitCategory.Infantry, Code="M"},
+                new UnitType(){Name="Infantry (Z)", Category=UnitCategory.Infantry, Code="Z"},
+            }}
+        };
+
+        // game series name => unit code => unit type
+        public static Dictionary<string, Dictionary<string, UnitType>> Series2Code2Type;// = new Dictionary<string, UnitType>()
 
         static UnitOob()
         {
-            UnitTypeMap = new Dictionary<string, UnitType>();
-            foreach (var unitSubType in UnitSubTypes)
+            Series2Code2Type = new();
+            foreach(var subTypes in SubTypesMap)
             {
-                UnitTypeMap[unitSubType.Code] = unitSubType;
+                Series2Code2Type[subTypes.Key] = subTypes.Value.ToDictionary(d => d.Code);
             }
         }
 
@@ -200,12 +249,19 @@ namespace YYZ.JTS.NB
         public override string ToString() => $"SupplyWagon({Name}, {Strength})";
     }
 
-    public static class JTSOobParser
+    public class JTSOobParser
     {
-        public static UnitGroup ParseUnits(string s)
+        public Dictionary<string, UnitType> UnitTypeMap; // C# 11: required
+
+        public static JTSOobParser FromCode(string name)
+        {
+            return new JTSOobParser(){UnitTypeMap = UnitOob.Series2Code2Type[name]};
+        }
+
+        public UnitGroup ParseUnits(string s)
         {
             var lines = s.Split("\n");
-            Debug.Assert(lines[0].Trim() == "2");
+            Debug.Assert(lines[0].Trim() == "2" || lines[0].Trim() == "3");
 
             var rootGroup = new UnitGroup();
             var stack = new Stack<UnitGroup>();
@@ -236,11 +292,11 @@ namespace YYZ.JTS.NB
             return rootGroup;
         }
 
-        public static AbstractUnit ParseUnit(Stack<UnitGroup> stack, string line)
+        public AbstractUnit ParseUnit(Stack<UnitGroup> stack, string line)
         {
             if (stack.Count == 1) // Top unit has 1 extra prefix to define its country
             {
-                var s = line.Split(" ", 2);
+                var s = line.Split((char[])null, 2, StringSplitOptions.RemoveEmptyEntries);
                 var unit = _ParseUnit(s[1]);
                 unit.Country = s[0];
                 return unit;
@@ -248,13 +304,13 @@ namespace YYZ.JTS.NB
             return _ParseUnit(line);
         }
 
-        static AbstractUnit _ParseUnit(string line)
+        AbstractUnit _ParseUnit(string line)
         {
-            var ss = line.Split(" ", 2);
+            var ss = line.Split((char[])null, 2, StringSplitOptions.RemoveEmptyEntries);
             switch (ss[0])
             {
                 case "L":
-                    var sss = ss[1].Split(" ", 4);
+                    var sss = ss[1].Split((char[])null, 4, StringSplitOptions.RemoveEmptyEntries);
                     return new Leader()
                     {
                         Rating = int.Parse(sss[0]),
@@ -268,7 +324,7 @@ namespace YYZ.JTS.NB
                     {
                         Strength = int.Parse(sss[0]),
                         Morale = int.Parse(sss[1]),
-                        Type = UnitOob.UnitTypeMap[sss[2]],
+                        Type = UnitTypeMap[sss[2]], // TODO: Raise a custom exception notifying user that perhaps a wrong parser is used. 
                         // Type = sss[2],
                         Weapon = sss[3],
                         Icon2D = sss[4],
@@ -276,7 +332,7 @@ namespace YYZ.JTS.NB
                         Name = sss[6]
                     };
                 case "S":
-                    sss = ss[1].Split(" ", 3);
+                    sss = ss[1].Split((char[])null, 3, StringSplitOptions.RemoveEmptyEntries);
                     return new SupplyWagon()
                     {
                         Strength = int.Parse(sss[0]),
@@ -390,7 +446,8 @@ namespace YYZ.JTS.NB
                 if (s[0] == ' ')
                     continue;
 
-                var ss = s.Trim().Split(" ");
+                // var ss = s.Trim().Split(" ");
+                var ss = s.Trim().Split();
 
                 if (ss[0] != "1")
                     continue;
@@ -497,7 +554,8 @@ namespace YYZ.JTS.NB
 
             // 1808 10 31 8 0 0 0 1 32
             //  0   1   2 3 4 5 6 7 8
-            var ds = sl[2].Trim().Split(" ").Select(int.Parse).ToArray();
+            // var ds = sl[2].Trim().Split(" ").Select(int.Parse).ToArray();
+            var ds = sl[2].Trim().Split().Select(int.Parse).ToArray();
             Year = ds[0];
             Month = ds[1];
             Day = ds[2];
@@ -518,7 +576,7 @@ namespace YYZ.JTS.NB
                 idx++;
             }
             idx = idx + 2;
-            var pair = sl[idx].Split(" ", 2);
+            var pair = sl[idx].Split((char[])null, 2, StringSplitOptions.RemoveEmptyEntries);
             var aiCommandSize = int.Parse(pair[0]);
             var DescriptionIdx = idx + aiCommandSize + 1;
 

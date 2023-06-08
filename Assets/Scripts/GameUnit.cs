@@ -38,6 +38,12 @@ public class GameUnit : MonoBehaviour
         
     }
 
+    public void SetColor(Color32 color)
+    {
+        baseRectRenderer.material.SetColor("_Color", color);
+        directionRectRenderer.material.SetColor("_Color", color);
+    }
+
     public void SetSize(float mainSize, float subSize)
     {
         BaseRect.transform.localScale = new Vector3(mainSize, subSize, 1);

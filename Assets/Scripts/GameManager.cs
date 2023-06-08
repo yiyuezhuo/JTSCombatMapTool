@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Linq;
 using System;
 using System.IO;
+using Newtonsoft.Json;
 
 using YYZ.JTS.NB;
 
@@ -143,12 +144,16 @@ public class TextInput
 public class GameManager : MonoBehaviour, IUnitSelectionPublisher
 {
     // public TextAsset OobText;
+    public TextAsset ColorJson;
+    Dictionary<string, Color32> colorMap = new();
 
-    public GameObject FrenchUnitPrefab;
-    public GameObject AlliedUnitPrefab;
-    public GameObject ManeuverLineFrenchPrefab;
-    public GameObject ManeuverLineAlliedPrefab;
-
+    // public GameObject FrenchUnitPrefab;
+    // public GameObject AlliedUnitPrefab;
+    public GameObject UnitPrefab;
+    // public GameObject ManeuverLineFrenchPrefab;
+    // public GameObject ManeuverLineAlliedPrefab;
+    public GameObject ManeuverLinePrefab;
+    
     public GameObject UnitContainer;
     public GameObject ManeuverLineContainer;
 
@@ -175,13 +180,43 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
     public int TextMode = 0;
 
     public int ShowMode = 0; // 0 => Single, 1 => Comparison
+    public string ParserMode = "NB"; // NB, CWB
 
+    public void Awake()
+    {
+        var int3Map = JsonConvert.DeserializeObject<Dictionary<string, byte[]>>(ColorJson.text);
+        foreach(var KV in int3Map)
+        {
+            colorMap[KV.Key] = new Color32(KV.Value[0], KV.Value[1], KV.Value[2], 255);
+            Debug.Log($"{KV.Key} => {KV.Value[0]}, {KV.Value[1]}, {KV.Value[2]}");
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        /*
         // Setup(currentScenarioName);
+        var int3Map = JsonConvert.DeserializeObject<Dictionary<string, byte[]>>(ColorJson.text);
+        foreach(var KV in int3Map)
+        {
+            colorMap[KV.Key] = new Color32(KV.Value[0], KV.Value[1], KV.Value[2], 255);
+            Debug.Log($"{KV.Key} => {KV.Value[0]}, {KV.Value[1]}, {KV.Value[2]}");
+        }
+        */
     }
+
+    Color32 GetColor(string s)
+    {
+        // mapGroup.MapUnits[0].UnitState.OobItem.Country
+        if(colorMap.TryGetValue(s, out var ret))
+        {
+            return ret;
+        }
+        return colorMap["Red"]; // "Allied" Fackback for NB titles
+    }
+
+    Color32 GetColor(MapGroupAdaptor mapGroup) => GetColor(mapGroup.MapUnits[0].UnitState.OobItem.Country);
 
     static float MapUnitDistance(MapUnitAdaptor a, MapUnitAdaptor b)
     {
@@ -237,7 +272,8 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         var scenario = new JTSScenario();
         scenario.Extract(Text.Scn);
 
-        unitGroup = JTSOobParser.ParseUnits(Text.Oob);
+        // unitGroup = JTSOobParser.ParseUnits(Text.Oob);
+        unitGroup = JTSOobParser.FromCode(ParserMode).ParseUnits(Text.Oob);
 
         /*
         foreach (var unit in unitGroup.Walk())
@@ -286,7 +322,7 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
                 {
                     var mapGroup = mapGroupNewOldPair.Item1;
                     var mapGroupOld = mapGroupNewOldPair.Item2;
-                    var maneuverLinePrefab = mapGroup.MapUnits[0].UnitState.OobItem.Country == "French" ? ManeuverLineFrenchPrefab : ManeuverLineAlliedPrefab; // TODO: Supports more color.
+                    // var maneuverLinePrefab = mapGroup.MapUnits[0].UnitState.OobItem.Country == "French" ? ManeuverLineFrenchPrefab : ManeuverLineAlliedPrefab; // TODO: Supports more color.
                     var center = mapGroup.GetCenter();
                     var centerOld = mapGroupOld.GetCenter();
 
@@ -294,8 +330,11 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
 
                     if ((center[0] - centerOld[0]) != 0 || (center[1] - centerOld[1]) != 0)
                     {
-                        var lineObj = Instantiate(maneuverLinePrefab, ManeuverLineContainer.transform);
+                        
+                        var lineObj = Instantiate(ManeuverLinePrefab, ManeuverLineContainer.transform);
                         var line = lineObj.GetComponent<LineRenderer>();
+                        var color = GetColor(mapGroup);
+                        line.material.SetColor("_Color", color);
                         line.SetPositions(new Vector3[] { new Vector3(centerOld[0], centerOld[1], -1), new Vector3(center[0], center[1], -1) });
 
                         lineViewMap[mapGroupNewOldPair] = line;
@@ -317,21 +356,24 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
             var unitStates = KV.Value;
             var _mapUnits = unitStates.Select(unitState => new MapUnitAdaptor(unitState)).ToList();
 
-            var prefab = brigade.Country == "French" ? FrenchUnitPrefab : AlliedUnitPrefab;
+            // var prefab = brigade.Country == "French" ? FrenchUnitPrefab : AlliedUnitPrefab;
+            
+
             var mapUnitsList = YYZ.Stats.Clustering.Cluster(_mapUnits, MapUnitDistance, DistanceThreshold);
             // Debug.Log($"mapUnitsList.Count={mapUnitsList.Count}");
 
             foreach (var mapUnits in mapUnitsList)
             {
                 var mapGroup = new MapGroupAdaptor() { MapUnits = mapUnits };
-                CreateGameUnit(mapGroup, prefab);
+                var color = GetColor(mapGroup);
+                CreateGameUnit(mapGroup, UnitPrefab, color);
                 mapGroupList.Add(mapGroup);
             }
         }
         return mapGroupList;
     }
 
-    void CreateGameUnit(MapGroupAdaptor mapGroup, GameObject prefab)
+    void CreateGameUnit(MapGroupAdaptor mapGroup, GameObject prefab, Color32 color)
     {
         // var mapGroup = new MapGroupAdaptor() { MapUnits = mapUnits };
 
@@ -376,6 +418,8 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
         {
             gameUnit.gameObject.SetActive(false);
         }
+
+        gameUnit.SetColor(color);
 
         viewMap[mapGroup] = gameUnit;
         modelMap[gameUnit] = mapGroup;

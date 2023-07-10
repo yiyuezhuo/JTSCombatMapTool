@@ -6,7 +6,7 @@ using System;
 using System.IO;
 using Newtonsoft.Json;
 
-using YYZ.JTS.NB;
+using YYZ.JTS;
 
 // Models, while implements some interfaces at the same time.
 
@@ -269,21 +269,9 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
 
     public void Setup()
     {
-        var scenario = new JTSScenario();
-        scenario.Extract(Text.Scn);
-
-        // unitGroup = JTSOobParser.ParseUnits(Text.Oob);
-        unitGroup = JTSOobParser.FromCode(ParserMode).ParseUnits(Text.Oob);
-
-        /*
-        foreach (var unit in unitGroup.Walk())
-        {
-            var group = unit as UnitGroup;
-            if (group != null)
-                Debug.Log(group);
-            // Debug.Log(unit);
-        }
-        */
+        var parser = JTSParser.FromCode(ParserMode);
+        var scenario = parser.ParseScenario(Text.Scn);
+        unitGroup = parser.ParseOOB(Text.Oob);
 
         var unitStatus = new JTSUnitStates();
         unitStatus.ExtractByLines(unitGroup, scenario.DynamicCommandBlock);
@@ -298,8 +286,8 @@ public class GameManager : MonoBehaviour, IUnitSelectionPublisher
             }
             else
             {
-                var scenarioOld = new JTSScenario();
-                scenarioOld.Extract(Text.ScnOld);
+                var scenarioOld = parser.ParseScenario(Text.ScnOld);
+
                 if (scenarioOld.OobFile != scenario.OobFile)
                 {
                     Debug.Log("Oob File doesn't match. Potential problem?");

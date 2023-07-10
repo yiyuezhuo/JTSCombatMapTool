@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using TMPro;
 using System;
 using System.Linq;
-using YYZ.JTS.NB;
+using YYZ.JTS;
 
 
 public static class DataLoader
@@ -71,8 +71,15 @@ public class ScenarioDropdown : MonoBehaviour
         var option = dropdown.options[index];
         var scnName = option.text;
         var scnText = DataLoader.LoadScenario(scnName);
+
+        /*
         var scenario = new JTSScenario();
         scenario.Extract(scnText); // TODO: add an "early stop mode"?
+        */
+
+        var parser = JTSParser.FromCode("NB");
+        var scenario = parser.ParseScenario(scnText);
+
         var oobName = RemoveExtension(scenario.OobFile);
         var oobText = DataLoader.LoadOob(oobName);
 
@@ -84,6 +91,6 @@ public class ScenarioDropdown : MonoBehaviour
         // var text = DataLoader.LoadScenario(name);
         // Debug.Log($"{name} => {text.Length} => {text.Substring(0, 100)}");
 
-        OptionSelected.Invoke(new TextInput() { Scn=scnText,Oob=oobText});
+        OptionSelected.Invoke(new TextInput() { Scn=scnText, Oob=oobText});
     }
 }
